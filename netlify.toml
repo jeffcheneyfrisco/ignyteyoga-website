@@ -132,3 +132,16 @@
   from = "/blog/"
   to = "/"
   status = 301
+
+# PowerHIIT45 was removed. Force the redirect so a leftover file cannot win.
+[[redirects]]
+  from = "/classes/powerhiit45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/powerhiit45/"
+  to = "/classes/"
+  status = 301
+  force = true

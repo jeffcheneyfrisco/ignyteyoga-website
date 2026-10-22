@@ -149,6 +149,7 @@ for (const banned of [
   "https://ignyteyoga.com/blog/summer-retreat-96jbz/",
   "https://ignyteyoga.com/blog/soul-gph5c/",
   "https://ignyteyoga.com/blog/yoga-wyy9d/",
+  "https://ignyteyoga.com/classes/powerhiit45/",
 ]) {
   if (sitemap.includes(`<loc>${banned}</loc>`)) fail(`sitemap still lists ${banned}`);
 }
@@ -176,7 +177,7 @@ if (!netlify.includes("frame-src") || !netlify.includes("https://www.google.com"
 for (const redirect of ["/home-original", "/schedule-1", "/instructors-1", "/blog/exploring-kfzll", "/blog/summer-retreat-96jbz", "/blog/soul-gph5c", "/blog/yoga-wyy9d", "/blog/"]) {
   if (!netlify.includes(`from = "${redirect}"`)) fail(`netlify.toml missing redirect for ${redirect}`);
 }
-for (const redirect of ["/home-original", "/home-original/", "/schedule-1", "/schedule-1/", "/instructors-1", "/instructors-1/"]) {
+for (const redirect of ["/home-original", "/home-original/", "/schedule-1", "/schedule-1/", "/instructors-1", "/instructors-1/", "/classes/powerhiit45", "/classes/powerhiit45/"]) {
   const block = new RegExp(`from = "${redirect}"\\n  to = "[^"]+"\\n  status = 301\\n  force = true`);
   if (!block.test(netlify)) fail(`netlify.toml redirect for ${redirect} must be a forced 301`);
 }
