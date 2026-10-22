@@ -73,6 +73,14 @@ for (const file of files) {
   const label = path.relative(dist, file);
 
   if (!title) fail(`${label} is missing a title`);
+  else if (title.length > 60 || !title.endsWith(" | Hot Yoga Frisco | Ignyte Yoga")) {
+    fail(`${label} title must be "Page | Hot Yoga Frisco | Ignyte Yoga" and <= 60 characters (${title.length}: ${title})`);
+  }
+  for (const script of findAll(document, "script")) {
+    const type = attr(script, "type");
+    const src = attr(script, "src");
+    if (!src && type !== "application/ld+json") fail(`${label} has an inline script`);
+  }
   if (h1s.length !== 1) fail(`${label} has ${h1s.length} h1 headings`);
   if (!description) fail(`${label} is missing a meta description`);
   else if (description.length < 50 || description.length > 170) {
@@ -109,8 +117,18 @@ for (const file of files) {
 }
 
 const home = await readFile(path.join(dist, "index.html"), "utf8");
+const address = "12021 Dallas Pkwy, Suite 300, Frisco, TX 75034";
 if (!home.includes("ExerciseGym")) fail("home page is missing ExerciseGym JSON-LD");
 if (!home.includes("LocalBusiness")) fail("home page is missing LocalBusiness JSON-LD");
+if (!home.includes(address)) fail("home page is missing the exact street address");
+if (!home.includes("33.1778061") || !home.includes("-96.8411471")) fail("home page JSON-LD is missing geo coordinates");
+if (!home.includes("Find us")) fail("home page is missing the Find us block");
+if (!home.includes("https://www.google.com/maps/embed")) fail("home page is missing the map embed");
+if (!home.includes('rel="apple-touch-icon"')) fail("home page is missing the apple touch icon");
+if (!home.includes('href="/site.webmanifest"')) fail("home page is missing the web manifest");
+if (!home.includes("imagesrcset=")) fail("home page is missing a responsive image preload");
+if (!home.includes('fetchpriority="high"')) fail("home page LCP image is missing fetchpriority=high");
+if (!home.includes("<style>")) fail("home page is missing inlined CSS");
 if (!home.includes('name="newsletter"')) fail("home page is missing the newsletter form");
 if (!home.includes("data-netlify")) fail("newsletter form is not a Netlify Form");
 
@@ -121,6 +139,18 @@ if (!/mindbody/i.test(schedule)) fail("schedule page does not identify Mindbody"
 const sitemap = await readFile(path.join(dist, "sitemap.xml"), "utf8");
 for (const url of indexable) {
   if (!sitemap.includes(`<loc>${url}</loc>`)) fail(`sitemap missing ${url}`);
+}
+for (const banned of [
+  "https://ignyteyoga.com/home-original/",
+  "https://ignyteyoga.com/schedule-1/",
+  "https://ignyteyoga.com/instructors-1/",
+  "https://ignyteyoga.com/blog/",
+  "https://ignyteyoga.com/blog/exploring-kfzll/",
+  "https://ignyteyoga.com/blog/summer-retreat-96jbz/",
+  "https://ignyteyoga.com/blog/soul-gph5c/",
+  "https://ignyteyoga.com/blog/yoga-wyy9d/",
+]) {
+  if (sitemap.includes(`<loc>${banned}</loc>`)) fail(`sitemap still lists ${banned}`);
 }
 
 const robots = await readFile(path.join(dist, "robots.txt"), "utf8");
@@ -139,6 +169,12 @@ for (const header of [
   "Permissions-Policy",
 ]) {
   if (!netlify.includes(header)) fail(`netlify.toml missing ${header}`);
+}
+if (!netlify.includes("frame-src") || !netlify.includes("https://www.google.com")) {
+  fail("netlify.toml frame-src is missing https://www.google.com");
+}
+for (const redirect of ["/home-original", "/schedule-1", "/instructors-1", "/blog/exploring-kfzll", "/blog/summer-retreat-96jbz", "/blog/soul-gph5c", "/blog/yoga-wyy9d", "/blog/"]) {
+  if (!netlify.includes(`from = "${redirect}"`)) fail(`netlify.toml missing redirect for ${redirect}`);
 }
 
 const media = path.join(dist, "media");

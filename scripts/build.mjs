@@ -1,4 +1,4 @@
-import { mkdir, readdir, readFile, writeFile, copyFile, stat, access } from "node:fs/promises";
+import { mkdir, readdir, readFile, writeFile, copyFile, stat, rm } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import * as parse5 from "parse5";
@@ -9,6 +9,7 @@ const srcDir = path.join(root, "src");
 const pagesDir = path.join(srcDir, "pages");
 const distDir = path.join(root, "dist");
 const siteOrigin = "https://ignyteyoga.com";
+const address = "12021 Dallas Pkwy, Suite 300, Frisco, TX 75034";
 
 const imageCache = new Map();
 
@@ -41,6 +42,18 @@ function findOne(node, tag) {
   return findAll(node, tag)[0] ?? null;
 }
 
+function element(tag, attrs, children = []) {
+  return {
+    nodeName: tag,
+    tagName: tag,
+    attrs: Object.entries(attrs)
+      .filter(([, value]) => value !== undefined && value !== null)
+      .map(([name, value]) => ({ name, value: String(value) })),
+    childNodes: children,
+    namespaceURI: "http://www.w3.org/1999/xhtml",
+  };
+}
+
 async function walkPages(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
   const files = [];
@@ -60,6 +73,22 @@ function stemOf(filePath) {
     .replace(/^-|-$/g, "");
 }
 
+function variantWidths(originalWidth, stem) {
+  const wanted = stem === "ignyte-0323-090" ? [480, 800, 960, 1600] : [480, 960, 1600];
+  const widths = wanted.filter((width) => width < originalWidth - 8);
+  const cap = Math.min(originalWidth, 1600);
+  if (!widths.includes(cap)) widths.push(cap);
+  return [...new Set(widths)].sort((a, b) => a - b);
+}
+
+async function writeWebp(absolute, width, quality, output) {
+  await sharp(absolute)
+    .rotate()
+    .resize({ width, withoutEnlargement: true })
+    .webp({ quality })
+    .toFile(output);
+}
+
 async function emitImage(sourceUrl) {
   if (imageCache.has(sourceUrl)) return imageCache.get(sourceUrl);
   const relative = sourceUrl.replace(/^\//, "");
@@ -70,33 +99,34 @@ async function emitImage(sourceUrl) {
   const meta = await sharp(absolute).metadata();
   const stem = stemOf(absolute);
   const originalWidth = meta.width || 1200;
-  const widths = [480, 800, 1280, 1920].filter((width) => width < originalWidth - 8);
-  if (!widths.includes(Math.min(originalWidth, 1920))) {
-    widths.push(Math.min(originalWidth, 2400));
-  }
-  const unique = [...new Set(widths)].sort((a, b) => a - b);
+  const widths = variantWidths(originalWidth, stem);
   const variants = [];
 
-  for (const width of unique) {
+  for (const width of widths) {
     const filename = `${stem}-${width}.webp`;
     const output = path.join(distDir, "media", filename);
-    try {
-      await access(output);
-    } catch {
-      await sharp(absolute)
-        .rotate()
-        .resize({ width, withoutEnlargement: true })
-        .webp({ quality: 76 })
-        .toFile(output);
+    let quality = 70;
+    if (stem === "ignyte-0323-090" && width === 1600) {
+      for (const candidate of [70, 58, 48, 40, 34, 28, 22, 18]) {
+        quality = candidate;
+        await writeWebp(absolute, width, quality, output);
+        const size = (await stat(output)).size;
+        if (size <= 210 * 1024) break;
+      }
+      const size = (await stat(output)).size;
+      console.log(`ignyte-0323-090-1600.webp ${size} bytes at quality ${quality}`);
+    } else {
+      await writeWebp(absolute, width, quality, output);
     }
     variants.push({ width, url: `/media/${filename}` });
   }
 
   const result = {
     variants,
-    width: meta.width || unique.at(-1),
-    height: meta.height || unique.at(-1),
+    width: meta.width || widths.at(-1),
+    height: meta.height || widths.at(-1),
     largest: variants.at(-1).url,
+    src: (variants.find((item) => item.width >= 960) ?? variants.at(-1)).url,
   };
   imageCache.set(sourceUrl, result);
   return result;
@@ -106,31 +136,79 @@ function srcset(variants) {
   return variants.map((item) => `${item.url} ${item.width}w`).join(", ");
 }
 
-async function rewriteImages(node) {
+function classList(node) {
+  return attr(node, "class").split(/\s+/).filter(Boolean);
+}
+
+function ancestorClasses(node) {
+  const classes = [];
+  let current = node.parentNode;
+  while (current) {
+    classes.push(...classList(current));
+    current = current.parentNode;
+  }
+  return classes;
+}
+
+function sizesFor(image) {
+  const preset = attr(image, "sizes");
+  if (preset) return preset;
+  const classes = ancestorClasses(image);
+  if (classes.includes("photo-row")) return "(min-width: 901px) 25vw, 50vw";
+  if (classes.includes("gallery") || classes.includes("team-grid")) return "(min-width: 901px) 33vw, 50vw";
+  if (classes.includes("cards")) return "(min-width: 901px) 25vw, 100vw";
+  if (classes.includes("split") || classes.includes("frame")) return "(min-width: 901px) 50vw, 100vw";
+  return "(min-width: 901px) 720px, 100vw";
+}
+
+async function rewriteImages(node, { eager = false } = {}) {
   const images = findAll(node, "img");
   for (const image of images) {
     const source = attr(image, "src");
     if (!source.startsWith("/assets/source/images/")) continue;
     const emitted = await emitImage(source);
-    setAttr(image, "src", emitted.largest);
+    setAttr(image, "src", emitted.src);
     setAttr(image, "srcset", srcset(emitted.variants));
-    if (!attr(image, "sizes")) setAttr(image, "sizes", "(min-width: 900px) 80vw, 100vw");
+    setAttr(image, "sizes", sizesFor(image));
     if (!attr(image, "width")) setAttr(image, "width", String(emitted.width));
     if (!attr(image, "height")) setAttr(image, "height", String(emitted.height));
+    if (!attr(image, "decoding")) setAttr(image, "decoding", "async");
+    if (!eager && !attr(image, "loading")) {
+      setAttr(image, "loading", "lazy");
+      if (!attr(image, "fetchpriority")) setAttr(image, "fetchpriority", "low");
+    }
   }
+}
 
+async function convertBackgrounds(node) {
   const backgrounds = [];
   walk(node, (current) => {
     if (attr(current, "data-bg")) backgrounds.push(current);
   });
-  for (const element of backgrounds) {
-    const source = attr(element, "data-bg");
-    const emitted = await emitImage(source);
-    const previous = attr(element, "style");
-    const background = `background-image:url('${emitted.largest}')`;
-    setAttr(element, "style", previous ? `${previous};${background}` : background);
-    element.attrs = element.attrs.filter((item) => item.name !== "data-bg");
+  let lcp = null;
+  let heroCount = 0;
+  for (const background of backgrounds) {
+    const emitted = await emitImage(attr(background, "data-bg"));
+    const isHero = classList(background).includes("hero");
+    if (isHero) heroCount += 1;
+    const priority = isHero && heroCount === 1;
+    const image = element("img", {
+      class: "hero-media",
+      src: emitted.src,
+      srcset: srcset(emitted.variants),
+      sizes: "100vw",
+      alt: "",
+      width: emitted.width,
+      height: emitted.height,
+      decoding: "async",
+      fetchpriority: priority ? "high" : "low",
+      loading: priority ? undefined : "lazy",
+    });
+    background.childNodes = [image, ...(background.childNodes ?? [])];
+    background.attrs = (background.attrs ?? []).filter((item) => item.name !== "data-bg");
+    if (priority) lcp = emitted;
   }
+  return lcp;
 }
 
 function textOf(node) {
@@ -147,10 +225,6 @@ function outputPath(canonical, distFile) {
   return path.join(distDir, clean, "index.html");
 }
 
-function headElement(tag, attrs) {
-  return { nodeName: tag, tagName: tag, attrs: Object.entries(attrs).map(([name, value]) => ({ name, value })), childNodes: [], namespaceURI: "http://www.w3.org/1999/xhtml" };
-}
-
 function localBusinessScript(canonical) {
   const data = {
     "@context": "https://schema.org",
@@ -161,11 +235,16 @@ function localBusinessScript(canonical) {
     email: "hello@ignyteyoga.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "12021 Dallas Parkway, Suite 300",
+      streetAddress: address,
       addressLocality: "Frisco",
       addressRegion: "TX",
       postalCode: "75034",
       addressCountry: "US",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 33.1778061,
+      longitude: -96.8411471,
     },
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
@@ -174,16 +253,21 @@ function localBusinessScript(canonical) {
       closes: "20:00",
     },
   };
-  return {
-    nodeName: "script",
-    tagName: "script",
-    attrs: [{ name: "type", value: "application/ld+json" }],
-    childNodes: [{ nodeName: "#text", value: JSON.stringify(data) }],
-    namespaceURI: "http://www.w3.org/1999/xhtml",
-  };
+  return element("script", { type: "application/ld+json" }, [{ nodeName: "#text", value: JSON.stringify(data) }]);
 }
 
-async function buildPage(file, headerHtml, footerHtml) {
+function preloadImage(emitted) {
+  return element("link", {
+    rel: "preload",
+    as: "image",
+    href: emitted.src,
+    imagesrcset: srcset(emitted.variants),
+    imagesizes: "100vw",
+    fetchpriority: "high",
+  });
+}
+
+async function buildPage(file, headerHtml, footerHtml, css) {
   const html = await readFile(file, "utf8");
   const document = parse5.parse(html);
   const head = findOne(document, "head");
@@ -217,8 +301,9 @@ async function buildPage(file, headerHtml, footerHtml) {
   await rewriteImages(main);
   const header = parse5.parseFragment(headerHtml);
   const footer = parse5.parseFragment(footerHtml);
-  await rewriteImages(header);
+  await rewriteImages(header, { eager: true });
   await rewriteImages(footer);
+  const lcp = await convertBackgrounds(main);
 
   body.childNodes = [...(header.childNodes ?? []), main, ...(footer.childNodes ?? [])];
   setAttr(main, "id", attr(main, "id") || "content");
@@ -230,20 +315,24 @@ async function buildPage(file, headerHtml, footerHtml) {
   const structuredData = hasLocalBusiness ? jsonLd : [localBusinessScript(canonical), ...jsonLd];
 
   const headNodes = [
-    headElement("meta", { charset: "utf-8" }),
-    headElement("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }),
-    { nodeName: "title", tagName: "title", attrs: [], childNodes: [{ nodeName: "#text", value: title }] },
-    headElement("meta", { name: "description", content: description }),
-    headElement("link", { rel: "canonical", href: canonical }),
-    headElement("meta", { name: "robots", content: robots }),
-    headElement("meta", { property: "og:title", content: title }),
-    headElement("meta", { property: "og:description", content: description }),
-    headElement("meta", { property: "og:url", content: canonical }),
-    headElement("meta", { property: "og:type", content: "website" }),
-    headElement("meta", { property: "og:site_name", content: "Ignyte Yoga" }),
-    ...(shareImage ? [headElement("meta", { property: "og:image", content: shareImage })] : []),
-    headElement("link", { rel: "icon", href: "/favicon.ico" }),
-    headElement("link", { rel: "stylesheet", href: "/styles/site.css" }),
+    element("meta", { charset: "utf-8" }),
+    element("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }),
+    ...(lcp ? [preloadImage(lcp)] : []),
+    element("meta", { name: "theme-color", content: "#111111" }),
+    { nodeName: "title", tagName: "title", attrs: [], childNodes: [{ nodeName: "#text", value: title }], namespaceURI: "http://www.w3.org/1999/xhtml" },
+    element("meta", { name: "description", content: description }),
+    element("link", { rel: "canonical", href: canonical }),
+    element("meta", { name: "robots", content: robots }),
+    element("style", {}, [{ nodeName: "#text", value: css }]),
+    element("meta", { property: "og:title", content: title }),
+    element("meta", { property: "og:description", content: description }),
+    element("meta", { property: "og:url", content: canonical }),
+    element("meta", { property: "og:type", content: "website" }),
+    element("meta", { property: "og:site_name", content: "Ignyte Yoga" }),
+    ...(shareImage ? [element("meta", { property: "og:image", content: shareImage })] : []),
+    element("link", { rel: "icon", href: "/favicon.ico" }),
+    element("link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" }),
+    element("link", { rel: "manifest", href: "/site.webmanifest" }),
     ...structuredData,
   ];
   head.childNodes = headNodes;
@@ -251,7 +340,9 @@ async function buildPage(file, headerHtml, footerHtml) {
 
   const destination = outputPath(canonical, distFile);
   await mkdir(path.dirname(destination), { recursive: true });
-  await writeFile(destination, `<!DOCTYPE html>\n${parse5.serialize(document)}\n`);
+  const serialized = parse5.serialize(document);
+  const pageHtml = serialized.startsWith("<!DOCTYPE") ? serialized : `<!DOCTYPE html>\n${serialized}`;
+  await writeFile(destination, `${pageHtml}\n`);
   return { file, destination, title, description, canonical, robots };
 }
 
@@ -282,22 +373,42 @@ function robotsTxt() {
   return `${agents.map((agent) => `User-agent: ${agent}\nAllow: /\n`).join("\n")}\nSitemap: ${siteOrigin}/sitemap.xml\n`;
 }
 
+async function emitTouchIcon() {
+  const logo = path.join(root, "assets/source/images/Your+paragraph+text.png");
+  const resized = await sharp(logo).resize({ width: 156, height: 156, fit: "inside" }).png().toBuffer();
+  await sharp({
+    create: {
+      width: 180,
+      height: 180,
+      channels: 4,
+      background: { r: 255, g: 255, b: 255, alpha: 1 },
+    },
+  })
+    .composite([{ input: resized, gravity: "centre" }])
+    .png()
+    .toFile(path.join(distDir, "apple-touch-icon.png"));
+}
+
 async function main() {
+  await rm(distDir, { recursive: true, force: true });
   await mkdir(path.join(distDir, "media"), { recursive: true });
   await mkdir(path.join(distDir, "styles"), { recursive: true });
   await mkdir(path.join(distDir, "fonts"), { recursive: true });
   await mkdir(path.join(distDir, "scripts"), { recursive: true });
+  await emitTouchIcon();
 
+  const css = await readFile(path.join(srcDir, "styles/site.css"), "utf8");
   const header = await readFile(path.join(srcDir, "partials/header.html"), "utf8");
   const footer = await readFile(path.join(srcDir, "partials/footer.html"), "utf8");
   const pages = [];
   for (const file of await walkPages(pagesDir)) {
-    pages.push(await buildPage(file, header, footer));
+    pages.push(await buildPage(file, header, footer, css));
     console.log(`built ${path.relative(root, file)}`);
   }
 
   await copyFile(path.join(srcDir, "styles/site.css"), path.join(distDir, "styles/site.css"));
   await copyFile(path.join(srcDir, "scripts/nav.js"), path.join(distDir, "scripts/nav.js"));
+  await copyFile(path.join(srcDir, "site.webmanifest"), path.join(distDir, "site.webmanifest"));
   for (const font of await readdir(path.join(srcDir, "fonts"))) {
     await copyFile(path.join(srcDir, "fonts", font), path.join(distDir, "fonts", font));
   }

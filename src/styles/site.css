@@ -203,10 +203,22 @@ button.btn,
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  background-color: #111;
   background-size: cover;
   background-position: center;
   color: white;
   isolation: isolate;
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  z-index: -2;
 }
 
 .hero {
@@ -389,6 +401,28 @@ button.btn,
   padding-top: 0.45rem;
 }
 
+.teacher-bio {
+  font-weight: 400;
+  margin: 0.35rem 0 0;
+}
+
+.class-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+  margin: 2rem 0 1.5rem;
+  text-align: left;
+}
+
+.class-groups ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.mobile-bar {
+  display: none;
+}
+
 .class-block {
   padding: 1.6rem 0;
   border-top: 1px solid var(--line);
@@ -420,7 +454,9 @@ button.btn,
 .newsletter {
   position: relative;
   isolation: isolate;
+  overflow: hidden;
   color: white;
+  background-color: #111;
   background-size: cover;
   background-position: center;
   padding: 5rem 6vw;
@@ -475,6 +511,31 @@ textarea {
   border: 1px solid var(--line);
   padding: 1rem;
   min-height: 240px;
+}
+
+.mindbody-frame {
+  display: block;
+  width: 100%;
+  min-height: 720px;
+  border: 0;
+  background: white;
+}
+
+.map-frame {
+  position: relative;
+  height: 0;
+  padding-bottom: 56%;
+  margin: 0 0 1rem;
+  overflow: hidden;
+  background: #e6e6e6;
+}
+
+.map-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .note {
@@ -616,7 +677,8 @@ blockquote footer {
   .prices,
   .split,
   .calendar,
-  .post-card {
+  .post-card,
+  .class-groups {
     grid-template-columns: 1fr;
   }
 
@@ -643,5 +705,42 @@ blockquote footer {
   .section,
   .newsletter {
     padding-inline: 1.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 4.6rem;
+  }
+
+  .mobile-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    background: #0d0d0d;
+    border-top: 1px solid #333;
+  }
+
+  .mobile-bar a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.95rem 0.3rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .mobile-bar a:first-child {
+    background: var(--accent);
+  }
+
+  .site-nav.is-open {
+    padding-bottom: 4.6rem;
   }
 }
