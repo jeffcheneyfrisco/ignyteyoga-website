@@ -389,6 +389,28 @@ button.btn,
   padding-top: 0.45rem;
 }
 
+.teacher-bio {
+  font-weight: 400;
+  margin: 0.35rem 0 0;
+}
+
+.class-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+  margin: 2rem 0 1.5rem;
+  text-align: left;
+}
+
+.class-groups ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.mobile-bar {
+  display: none;
+}
+
 .class-block {
   padding: 1.6rem 0;
   border-top: 1px solid var(--line);
@@ -616,7 +638,8 @@ blockquote footer {
   .prices,
   .split,
   .calendar,
-  .post-card {
+  .post-card,
+  .class-groups {
     grid-template-columns: 1fr;
   }
 
@@ -643,5 +666,42 @@ blockquote footer {
   .section,
   .newsletter {
     padding-inline: 1.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 4.6rem;
+  }
+
+  .mobile-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    background: #0d0d0d;
+    border-top: 1px solid #333;
+  }
+
+  .mobile-bar a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.95rem 0.3rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .mobile-bar a:first-child {
+    background: var(--accent);
+  }
+
+  .site-nav.is-open {
+    padding-bottom: 4.6rem;
   }
 }

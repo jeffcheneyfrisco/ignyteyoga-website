@@ -35,3 +35,13 @@
   from = "/cart/"
   to = "/"
   status = 301
+
+[[redirects]]
+  from = "/teachers"
+  to = "/ourteam/"
+  status = 301
+
+[[redirects]]
+  from = "/teachers/"
+  to = "/ourteam/"
+  status = 301

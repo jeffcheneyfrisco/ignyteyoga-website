@@ -48,6 +48,26 @@ test("static build and SEO check", () => {
   assert.doesNotMatch(newer, /TODO: Hours/);
   assert.doesNotMatch(newer, /75033/);
   assert.match(newer, /href="\/new-here\/">New here\?/);
+  assert.match(newer, /1\. Before you come/);
+  assert.match(newer, /2\. Arriving/);
+  assert.match(newer, /3\. In the room/);
+  assert.match(newer, /4\. After class/);
+  assert.match(newer, /TODO: The published policies/);
+
+  const teachers = readFileSync("dist/ourteam/index.html", "utf8");
+  assert.match(teachers, /Christie must confirm this roster/);
+  assert.match(teachers, /Christie Cheney Bone/);
+  assert.match(teachers, /Dianne Powter/);
+  assert.match(teachers, /Sierra Snyder/);
+  assert.doesNotMatch(teachers, /lorem ipsum/i);
+  assert.match(home, /Why infrared/);
+  assert.match(home, /self-guided infrared sauna workout/);
+  assert.match(home, /href="\/classes\/hotflo\/"/);
+  assert.match(home, /href="\/classes\/hothiit\/"/);
+  assert.doesNotMatch(home, /Journal of the American College of Cardiology/);
+  assert.match(home, /class="mobile-bar"/);
+  assert.match(home, /tel:\+14695362540/);
+  assert.match(home, /maps\/dir\/\?api=1/);
   assert.doesNotMatch(home, /lorem ipsum/i);
   assert.doesNotMatch(home, /acuity/i);
 
