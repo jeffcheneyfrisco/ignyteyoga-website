@@ -94,9 +94,9 @@ test("static build and SEO check", () => {
   assert.equal(existsSync("dist/schedule-1/index.html"), false);
   assert.equal(existsSync("dist/instructors-1/index.html"), false);
   const netlify = readFileSync("netlify.toml", "utf8");
-  assert.match(netlify, /from = "\/home-original\/"\n  to = "\/"\n  status = 301!/);
-  assert.match(netlify, /from = "\/schedule-1\/"\n  to = "\/schedule\/"\n  status = 301!/);
-  assert.match(netlify, /from = "\/instructors-1\/"\n  to = "\/ourteam\/"\n  status = 301!/);
+  assert.match(netlify, /from = "\/home-original\/"\n  to = "\/"\n  status = 301\n  force = true/);
+  assert.match(netlify, /from = "\/schedule-1\/"\n  to = "\/schedule\/"\n  status = 301\n  force = true/);
+  assert.match(netlify, /from = "\/instructors-1\/"\n  to = "\/ourteam\/"\n  status = 301\n  force = true/);
   assert.equal(existsSync("dist/apple-touch-icon.png"), true);
   assert.equal(existsSync("dist/site.webmanifest"), true);
   const icon = readFileSync("dist/apple-touch-icon.png");

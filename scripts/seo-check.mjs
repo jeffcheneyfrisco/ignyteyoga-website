@@ -177,8 +177,8 @@ for (const redirect of ["/home-original", "/schedule-1", "/instructors-1", "/blo
   if (!netlify.includes(`from = "${redirect}"`)) fail(`netlify.toml missing redirect for ${redirect}`);
 }
 for (const redirect of ["/home-original", "/home-original/", "/schedule-1", "/schedule-1/", "/instructors-1", "/instructors-1/"]) {
-  const block = new RegExp(`from = "${redirect}"\\n  to = "[^"]+"\\n  status = 301!`);
-  if (!block.test(netlify)) fail(`netlify.toml redirect for ${redirect} must be a forced 301!`);
+  const block = new RegExp(`from = "${redirect}"\\n  to = "[^"]+"\\n  status = 301\\n  force = true`);
+  if (!block.test(netlify)) fail(`netlify.toml redirect for ${redirect} must be a forced 301`);
 }
 
 const media = path.join(dist, "media");

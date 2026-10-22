@@ -50,32 +50,38 @@
 [[redirects]]
   from = "/home-original"
   to = "/"
-  status = 301!
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/home-original/"
   to = "/"
-  status = 301!
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/schedule-1"
   to = "/schedule/"
-  status = 301!
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/schedule-1/"
   to = "/schedule/"
-  status = 301!
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/instructors-1"
   to = "/ourteam/"
-  status = 301!
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/instructors-1/"
   to = "/ourteam/"
-  status = 301!
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/blog/exploring-kfzll"
