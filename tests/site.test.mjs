@@ -143,16 +143,30 @@ test("static build and SEO check", () => {
   assert.match(community, /preload="metadata"/);
   assert.match(community, /class="sound-toggle"/);
   assert.match(community, /Play Ignyte Tri with sound/);
-  assert.equal((community.match(/preload="metadata"/g) || []).length, 3);
-  assert.equal((community.match(/\smuted(?:=|\s|>)/g) || []).length, 3);
-  assert.match(community, /src="\/images\/community\/sunrise-walks\.jpg"/);
+  assert.equal((community.match(/preload="metadata"/g) || []).length, 5);
+  assert.equal((community.match(/\smuted(?:=|\s|>)/g) || []).length, 5);
+  assert.match(community, /src="\/images\/community\/sunrise-1\.jpg"/);
+  assert.match(community, /Ignyte Sunrise Walk group outside the studio at sunrise/);
+  assert.match(community, /src="\/images\/community\/sunrise-2\.jpg"/);
+  assert.match(community, /src="\/images\/community\/sunrise-clip1\.mp4"/);
+  assert.match(community, /poster="\/images\/community\/sunrise-clip1-poster\.jpg"/);
+  assert.match(community, /src="\/images\/community\/sunrise-clip2\.mp4"/);
+  assert.match(community, /poster="\/images\/community\/sunrise-clip2-poster\.jpg"/);
+  assert.doesNotMatch(community, /image-asset-90d1db64/);
+  assert.doesNotMatch(community, /sunrise-walks\.jpg/);
   assert.match(community, /https:\/\/www\.instagram\.com\/ignyteyoga\//);
   assert.match(community, /@ignyteyoga/);
   assert.match(community, /href="\/schedule\/">Book a class/);
   assert.match(community, /https:\/\/ignyteyoga\.com\/community\//);
   assert.equal(existsSync("dist/images/community/lake-grapevine.jpg"), true);
   assert.equal(existsSync("dist/images/community/ignyte-tri-poster.jpg"), true);
-  assert.equal(existsSync("dist/images/community/sunrise-walks.jpg"), true);
+  assert.equal(existsSync("dist/images/community/sunrise-1.jpg"), true);
+  assert.equal(existsSync("dist/images/community/sunrise-2.jpg"), true);
+  assert.equal(existsSync("dist/images/community/sunrise-clip1.mp4"), true);
+  assert.equal(existsSync("dist/images/community/sunrise-clip2.mp4"), true);
+  assert.equal(existsSync("dist/images/community/sunrise-walks.jpg"), false);
+  assert.doesNotMatch(home, /image-asset-90d1db64/);
+  assert.doesNotMatch(home, /Diane Shaw/);
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/community\/<\/loc>/);
   assert.match(netlify, /from = "\/classes\/power45\/"\n  to = "\/classes\/"\n  status = 301\n  force = true/);
   assert.match(netlify, /from = "\/classes\/power-45\/"\n  to = "\/classes\/"\n  status = 301\n  force = true/);
@@ -171,7 +185,10 @@ test("static build and SEO check", () => {
     return found;
   }
   for (const file of walkHtml("dist")) {
-    assert.doesNotMatch(readFileSync(file, "utf8"), power45, file);
+    const html = readFileSync(file, "utf8");
+    assert.doesNotMatch(html, power45, file);
+    assert.doesNotMatch(html, /image-asset-90d1db64/, file);
+    assert.doesNotMatch(html, /Diane Shaw/, file);
   }
   assert.match(readFileSync("dist/classes/powerhiit45/index.html", "utf8"), /PowerHIIT45/);
   assert.match(readFileSync("dist/classes/powerflo/index.html", "utf8"), /PowerFlo/);
