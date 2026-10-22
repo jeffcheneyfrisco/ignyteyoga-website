@@ -373,6 +373,16 @@ function robotsTxt() {
   return `${agents.map((agent) => `User-agent: ${agent}\nAllow: /\n`).join("\n")}\nSitemap: ${siteOrigin}/sitemap.xml\n`;
 }
 
+async function copyTree(from, to) {
+  await mkdir(to, { recursive: true });
+  for (const entry of await readdir(from, { withFileTypes: true })) {
+    const source = path.join(from, entry.name);
+    const target = path.join(to, entry.name);
+    if (entry.isDirectory()) await copyTree(source, target);
+    else await copyFile(source, target);
+  }
+}
+
 async function emitTouchIcon() {
   const logo = path.join(root, "assets/source/images/Your+paragraph+text.png");
   const resized = await sharp(logo).resize({ width: 156, height: 156, fit: "inside" }).png().toBuffer();
@@ -413,6 +423,7 @@ async function main() {
     await copyFile(path.join(srcDir, "fonts", font), path.join(distDir, "fonts", font));
   }
   await copyFile(path.join(root, "assets/source/images/favicon.ico"), path.join(distDir, "favicon.ico"));
+  await copyTree(path.join(root, "images"), path.join(distDir, "images"));
 
   const scriptTag = `<script src="/scripts/nav.js" defer></script>`;
   for (const page of pages) {

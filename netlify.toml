@@ -132,3 +132,52 @@
   from = "/blog/"
   to = "/"
   status = 301
+
+# Power45 is retired. Strength 45 is a different class and stays.
+[[redirects]]
+  from = "/classes/power45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/power45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/power-45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/power-45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/power45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/power45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/power-45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/power-45/"
+  to = "/classes/"
+  status = 301
+  force = true
