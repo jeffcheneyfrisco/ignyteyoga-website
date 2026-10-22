@@ -138,7 +138,7 @@ p {
   margin-left: auto;
 }
 
-.book-btn-bar {
+.header-end .book-btn-bar {
   display: none;
 }
 
@@ -155,6 +155,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .site-nav a:hover {
@@ -632,16 +633,22 @@ blockquote footer {
   text-transform: uppercase;
 }
 
-@media (max-width: 900px) {
-  .logo img {
-    height: 48px;
+@media (min-width: 1200px) {
+  .logo {
+    flex: 0 0 auto;
   }
 
+  .logo img {
+    max-width: none;
+  }
+}
+
+@media (max-width: 1199px) {
   .header-end {
     gap: 0.5rem;
   }
 
-  .book-btn-bar {
+  .header-end .book-btn-bar {
     display: inline-block;
     padding: 0.55rem 0.65rem;
     font-size: 0.68rem;
@@ -671,6 +678,12 @@ blockquote footer {
 
   .site-nav a {
     padding: 0.85rem 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .logo img {
+    height: 48px;
   }
 
   .cards,

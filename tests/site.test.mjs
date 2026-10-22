@@ -21,7 +21,8 @@ test("static build and SEO check", () => {
   assert.equal(existsSync("dist/classes/blissflo/index.html"), true);
   assert.equal(existsSync("dist/classes/stretch/index.html"), true);
   assert.equal(existsSync("dist/classes/hothiit/index.html"), true);
-  assert.equal(existsSync("dist/classes/powerhiit45/index.html"), true);
+  assert.equal(existsSync("dist/classes/powerhiit45/index.html"), false);
+  assert.equal(existsSync("dist/community/index.html"), true);
   assert.equal(existsSync("assets/source/inventory.md"), true);
   assert.equal(existsSync("content/home.md"), true);
   assert.equal(existsSync("notes/later-improvements.md"), true);
@@ -97,6 +98,8 @@ test("static build and SEO check", () => {
   assert.match(netlify, /from = "\/home-original\/"\n  to = "\/"\n  status = 301\n  force = true/);
   assert.match(netlify, /from = "\/schedule-1\/"\n  to = "\/schedule\/"\n  status = 301\n  force = true/);
   assert.match(netlify, /from = "\/instructors-1\/"\n  to = "\/ourteam\/"\n  status = 301\n  force = true/);
+  assert.match(netlify, /from = "\/classes\/powerhiit45"\n  to = "\/classes\/"\n  status = 301\n  force = true/);
+  assert.match(netlify, /from = "\/classes\/powerhiit45\/"\n  to = "\/classes\/"\n  status = 301\n  force = true/);
   assert.equal(existsSync("dist/apple-touch-icon.png"), true);
   assert.equal(existsSync("dist/site.webmanifest"), true);
   const icon = readFileSync("dist/apple-touch-icon.png");
@@ -109,4 +112,27 @@ test("static build and SEO check", () => {
   assert.match(about, /ignyte-0323-090-1600\.webp 1600w/);
   assert.match(about, /ignyte-0323-090-800\.webp 800w/);
   assert.match(about, /loading="lazy"/);
+
+  const classes = readFileSync("dist/classes/index.html", "utf8");
+  assert.doesNotMatch(home, /powerhiit45/i);
+  assert.doesNotMatch(home, /PowerHIIT/);
+  assert.doesNotMatch(classes, /powerhiit45/i);
+  assert.doesNotMatch(newer, /powerhiit45/i);
+  assert.match(home, /href="\/community\/">Community/);
+
+  const community = readFileSync("dist/community/index.html", "utf8");
+  assert.match(community, /<title>Community Beyond the Walls \| Hot Yoga Frisco \| Ignyte Yoga<\/title>/);
+  assert.match(community, /property="og:title" content="Community Beyond the Walls \| Hot Yoga Frisco \| Ignyte Yoga"/);
+  assert.match(community, /property="og:url" content="https:\/\/ignyteyoga\.com\/community\/"/);
+  assert.match(community, /property="og:image"/);
+  assert.match(community, /Lake Grapevine/);
+  assert.match(community, /Ignyte Triathlon/);
+  assert.match(community, /Ignyte Sculpt 45/);
+  assert.match(community, /Sunrise walks/);
+  assert.match(community, /Follow <a href="https:\/\/www\.instagram\.com\/ignyteyoga\/">@ignyteyoga<\/a> for upcoming dates/);
+  assert.match(community, /href="\/schedule\/">Book a class/);
+  assert.match(community, /\/media\/ignyte-0323-/);
+  const sitemap = readFileSync("dist/sitemap.xml", "utf8");
+  assert.match(sitemap, /<loc>https:\/\/ignyteyoga\.com\/community\/<\/loc>/);
+  assert.doesNotMatch(sitemap, /powerhiit45/);
 });
