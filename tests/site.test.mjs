@@ -14,12 +14,19 @@ test("static build and SEO check", () => {
   assert.equal(existsSync("dist/schedule/index.html"), true);
   assert.equal(existsSync("dist/classes/index.html"), true);
   assert.equal(existsSync("dist/new-here/index.html"), true);
-  assert.equal(existsSync("dist/classes/hotflo/index.html"), true);
+  assert.equal(existsSync("dist/classes/flow/index.html"), true);
   assert.equal(existsSync("dist/classes/powerflo/index.html"), true);
   assert.equal(existsSync("dist/classes/ignyte-sculpt/index.html"), true);
-  assert.equal(existsSync("dist/classes/ignyte-sculpt-45/index.html"), true);
-  assert.equal(existsSync("dist/classes/blissflo/index.html"), true);
-  assert.equal(existsSync("dist/classes/stretch/index.html"), true);
+  assert.equal(existsSync("dist/classes/ignyte-sculpt-45/index.html"), false);
+  assert.equal(existsSync("src/pages/classes/ignyte-sculpt-45.html"), false);
+  assert.equal(existsSync("dist/classes/deep-surrender/index.html"), true);
+  assert.equal(existsSync("dist/classes/deep-surrender45/index.html"), true);
+  assert.equal(existsSync("dist/classes/blissflo/index.html"), false);
+  assert.equal(existsSync("src/pages/classes/blissflo.html"), false);
+  assert.equal(existsSync("dist/classes/stretch/index.html"), false);
+  assert.equal(existsSync("src/pages/classes/stretch.html"), false);
+  assert.equal(existsSync("dist/classes/hotflo/index.html"), false);
+  assert.equal(existsSync("src/pages/classes/hotflo.html"), false);
   assert.equal(existsSync("dist/classes/hothiit/index.html"), true);
   assert.equal(existsSync("dist/classes/powerhiit45/index.html"), true);
   assert.equal(existsSync("assets/source/inventory.md"), true);
@@ -62,7 +69,7 @@ test("static build and SEO check", () => {
   assert.doesNotMatch(teachers, /lorem ipsum/i);
   assert.match(home, /Why infrared/);
   assert.match(home, /self-guided infrared sauna workout/);
-  assert.match(home, /href="\/classes\/hotflo\/"/);
+  assert.match(home, /href="\/classes\/flow\/"/);
   assert.match(home, /href="\/classes\/hothiit\/"/);
   assert.doesNotMatch(home, /Journal of the American College of Cardiology/);
   assert.match(home, /class="mobile-bar"/);
@@ -74,8 +81,14 @@ test("static build and SEO check", () => {
   const schedule = readFileSync("dist/schedule/index.html", "utf8");
   assert.match(schedule, /ce1600307310/);
   assert.match(schedule, /mindbody/i);
-  assert.match(schedule, /widgets\.mindbodyonline\.com\/iframe\/schedules\/ce1600307310/);
+  assert.match(schedule, /src="\/book\/widgets\/schedules\/view\/ce771257310\/schedule"/);
+  assert.doesNotMatch(schedule, /widgets\.mindbodyonline\.com\/iframe/);
   assert.doesNotMatch(schedule, /healcode\.js/);
+  const staffStyle = readFileSync("netlify/edge-functions/schedule-staff.js", "utf8");
+  assert.match(staffStyle, /\.MuiGrid-item:has\(> \.MuiAccordion-root\) > \.MuiTypography-h6 \+ \.MuiTypography-body2/);
+  assert.match(staffStyle, /color: #d3382c !important/);
+  assert.match(staffStyle, /font-weight: 700 !important/);
+  assert.doesNotMatch(staffStyle, /Kristin|Andrea|Christie|Danielle/);
   assert.match(schedule, /openingHoursSpecification/);
   assert.match(schedule, /75034/);
   assert.doesNotMatch(schedule, /75033/);
@@ -94,6 +107,10 @@ test("static build and SEO check", () => {
   assert.equal(existsSync("dist/schedule-1/index.html"), false);
   assert.equal(existsSync("dist/instructors-1/index.html"), false);
   const netlify = readFileSync("netlify.toml", "utf8");
+  assert.match(netlify, /function = "schedule-staff"/);
+  assert.match(netlify, /path = "\/book\/widgets\/schedules\/view\/ce771257310\/schedule"/);
+  assert.match(netlify, /from = "\/book\/\*"\n  to = "https:\/\/go\.mindbodyonline\.com\/book\/:splat"\n  status = 200\n  force = true/);
+  assert.match(netlify, /frame-src 'self'/);
   assert.match(netlify, /from = "\/home-original\/"\n  to = "\/"\n  status = 301\n  force = true/);
   assert.match(netlify, /from = "\/schedule-1\/"\n  to = "\/schedule\/"\n  status = 301\n  force = true/);
   assert.match(netlify, /from = "\/instructors-1\/"\n  to = "\/ourteam\/"\n  status = 301\n  force = true/);
@@ -176,6 +193,18 @@ test("static build and SEO check", () => {
   assert.match(netlify, /from = "\/classes\/power-45\/"\n  to = "\/classes\/"\n  status = 301\n  force = true/);
   assert.match(netlify, /from = "\/power45\/"\n  to = "\/classes\/"\n  status = 301\n  force = true/);
   assert.match(netlify, /from = "\/power-45\/"\n  to = "\/classes\/"\n  status = 301\n  force = true/);
+  for (const from of ["/classes/bliss", "/classes/bliss/", "/classes/blissflo", "/classes/blissflo/", "/bliss", "/bliss/", "/blissflo", "/blissflo/"]) {
+    assert.match(netlify, new RegExp(`from = "${from}"\\n  to = "/classes/deep-surrender/"\\n  status = 301\\n  force = true`));
+  }
+  for (const from of ["/classes/bliss45", "/classes/bliss45/", "/classes/bliss-45", "/classes/bliss-45/", "/classes/blissflo45", "/classes/blissflo45/", "/classes/blissflo-45", "/classes/blissflo-45/", "/bliss45", "/bliss45/", "/bliss-45", "/bliss-45/", "/blissflo45", "/blissflo45/", "/blissflo-45", "/blissflo-45/"]) {
+    assert.match(netlify, new RegExp(`from = "${from}"\\n  to = "/classes/deep-surrender45/"\\n  status = 301\\n  force = true`));
+  }
+  for (const from of ["/classes/ignyte-sculpt-45", "/classes/ignyte-sculpt-45/", "/classes/ignytesculpt45", "/classes/ignytesculpt45/", "/classes/ignyte-sculpt45", "/classes/ignyte-sculpt45/", "/classes/ignite-sculpt-45", "/classes/ignite-sculpt-45/", "/classes/ignitesculpt45", "/classes/ignitesculpt45/", "/classes/ignite-sculpt45", "/classes/ignite-sculpt45/", "/ignyte-sculpt-45", "/ignyte-sculpt-45/", "/ignytesculpt45", "/ignytesculpt45/", "/ignyte-sculpt45", "/ignyte-sculpt45/", "/ignite-sculpt-45", "/ignite-sculpt-45/", "/ignitesculpt45", "/ignitesculpt45/", "/ignite-sculpt45", "/ignite-sculpt45/", "/classes/stretch", "/classes/stretch/", "/stretch", "/stretch/"]) {
+    assert.match(netlify, new RegExp(`from = "${from}"\\n  to = "/classes/"\\n  status = 301\\n  force = true`));
+  }
+  for (const from of ["/classes/hotflo", "/classes/hotflo/", "/classes/hot-flo", "/classes/hot-flo/", "/classes/hotflow", "/classes/hotflow/", "/classes/hot-flow", "/classes/hot-flow/", "/hotflo", "/hotflo/", "/hot-flo", "/hot-flo/", "/hotflow", "/hotflow/", "/hot-flow", "/hot-flow/"]) {
+    assert.match(netlify, new RegExp(`from = "${from}"\\n  to = "/classes/flow/"\\n  status = 301\\n  force = true`));
+  }
   assert.doesNotMatch(community, /power yoga/i);
   assert.match(readFileSync("dist/classes/index.html", "utf8"), /PowerFlo/);
 
@@ -191,9 +220,22 @@ test("static build and SEO check", () => {
   for (const file of walkHtml("dist")) {
     const html = readFileSync(file, "utf8");
     assert.doesNotMatch(html, power45, file);
+    assert.doesNotMatch(html, /bliss/i, file);
+    assert.doesNotMatch(html, /ignyte[\s-]*sculpt[\s-]*45/i, file);
+    assert.doesNotMatch(html, /ignite[\s-]*sculpt[\s-]*45/i, file);
+    assert.doesNotMatch(html, /hot[\s-]*flo/i, file);
+    assert.doesNotMatch(html, /hot[\s-]*flow/i, file);
+    assert.doesNotMatch(html, /\/classes\/stretch/i, file);
+    assert.doesNotMatch(html, />\s*Stretch\s*</, file);
     assert.doesNotMatch(html, /image-asset-90d1db64/, file);
     assert.doesNotMatch(html, /Diane Shaw/, file);
   }
+  assert.match(readFileSync("dist/classes/flow/index.html", "utf8"), /<h1>Flow<\/h1>/);
+  assert.match(readFileSync("dist/classes/deep-surrender/index.html", "utf8"), /<h1>Deep Surrender<\/h1>/);
+  assert.match(readFileSync("dist/classes/deep-surrender45/index.html", "utf8"), /<h1>Deep Surrender45<\/h1>/);
+  assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/classes\/flow\/<\/loc>/);
+  assert.doesNotMatch(readFileSync("dist/sitemap.xml", "utf8"), /hotflo|stretch|ignyte-sculpt-45|bliss/i);
+  assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/classes\/deep-surrender45\/<\/loc>/);
   assert.match(readFileSync("dist/classes/powerhiit45/index.html", "utf8"), /PowerHIIT45/);
   assert.match(readFileSync("dist/classes/powerflo/index.html", "utf8"), /PowerFlo/);
 });

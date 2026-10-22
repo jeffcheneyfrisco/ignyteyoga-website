@@ -14,7 +14,20 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' https://widgets.mindbodyonline.com; frame-src https://widgets.mindbodyonline.com https://www.mindbodyonline.com https://clients.mindbodyonline.com https://*.mindbodyonline.com https://www.google.com https://maps.google.com; connect-src 'self' https://widgets.mindbodyonline.com https://*.mindbodyonline.com; form-action 'self'; base-uri 'self'; object-src 'none'"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' https://widgets.mindbodyonline.com; frame-src 'self' https://widgets.mindbodyonline.com https://www.mindbodyonline.com https://clients.mindbodyonline.com https://*.mindbodyonline.com https://www.google.com https://maps.google.com; connect-src 'self' https://widgets.mindbodyonline.com https://*.mindbodyonline.com; form-action 'self'; base-uri 'self'; object-src 'none'"
+
+# Schedule document: inject one teacher-name style. Must return a response so the
+# /book proxy rewrite below does not replace it with the unstyled Mindbody page.
+[[edge_functions]]
+  function = "schedule-staff"
+  path = "/book/widgets/schedules/view/ce771257310/schedule"
+
+# Mindbody loads its scripts, fonts, and week-to-week schedule calls from /book/*.
+[[redirects]]
+  from = "/book/*"
+  to = "https://go.mindbodyonline.com/book/:splat"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/home"
@@ -179,5 +192,416 @@
 [[redirects]]
   from = "/power-45/"
   to = "/classes/"
+  status = 301
+  force = true
+
+# Bliss / BlissFlo is now Deep Surrender. Bliss45 / BlissFlo45 / "Bliss 45" is now Deep Surrender45.
+[[redirects]]
+  from = "/classes/bliss"
+  to = "/classes/deep-surrender/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/bliss/"
+  to = "/classes/deep-surrender/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/blissflo"
+  to = "/classes/deep-surrender/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/blissflo/"
+  to = "/classes/deep-surrender/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bliss"
+  to = "/classes/deep-surrender/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bliss/"
+  to = "/classes/deep-surrender/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blissflo"
+  to = "/classes/deep-surrender/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blissflo/"
+  to = "/classes/deep-surrender/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/bliss45"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/bliss45/"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/bliss-45"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/bliss-45/"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/blissflo45"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/blissflo45/"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/blissflo-45"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/blissflo-45/"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bliss45"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bliss45/"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bliss-45"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bliss-45/"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blissflo45"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blissflo45/"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blissflo-45"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blissflo-45/"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+# IgnyteSculpt45 and Stretch are retired. HotFlo / Hot Flow is now Flow.
+
+[[redirects]]
+  from = "/classes/ignyte-sculpt-45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/ignyte-sculpt-45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ignyte-sculpt-45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ignyte-sculpt-45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/ignytesculpt45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/ignytesculpt45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ignytesculpt45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ignytesculpt45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/ignyte-sculpt45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/ignyte-sculpt45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ignyte-sculpt45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ignyte-sculpt45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/ignite-sculpt-45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/ignite-sculpt-45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ignite-sculpt-45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ignite-sculpt-45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/ignitesculpt45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/ignitesculpt45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ignitesculpt45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ignitesculpt45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/ignite-sculpt45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/ignite-sculpt45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ignite-sculpt45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ignite-sculpt45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/stretch"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/stretch/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/stretch"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/stretch/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/hotflo"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/hotflo/"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hotflo"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hotflo/"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/hot-flo"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/hot-flo/"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hot-flo"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hot-flo/"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/hotflow"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/hotflow/"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hotflow"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hotflow/"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/hot-flow"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/hot-flow/"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hot-flow"
+  to = "/classes/flow/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hot-flow/"
+  to = "/classes/flow/"
   status = 301
   force = true
