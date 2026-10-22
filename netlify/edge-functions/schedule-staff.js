@@ -68,10 +68,23 @@ function upstreamHeaders(request) {
   return headers;
 }
 
+function allowedBookPath(pathname) {
+  return pathname === SCHEDULE_PATH
+    || pathname.startsWith("/book/_next/")
+    || pathname.startsWith("/book/iframeResizer")
+    || pathname === "/book/favicon.ico"
+    || pathname.startsWith("/book/mp/");
+}
+
 export default async (request) => {
   const incoming = new URL(request.url);
-  const target = new URL(SCHEDULE_PATH, UPSTREAM_ORIGIN);
-  target.search = incoming.search;
+  if (!allowedBookPath(incoming.pathname)) {
+    return new Response("Not found", {
+      status: 404,
+      headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "no-store" },
+    });
+  }
+  const target = new URL(incoming.pathname + incoming.search, UPSTREAM_ORIGIN);
 
   const init = {
     method: request.method,

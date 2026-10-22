@@ -108,8 +108,8 @@ test("static build and SEO check", () => {
   assert.equal(existsSync("dist/instructors-1/index.html"), false);
   const netlify = readFileSync("netlify.toml", "utf8");
   assert.match(netlify, /function = "schedule-staff"/);
-  assert.match(netlify, /path = "\/book\/widgets\/schedules\/view\/ce771257310\/schedule"/);
-  assert.match(netlify, /from = "\/book\/\*"\n  to = "https:\/\/go\.mindbodyonline\.com\/book\/:splat"\n  status = 200\n  force = true/);
+  assert.match(netlify, /pattern = "\^\/book\/\.\*"/);
+  assert.doesNotMatch(netlify, /go\.mindbodyonline\.com\/book\/:splat/);
   assert.match(netlify, /frame-src 'self'/);
   assert.match(netlify, /from = "\/home-original\/"\n  to = "\/"\n  status = 301\n  force = true/);
   assert.match(netlify, /from = "\/schedule-1\/"\n  to = "\/schedule\/"\n  status = 301\n  force = true/);

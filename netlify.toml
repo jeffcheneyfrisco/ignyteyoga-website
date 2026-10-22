@@ -16,18 +16,12 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
     Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' https://widgets.mindbodyonline.com; frame-src 'self' https://widgets.mindbodyonline.com https://www.mindbodyonline.com https://clients.mindbodyonline.com https://*.mindbodyonline.com https://www.google.com https://maps.google.com; connect-src 'self' https://widgets.mindbodyonline.com https://*.mindbodyonline.com; form-action 'self'; base-uri 'self'; object-src 'none'"
 
-# Schedule document: inject one teacher-name style. Must return a response so the
-# /book proxy rewrite below does not replace it with the unstyled Mindbody page.
+# Schedule document plus the /book assets that app requests. The function fetches
+# Mindbody and adds one teacher-name style to the schedule HTML. No external redirect:
+# a status-200 proxy of another host is not used.
 [[edge_functions]]
   function = "schedule-staff"
-  path = "/book/widgets/schedules/view/ce771257310/schedule"
-
-# Mindbody loads its scripts, fonts, and week-to-week schedule calls from /book/*.
-[[redirects]]
-  from = "/book/*"
-  to = "https://go.mindbodyonline.com/book/:splat"
-  status = 200
-  force = true
+  pattern = "^/book/.*"
 
 [[redirects]]
   from = "/home"
