@@ -457,6 +457,13 @@ button.btn,
   padding: 0;
 }
 
+.lake-media,
+.lake-clips,
+.sunrise-clips,
+.tri-frame {
+  overflow: hidden;
+}
+
 .lake-media {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(200px, 0.72fr);
@@ -466,6 +473,7 @@ button.btn,
 
 .lake-clips {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.55rem;
   align-content: start;
 }
@@ -482,29 +490,32 @@ button.btn,
 
 .sunrise-clips {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 0.55rem;
   align-content: start;
 }
 
 .sunrise-clips img {
-  grid-column: 1 / -1;
   height: auto;
   aspect-ratio: 16 / 9;
 }
 
 .sunrise-clips .clip-tall {
-  width: 100%;
+  width: 58%;
   aspect-ratio: 9 / 16;
 }
 
 .lake-clips .clip-wide {
+  grid-column: 1 / -1;
   aspect-ratio: 16 / 9;
 }
 
 .lake-clips .clip-tall {
-  width: 48%;
+  width: 100%;
   aspect-ratio: 9 / 16;
+  object-position: center center;
+}
+
+.lake-clips .clip-overlook {
   object-position: center 18%;
 }
 
@@ -550,12 +561,13 @@ button.btn,
   font-weight: 600;
 }
 
-.adventure > div {
-  padding: 1.15rem 1.15rem 0.35rem;
+.adventure-copy {
+  padding: 28px 1.15rem 1rem 28px;
 }
 
 .adventure h2 {
   font-size: clamp(1.7rem, 2.5vw, 2.15rem);
+  line-height: 1.15;
 }
 
 .adventure .meta {
@@ -849,11 +861,12 @@ blockquote footer {
   }
 
   .lake-clips {
-    grid-template-columns: 1.4fr 0.8fr;
+    grid-template-columns: 1.3fr 0.7fr 0.7fr;
   }
 
   .lake-clips .clip-wide,
   .lake-clips .clip-tall {
+    grid-column: auto;
     width: 100%;
     height: 148px;
     max-height: none;
@@ -867,7 +880,7 @@ blockquote footer {
   }
 
   .sunrise-clips {
-    grid-template-columns: 1.3fr 0.7fr 0.7fr;
+    grid-template-columns: 1.4fr 0.8fr;
   }
 
   .sunrise-clips img,

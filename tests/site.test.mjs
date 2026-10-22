@@ -148,8 +148,10 @@ test("static build and SEO check", () => {
   assert.match(community, /src="\/images\/community\/sunrise-1\.jpg"/);
   assert.match(community, /Ignyte Sunrise Walk group outside the studio at sunrise/);
   assert.match(community, /src="\/images\/community\/sunrise-2\.jpg"/);
-  assert.match(community, /src="\/images\/community\/sunrise-clip1\.mp4"/);
-  assert.match(community, /poster="\/images\/community\/sunrise-clip1-poster\.jpg"/);
+  assert.match(community, /src="\/images\/community\/grapevine-clip3\.mp4"/);
+  assert.match(community, /poster="\/images\/community\/grapevine-clip3-poster\.jpg"/);
+  assert.match(community, /hiking a green trail at Lake Grapevine/);
+  assert.doesNotMatch(community, /sunrise-clip1/);
   assert.match(community, /src="\/images\/community\/sunrise-clip2\.mp4"/);
   assert.match(community, /poster="\/images\/community\/sunrise-clip2-poster\.jpg"/);
   assert.doesNotMatch(community, /image-asset-90d1db64/);
@@ -162,7 +164,9 @@ test("static build and SEO check", () => {
   assert.equal(existsSync("dist/images/community/ignyte-tri-poster.jpg"), true);
   assert.equal(existsSync("dist/images/community/sunrise-1.jpg"), true);
   assert.equal(existsSync("dist/images/community/sunrise-2.jpg"), true);
-  assert.equal(existsSync("dist/images/community/sunrise-clip1.mp4"), true);
+  assert.equal(existsSync("dist/images/community/grapevine-clip3.mp4"), true);
+  assert.equal(existsSync("dist/images/community/grapevine-clip3-poster.jpg"), true);
+  assert.equal(existsSync("dist/images/community/sunrise-clip1.mp4"), false);
   assert.equal(existsSync("dist/images/community/sunrise-clip2.mp4"), true);
   assert.equal(existsSync("dist/images/community/sunrise-walks.jpg"), false);
   assert.doesNotMatch(home, /image-asset-90d1db64/);

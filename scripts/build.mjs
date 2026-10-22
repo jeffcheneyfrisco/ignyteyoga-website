@@ -341,9 +341,13 @@ async function buildPage(file, headerHtml, footerHtml, css) {
   const destination = outputPath(canonical, distFile);
   await mkdir(path.dirname(destination), { recursive: true });
   const serialized = parse5.serialize(document);
-  const pageHtml = serialized.startsWith("<!DOCTYPE") ? serialized : `<!DOCTYPE html>\n${serialized}`;
+  const pageHtml = restoreStyleText(serialized.startsWith("<!DOCTYPE") ? serialized : `<!DOCTYPE html>\n${serialized}`);
   await writeFile(destination, `${pageHtml}\n`);
   return { file, destination, title, description, canonical, robots };
+}
+
+function restoreStyleText(html) {
+  return html.replace(/<style>([\s\S]*?)<\/style>/g, (_, css) => `<style>${css.replace(/&gt;/g, ">").replace(/&amp;/g, "&")}</style>`);
 }
 
 function sitemapXml(pages) {
