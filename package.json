@@ -3,9 +3,12 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=24"
+    "node": ">=24 <25"
   },
   "packageManager": "pnpm@10.33.4",
+  "pnpm": {
+    "onlyBuiltDependencies": ["sharp"]
+  },
   "scripts": {
     "build": "node scripts/build.mjs",
     "seo": "node scripts/seo-check.mjs",

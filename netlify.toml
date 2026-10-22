@@ -2,6 +2,7 @@
   command = "pnpm build"
   publish = "dist"
 
+# Node comes from NODE_VERSION (overrides the UI). pnpm comes from package.json "packageManager".
 [build.environment]
   NODE_VERSION = "24"
 
