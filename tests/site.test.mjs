@@ -119,8 +119,8 @@ test("static build and SEO check", () => {
   assert.match(community, /<h1>Community Beyond the Walls<\/h1>/);
   assert.match(community, /Ignyte Adventures/);
   assert.match(community, /Lake Grapevine Community Day/);
-  assert.match(community, /Spring 2026/);
-  assert.match(community, /10 AM to 5 PM/);
+  assert.match(community, /April 11, 2026, 10 AM to 5 PM/);
+  assert.match(community, /Ignyte community group photo on a hiking trail at Lake Grapevine/);
   assert.match(community, /Ignyte Tri 2026/);
   assert.match(community, /Fall 2026/);
   assert.match(community, /Our pace\. Our people\./);
@@ -134,12 +134,9 @@ test("static build and SEO check", () => {
   assert.match(community, /starting and finishing at the studio/);
   assert.match(community, /Sunrise Walks/);
   assert.match(community, /src="\/images\/community\/lake-grapevine\.jpg"/);
-  assert.match(community, /src="\/images\/community\/ignyte-tri\.mp4"/);
-  assert.match(community, /poster="\/images\/community\/ignyte-tri-poster\.jpg"/);
-  assert.match(community, /muted/);
-  assert.match(community, /autoplay/);
-  assert.match(community, /\bloop\b/);
-  assert.match(community, /playsinline/);
+  assert.match(community, /src="\/images\/community\/ignyte-tri-poster\.jpg"/);
+  assert.match(community, /Ignyte Tri group on the track at sunrise/);
+  assert.doesNotMatch(community, /ignyte-tri\.mp4/);
   assert.match(community, /src="\/images\/community\/sunrise-walks\.jpg"/);
   assert.match(community, /https:\/\/www\.instagram\.com\/ignyteyoga\//);
   assert.match(community, /@ignyteyoga/);

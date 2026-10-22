@@ -435,10 +435,14 @@ button.btn,
   height: 240px;
 }
 
-.adventure video {
+.adventure img.lake-photo {
+  height: auto;
+  aspect-ratio: 1187 / 1246;
+}
+
+.adventure img.tri-poster {
   height: auto;
   aspect-ratio: 9 / 16;
-  background: #111 url("/images/community/ignyte-tri-poster.jpg") center / cover no-repeat;
 }
 
 .adventure-tagline {
