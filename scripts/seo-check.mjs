@@ -176,6 +176,10 @@ if (!netlify.includes("frame-src") || !netlify.includes("https://www.google.com"
 for (const redirect of ["/home-original", "/schedule-1", "/instructors-1", "/blog/exploring-kfzll", "/blog/summer-retreat-96jbz", "/blog/soul-gph5c", "/blog/yoga-wyy9d", "/blog/"]) {
   if (!netlify.includes(`from = "${redirect}"`)) fail(`netlify.toml missing redirect for ${redirect}`);
 }
+for (const redirect of ["/home-original", "/home-original/", "/schedule-1", "/schedule-1/", "/instructors-1", "/instructors-1/"]) {
+  const block = new RegExp(`from = "${redirect}"\\n  to = "[^"]+"\\n  status = 301\\n  force = true`);
+  if (!block.test(netlify)) fail(`netlify.toml redirect for ${redirect} must be a forced 301`);
+}
 
 const media = path.join(dist, "media");
 const mediaStat = await stat(media);

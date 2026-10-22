@@ -46,35 +46,42 @@
   to = "/ourteam/"
   status = 301
 
+# Forced: these paths used to be real pages, and Netlify serves a file ahead of a plain 301.
 [[redirects]]
   from = "/home-original"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/home-original/"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/schedule-1"
   to = "/schedule/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/schedule-1/"
   to = "/schedule/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/instructors-1"
   to = "/ourteam/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/instructors-1/"
   to = "/ourteam/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/blog/exploring-kfzll"
