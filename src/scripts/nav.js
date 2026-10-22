@@ -14,3 +14,20 @@ if (toggle && nav) {
     });
   });
 }
+
+document.querySelectorAll(".sound-toggle").forEach((button) => {
+  const video = button.closest(".tri-frame")?.querySelector("video");
+  if (!video) return;
+  button.addEventListener("click", () => {
+    const unmute = video.muted;
+    video.muted = !unmute;
+    if (unmute) {
+      const play = video.play();
+      if (play) play.catch(() => {});
+    }
+    const sounding = !video.muted;
+    button.setAttribute("aria-pressed", sounding ? "true" : "false");
+    button.setAttribute("aria-label", sounding ? "Mute Ignyte Tri" : "Play Ignyte Tri with sound");
+    button.textContent = sounding ? "Mute" : "Play";
+  });
+});

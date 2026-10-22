@@ -341,9 +341,13 @@ async function buildPage(file, headerHtml, footerHtml, css) {
   const destination = outputPath(canonical, distFile);
   await mkdir(path.dirname(destination), { recursive: true });
   const serialized = parse5.serialize(document);
-  const pageHtml = serialized.startsWith("<!DOCTYPE") ? serialized : `<!DOCTYPE html>\n${serialized}`;
+  const pageHtml = restoreStyleText(serialized.startsWith("<!DOCTYPE") ? serialized : `<!DOCTYPE html>\n${serialized}`);
   await writeFile(destination, `${pageHtml}\n`);
   return { file, destination, title, description, canonical, robots };
+}
+
+function restoreStyleText(html) {
+  return html.replace(/<style>([\s\S]*?)<\/style>/g, (_, css) => `<style>${css.replace(/&gt;/g, ">").replace(/&amp;/g, "&")}</style>`);
 }
 
 function sitemapXml(pages) {
@@ -371,6 +375,16 @@ function robotsTxt() {
     "Applebot-Extended",
   ];
   return `${agents.map((agent) => `User-agent: ${agent}\nAllow: /\n`).join("\n")}\nSitemap: ${siteOrigin}/sitemap.xml\n`;
+}
+
+async function copyTree(from, to) {
+  await mkdir(to, { recursive: true });
+  for (const entry of await readdir(from, { withFileTypes: true })) {
+    const source = path.join(from, entry.name);
+    const target = path.join(to, entry.name);
+    if (entry.isDirectory()) await copyTree(source, target);
+    else await copyFile(source, target);
+  }
 }
 
 async function emitTouchIcon() {
@@ -413,6 +427,7 @@ async function main() {
     await copyFile(path.join(srcDir, "fonts", font), path.join(distDir, "fonts", font));
   }
   await copyFile(path.join(root, "assets/source/images/favicon.ico"), path.join(distDir, "favicon.ico"));
+  await copyTree(path.join(root, "images"), path.join(distDir, "images"));
 
   const scriptTag = `<script src="/scripts/nav.js" defer></script>`;
   for (const page of pages) {

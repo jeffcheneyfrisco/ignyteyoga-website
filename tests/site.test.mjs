@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { existsSync, readFileSync, statSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import test from "node:test";
 
 test("static build and SEO check", () => {
@@ -109,4 +109,91 @@ test("static build and SEO check", () => {
   assert.match(about, /ignyte-0323-090-1600\.webp 1600w/);
   assert.match(about, /ignyte-0323-090-800\.webp 800w/);
   assert.match(about, /loading="lazy"/);
+
+  assert.match(home, /href="\/community\/">Community/);
+  assert.equal(existsSync("dist/community/index.html"), true);
+  assert.equal(existsSync("dist/classes/power45/index.html"), false);
+  assert.equal(existsSync("dist/classes/power-45/index.html"), false);
+  assert.equal(existsSync("src/pages/classes/power45.html"), false);
+  const community = readFileSync("dist/community/index.html", "utf8");
+  assert.match(community, /<h1>Community Beyond the Walls<\/h1>/);
+  assert.match(community, /Ignyte Adventures/);
+  assert.match(community, /Lake Grapevine Community Day/);
+  assert.match(community, /April 11, 2026, 10 AM to 5 PM/);
+  assert.match(community, /Ignyte community group photo on a hiking trail at Lake Grapevine/);
+  assert.match(community, /Ignyte Tri 2026/);
+  assert.match(community, /Fall 2026/);
+  assert.match(community, /Our pace\. Our people\./);
+  assert.match(community, /More Ignyte Tri to come!/);
+  assert.match(community, /Strength45 with Allyson/);
+  assert.match(community, /href="\/classes\/powerflo\/"/);
+  assert.match(community, /PowerFlo/);
+  assert.match(community, /with Dianne/);
+  assert.match(community, /5K fun run/);
+  assert.match(community, /run, walk, or roll/);
+  assert.match(community, /starting and finishing at the studio/);
+  assert.match(community, /Sunrise Walks/);
+  assert.match(community, /src="\/images\/community\/lake-grapevine\.jpg"/);
+  assert.match(community, /src="\/images\/community\/ignyte-tri\.mp4"/);
+  assert.match(community, /poster="\/images\/community\/ignyte-tri-poster\.jpg"/);
+  assert.match(community, /src="\/images\/community\/grapevine-clip1\.mp4"/);
+  assert.match(community, /poster="\/images\/community\/grapevine-clip1-poster\.jpg"/);
+  assert.match(community, /src="\/images\/community\/grapevine-clip2\.mp4"/);
+  assert.match(community, /poster="\/images\/community\/grapevine-clip2-poster\.jpg"/);
+  assert.match(community, /preload="metadata"/);
+  assert.match(community, /class="sound-toggle"/);
+  assert.match(community, /Play Ignyte Tri with sound/);
+  assert.equal((community.match(/preload="metadata"/g) || []).length, 5);
+  assert.equal((community.match(/\smuted(?:=|\s|>)/g) || []).length, 5);
+  assert.match(community, /src="\/images\/community\/sunrise-1\.jpg"/);
+  assert.match(community, /Ignyte Sunrise Walk group outside the studio at sunrise/);
+  assert.match(community, /src="\/images\/community\/sunrise-2\.jpg"/);
+  assert.match(community, /src="\/images\/community\/grapevine-clip3\.mp4"/);
+  assert.match(community, /poster="\/images\/community\/grapevine-clip3-poster\.jpg"/);
+  assert.match(community, /hiking a green trail at Lake Grapevine/);
+  assert.doesNotMatch(community, /sunrise-clip1/);
+  assert.match(community, /src="\/images\/community\/sunrise-clip2\.mp4"/);
+  assert.match(community, /poster="\/images\/community\/sunrise-clip2-poster\.jpg"/);
+  assert.doesNotMatch(community, /image-asset-90d1db64/);
+  assert.doesNotMatch(community, /sunrise-walks\.jpg/);
+  assert.match(community, /https:\/\/www\.instagram\.com\/ignyteyoga\//);
+  assert.match(community, /@ignyteyoga/);
+  assert.match(community, /href="\/schedule\/">Book a class/);
+  assert.match(community, /https:\/\/ignyteyoga\.com\/community\//);
+  assert.equal(existsSync("dist/images/community/lake-grapevine.jpg"), true);
+  assert.equal(existsSync("dist/images/community/ignyte-tri-poster.jpg"), true);
+  assert.equal(existsSync("dist/images/community/sunrise-1.jpg"), true);
+  assert.equal(existsSync("dist/images/community/sunrise-2.jpg"), true);
+  assert.equal(existsSync("dist/images/community/grapevine-clip3.mp4"), true);
+  assert.equal(existsSync("dist/images/community/grapevine-clip3-poster.jpg"), true);
+  assert.equal(existsSync("dist/images/community/sunrise-clip1.mp4"), false);
+  assert.equal(existsSync("dist/images/community/sunrise-clip2.mp4"), true);
+  assert.equal(existsSync("dist/images/community/sunrise-walks.jpg"), false);
+  assert.doesNotMatch(home, /image-asset-90d1db64/);
+  assert.doesNotMatch(home, /Diane Shaw/);
+  assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/community\/<\/loc>/);
+  assert.match(netlify, /from = "\/classes\/power45\/"\n  to = "\/classes\/"\n  status = 301\n  force = true/);
+  assert.match(netlify, /from = "\/classes\/power-45\/"\n  to = "\/classes\/"\n  status = 301\n  force = true/);
+  assert.match(netlify, /from = "\/power45\/"\n  to = "\/classes\/"\n  status = 301\n  force = true/);
+  assert.match(netlify, /from = "\/power-45\/"\n  to = "\/classes\/"\n  status = 301\n  force = true/);
+  assert.doesNotMatch(community, /power yoga/i);
+  assert.match(readFileSync("dist/classes/index.html", "utf8"), /PowerFlo/);
+
+  const power45 = /power[\s-]*45/i;
+  function walkHtml(dir, found = []) {
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const full = `${dir}/${entry.name}`;
+      if (entry.isDirectory()) walkHtml(full, found);
+      else if (entry.name.endsWith(".html") || entry.name.endsWith(".xml") || entry.name.endsWith(".txt")) found.push(full);
+    }
+    return found;
+  }
+  for (const file of walkHtml("dist")) {
+    const html = readFileSync(file, "utf8");
+    assert.doesNotMatch(html, power45, file);
+    assert.doesNotMatch(html, /image-asset-90d1db64/, file);
+    assert.doesNotMatch(html, /Diane Shaw/, file);
+  }
+  assert.match(readFileSync("dist/classes/powerhiit45/index.html", "utf8"), /PowerHIIT45/);
+  assert.match(readFileSync("dist/classes/powerflo/index.html", "utf8"), /PowerFlo/);
 });
