@@ -1,0 +1,37 @@
+[build]
+  command = "pnpm build"
+  publish = "dist"
+
+# Node comes from NODE_VERSION (overrides the UI). pnpm comes from package.json "packageManager".
+[build.environment]
+  NODE_VERSION = "24"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' https://widgets.mindbodyonline.com; frame-src https://widgets.mindbodyonline.com https://www.mindbodyonline.com https://clients.mindbodyonline.com https://*.mindbodyonline.com; connect-src 'self' https://widgets.mindbodyonline.com https://*.mindbodyonline.com; form-action 'self'; base-uri 'self'; object-src 'none'"
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/cart"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/cart/"
+  to = "/"
+  status = 301

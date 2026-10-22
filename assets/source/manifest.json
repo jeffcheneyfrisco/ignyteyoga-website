@@ -1,0 +1,2238 @@
+{
+  "pages": [
+    {
+      "url": "https://www.ignyteyoga.com/blog",
+      "slug": "blog",
+      "title": "Blog \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/blog.html",
+      "text": "content/blog.txt",
+      "bytes": 391186
+    },
+    {
+      "url": "https://www.ignyteyoga.com/blog/soul-gph5c",
+      "slug": "blog-soul-gph5c",
+      "title": "Feeding your Soul \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "Maybe you want to turn a hobby into something more. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.",
+      "html": "assets/source/html/blog-soul-gph5c.html",
+      "text": "content/blog-soul-gph5c.txt",
+      "bytes": 264957
+    },
+    {
+      "url": "https://www.ignyteyoga.com/blog/summer-retreat-96jbz",
+      "slug": "blog-summer-retreat-96jbz",
+      "title": "Summer Retreat 2019 \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "Maybe you want to turn a hobby into something more. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.",
+      "html": "assets/source/html/blog-summer-retreat-96jbz.html",
+      "text": "content/blog-summer-retreat-96jbz.txt",
+      "bytes": 363471
+    },
+    {
+      "url": "https://www.ignyteyoga.com/blog/yoga-wyy9d",
+      "slug": "blog-yoga-wyy9d",
+      "title": "Yoga Reimagined \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "Maybe you want to turn a hobby into something more. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.",
+      "html": "assets/source/html/blog-yoga-wyy9d.html",
+      "text": "content/blog-yoga-wyy9d.txt",
+      "bytes": 131941
+    },
+    {
+      "url": "https://www.ignyteyoga.com/blog/exploring-kfzll",
+      "slug": "blog-exploring-kfzll",
+      "title": "Exploring Colima \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "Maybe you want to turn a hobby into something more. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.",
+      "html": "assets/source/html/blog-exploring-kfzll.html",
+      "text": "content/blog-exploring-kfzll.txt",
+      "bytes": 245751
+    },
+    {
+      "url": "https://www.ignyteyoga.com/about",
+      "slug": "about",
+      "title": "About \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/about.html",
+      "text": "content/about.txt",
+      "bytes": 162877
+    },
+    {
+      "url": "https://www.ignyteyoga.com/home-original",
+      "slug": "home-original",
+      "title": "Home (original) \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/home-original.html",
+      "text": "content/home-original.txt",
+      "bytes": 323985
+    },
+    {
+      "url": "https://www.ignyteyoga.com/classes",
+      "slug": "classes",
+      "title": "Classes \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/classes.html",
+      "text": "content/classes.txt",
+      "bytes": 161388
+    },
+    {
+      "url": "https://www.ignyteyoga.com/ourteam",
+      "slug": "ourteam",
+      "title": "Our Instructors \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/ourteam.html",
+      "text": "content/ourteam.txt",
+      "bytes": 169758
+    },
+    {
+      "url": "https://www.ignyteyoga.com/instructorschristiecheney",
+      "slug": "instructorschristiecheney",
+      "title": "Instructors-Christie-Cheney \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/instructorschristiecheney.html",
+      "text": "content/instructorschristiecheney.txt",
+      "bytes": 512433
+    },
+    {
+      "url": "https://www.ignyteyoga.com/schedule",
+      "slug": "schedule",
+      "title": "Schedule \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/schedule.html",
+      "text": "content/schedule.txt",
+      "bytes": 139778
+    },
+    {
+      "url": "https://www.ignyteyoga.com/book-a-class",
+      "slug": "book-a-class",
+      "title": "Book a Class \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/book-a-class.html",
+      "text": "content/book-a-class.txt",
+      "bytes": 404348
+    },
+    {
+      "url": "https://www.ignyteyoga.com/policy-procedures",
+      "slug": "policy-procedures",
+      "title": "Policy & Procedures \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/policy-procedures.html",
+      "text": "content/policy-procedures.txt",
+      "bytes": 130614
+    },
+    {
+      "url": "https://www.ignyteyoga.com/home",
+      "slug": "home",
+      "title": "Ignyte Yoga. What's Your Why?",
+      "description": "Ignyte Yoga is a family-owned, family-run infrared yoga studio that embraces and celebrates all skill levels - from beginner to advanced. Ignyte Yoga is one of the original infrared hot yoga studios in Frisco. We're conveniently located off of Dallas Parkway and offer flow classes, power yoga, and weight-cardio fusion classes for all levels!",
+      "html": "assets/source/html/home.html",
+      "text": "content/home.txt",
+      "bytes": 224518
+    },
+    {
+      "url": "https://www.ignyteyoga.com/rates",
+      "slug": "rates",
+      "title": "Rates \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/rates.html",
+      "text": "content/rates.txt",
+      "bytes": 231955
+    },
+    {
+      "url": "https://www.ignyteyoga.com/schedule-1",
+      "slug": "schedule-1",
+      "title": "Schedule (Copy) \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/schedule-1.html",
+      "text": "content/schedule-1.txt",
+      "bytes": 143534
+    },
+    {
+      "url": "https://www.ignyteyoga.com/texasbigstar",
+      "slug": "texasbigstar",
+      "title": "TexasBigStar \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/texasbigstar.html",
+      "text": "content/texasbigstar.txt",
+      "bytes": 238816
+    },
+    {
+      "url": "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-schedule",
+      "slug": "200-hour-yoga-teacher-training-schedule",
+      "title": "Training Schedule \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/200-hour-yoga-teacher-training-schedule.html",
+      "text": "content/200-hour-yoga-teacher-training-schedule.txt",
+      "bytes": 347424
+    },
+    {
+      "url": "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-sign-up",
+      "slug": "200-hour-yoga-teacher-training-sign-up",
+      "title": "Teacher Training Sign Up \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/200-hour-yoga-teacher-training-sign-up.html",
+      "text": "content/200-hour-yoga-teacher-training-sign-up.txt",
+      "bytes": 164064
+    },
+    {
+      "url": "https://www.ignyteyoga.com/instructors-1",
+      "slug": "instructors-1",
+      "title": "Our Instructors \u2014 Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/instructors-1.html",
+      "text": "content/instructors-1.txt",
+      "bytes": 221116
+    },
+    {
+      "url": "https://www.ignyteyoga.com/",
+      "slug": "home",
+      "title": "Ignyte Yoga. What's Your Why?",
+      "description": "Ignyte Yoga is a family-owned, family-run infrared yoga studio that embraces and celebrates all skill levels - from beginner to advanced. Ignyte Yoga is one of the original infrared hot yoga studios in Frisco. We're conveniently located off of Dallas Parkway and offer flow classes, power yoga, and weight-cardio fusion classes for all levels!",
+      "html": "assets/source/html/home.html",
+      "text": "content/home.txt",
+      "bytes": 224492
+    },
+    {
+      "url": "https://www.ignyteyoga.com/cart",
+      "slug": "cart",
+      "title": "Ignyte Yoga. What's Your Why?",
+      "description": "",
+      "html": "assets/source/html/cart.html",
+      "text": "content/cart.txt",
+      "bytes": 114336
+    },
+    {
+      "url": "https://www.ignyteyoga.com",
+      "slug": "home",
+      "title": "Ignyte Yoga. What's Your Why?",
+      "description": "Ignyte Yoga is a family-owned, family-run infrared yoga studio that embraces and celebrates all skill levels - from beginner to advanced. Ignyte Yoga is one of the original infrared hot yoga studios in Frisco. We're conveniently located off of Dallas Parkway and offer flow classes, power yoga, and weight-cardio fusion classes for all levels!",
+      "html": "assets/source/html/home.html",
+      "text": "content/home.txt",
+      "bytes": 224492
+    }
+  ],
+  "assets": [
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/35b1ed66-fb5e-4d5e-8f2e-3f2705694e5a/favicon.ico",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog",
+        "https://www.ignyteyoga.com/blog/soul-gph5c",
+        "https://www.ignyteyoga.com/blog/summer-retreat-96jbz",
+        "https://www.ignyteyoga.com/blog/yoga-wyy9d",
+        "https://www.ignyteyoga.com/blog/exploring-kfzll",
+        "https://www.ignyteyoga.com/about",
+        "https://www.ignyteyoga.com/home-original",
+        "https://www.ignyteyoga.com/classes",
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "https://www.ignyteyoga.com/schedule",
+        "https://www.ignyteyoga.com/book-a-class",
+        "https://www.ignyteyoga.com/policy-procedures",
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/rates",
+        "https://www.ignyteyoga.com/schedule-1",
+        "https://www.ignyteyoga.com/texasbigstar",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-schedule",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-sign-up",
+        "https://www.ignyteyoga.com/instructors-1",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com/cart",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/35b1ed66-fb5e-4d5e-8f2e-3f2705694e5a/favicon.ico?format=100w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/35b1ed66-fb5e-4d5e-8f2e-3f2705694e5a/favicon.ico",
+      "file": "assets/source/images/favicon.ico",
+      "bytes": 17212
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog",
+        "https://www.ignyteyoga.com/blog/soul-gph5c",
+        "https://www.ignyteyoga.com/blog/summer-retreat-96jbz",
+        "https://www.ignyteyoga.com/blog/yoga-wyy9d",
+        "https://www.ignyteyoga.com/blog/exploring-kfzll",
+        "https://www.ignyteyoga.com/about",
+        "https://www.ignyteyoga.com/home-original",
+        "https://www.ignyteyoga.com/classes",
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "https://www.ignyteyoga.com/schedule",
+        "https://www.ignyteyoga.com/book-a-class",
+        "https://www.ignyteyoga.com/policy-procedures",
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/rates",
+        "https://www.ignyteyoga.com/schedule-1",
+        "https://www.ignyteyoga.com/texasbigstar",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-schedule",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-sign-up",
+        "https://www.ignyteyoga.com/instructors-1",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com/cart",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com"
+      ],
+      "error": "empty response",
+      "file": "",
+      "bytes": 0
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/839be4dd-3ce5-4ac3-afab-5ae3617f0261/Your+paragraph+text.png?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog",
+        "https://www.ignyteyoga.com/blog/soul-gph5c",
+        "https://www.ignyteyoga.com/blog/summer-retreat-96jbz",
+        "https://www.ignyteyoga.com/blog/yoga-wyy9d",
+        "https://www.ignyteyoga.com/blog/exploring-kfzll",
+        "https://www.ignyteyoga.com/about",
+        "https://www.ignyteyoga.com/home-original",
+        "https://www.ignyteyoga.com/classes",
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "https://www.ignyteyoga.com/schedule",
+        "https://www.ignyteyoga.com/book-a-class",
+        "https://www.ignyteyoga.com/policy-procedures",
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/rates",
+        "https://www.ignyteyoga.com/schedule-1",
+        "https://www.ignyteyoga.com/texasbigstar",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-schedule",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-sign-up",
+        "https://www.ignyteyoga.com/instructors-1",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com/cart",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/839be4dd-3ce5-4ac3-afab-5ae3617f0261/Your+paragraph+text.png?format=1500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/839be4dd-3ce5-4ac3-afab-5ae3617f0261/Your+paragraph+text.png?format=original",
+      "file": "assets/source/images/Your+paragraph+text.png",
+      "bytes": 72016
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615595317788-HZ39DMQHET67GE7LHT2W/Hot+Body+Website+Assets+%284%29.png?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615595317788-HZ39DMQHET67GE7LHT2W/Hot+Body+Website+Assets+%284%29.png",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615595317788-HZ39DMQHET67GE7LHT2W/Hot+Body+Website+Assets+%284%29.png?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615595317788-HZ39DMQHET67GE7LHT2W/Hot+Body+Website+Assets+%284%29.png?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615595317788-HZ39DMQHET67GE7LHT2W/Hot+Body+Website+Assets+%284%29.png?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615595317788-HZ39DMQHET67GE7LHT2W/Hot+Body+Website+Assets+%284%29.png?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615595317788-HZ39DMQHET67GE7LHT2W/Hot+Body+Website+Assets+%284%29.png?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615595317788-HZ39DMQHET67GE7LHT2W/Hot+Body+Website+Assets+%284%29.png?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615595317788-HZ39DMQHET67GE7LHT2W/Hot+Body+Website+Assets+%284%29.png?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615595317788-HZ39DMQHET67GE7LHT2W/Hot+Body+Website+Assets+%284%29.png?format=original",
+      "file": "assets/source/images/Hot+Body+Website+Assets+-4-.png",
+      "bytes": 825370
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797470203-WQC0DSSDV4LK9U4NWMZ9/Aro%252BHa_0411.jpg/?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797470203-WQC0DSSDV4LK9U4NWMZ9/Aro%252BHa_0411.jpg/",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797470203-WQC0DSSDV4LK9U4NWMZ9/Aro%252BHa_0411.jpg/?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797470203-WQC0DSSDV4LK9U4NWMZ9/Aro%252BHa_0411.jpg/?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797470203-WQC0DSSDV4LK9U4NWMZ9/Aro%252BHa_0411.jpg/?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797470203-WQC0DSSDV4LK9U4NWMZ9/Aro%252BHa_0411.jpg/?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797470203-WQC0DSSDV4LK9U4NWMZ9/Aro%252BHa_0411.jpg/?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797470203-WQC0DSSDV4LK9U4NWMZ9/Aro%252BHa_0411.jpg/?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797470203-WQC0DSSDV4LK9U4NWMZ9/Aro%252BHa_0411.jpg/?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797470203-WQC0DSSDV4LK9U4NWMZ9/Aro%252BHa_0411.jpg/?format=original",
+      "file": "assets/source/images/Aro-2BHa_0411.jpg",
+      "bytes": 206278
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796751305-Q0Y2Z3NPAOZDYGZUX7VW/Aro+Ha_0394.jpg/?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796751305-Q0Y2Z3NPAOZDYGZUX7VW/Aro+Ha_0394.jpg/",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796751305-Q0Y2Z3NPAOZDYGZUX7VW/Aro+Ha_0394.jpg/?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796751305-Q0Y2Z3NPAOZDYGZUX7VW/Aro+Ha_0394.jpg/?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796751305-Q0Y2Z3NPAOZDYGZUX7VW/Aro+Ha_0394.jpg/?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796751305-Q0Y2Z3NPAOZDYGZUX7VW/Aro+Ha_0394.jpg/?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796751305-Q0Y2Z3NPAOZDYGZUX7VW/Aro+Ha_0394.jpg/?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796751305-Q0Y2Z3NPAOZDYGZUX7VW/Aro+Ha_0394.jpg/?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796751305-Q0Y2Z3NPAOZDYGZUX7VW/Aro+Ha_0394.jpg/?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796751305-Q0Y2Z3NPAOZDYGZUX7VW/Aro+Ha_0394.jpg/?format=original",
+      "file": "assets/source/images/Aro+Ha_0394.jpg",
+      "bytes": 927292
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795858124-BUNDAG0VCNO7MHQ8WG1X/Aro-Ha_1169.jpg/?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795858124-BUNDAG0VCNO7MHQ8WG1X/Aro-Ha_1169.jpg/",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795858124-BUNDAG0VCNO7MHQ8WG1X/Aro-Ha_1169.jpg/?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795858124-BUNDAG0VCNO7MHQ8WG1X/Aro-Ha_1169.jpg/?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795858124-BUNDAG0VCNO7MHQ8WG1X/Aro-Ha_1169.jpg/?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795858124-BUNDAG0VCNO7MHQ8WG1X/Aro-Ha_1169.jpg/?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795858124-BUNDAG0VCNO7MHQ8WG1X/Aro-Ha_1169.jpg/?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795858124-BUNDAG0VCNO7MHQ8WG1X/Aro-Ha_1169.jpg/?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795858124-BUNDAG0VCNO7MHQ8WG1X/Aro-Ha_1169.jpg/?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795858124-BUNDAG0VCNO7MHQ8WG1X/Aro-Ha_1169.jpg/?format=original",
+      "file": "assets/source/images/Aro-Ha_1169.jpg",
+      "bytes": 1412059
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797119075-VBVUPK1BOL13OBAATQF2/20140302_trade-151_0742-copy.jpg/?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797119075-VBVUPK1BOL13OBAATQF2/20140302_trade-151_0742-copy.jpg/",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797119075-VBVUPK1BOL13OBAATQF2/20140302_trade-151_0742-copy.jpg/?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797119075-VBVUPK1BOL13OBAATQF2/20140302_trade-151_0742-copy.jpg/?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797119075-VBVUPK1BOL13OBAATQF2/20140302_trade-151_0742-copy.jpg/?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797119075-VBVUPK1BOL13OBAATQF2/20140302_trade-151_0742-copy.jpg/?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797119075-VBVUPK1BOL13OBAATQF2/20140302_trade-151_0742-copy.jpg/?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797119075-VBVUPK1BOL13OBAATQF2/20140302_trade-151_0742-copy.jpg/?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797119075-VBVUPK1BOL13OBAATQF2/20140302_trade-151_0742-copy.jpg/?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797119075-VBVUPK1BOL13OBAATQF2/20140302_trade-151_0742-copy.jpg/?format=original",
+      "file": "assets/source/images/20140302_trade-151_0742-copy.jpg",
+      "bytes": 1586236
+    },
+    {
+      "source_url": "https://www.ignyteyoga.com/universal/svg/social-accounts.svg#instagram-unauth-icon",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog",
+        "https://www.ignyteyoga.com/blog/soul-gph5c",
+        "https://www.ignyteyoga.com/blog/summer-retreat-96jbz",
+        "https://www.ignyteyoga.com/blog/yoga-wyy9d",
+        "https://www.ignyteyoga.com/blog/exploring-kfzll",
+        "https://www.ignyteyoga.com/about",
+        "https://www.ignyteyoga.com/home-original",
+        "https://www.ignyteyoga.com/classes",
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "https://www.ignyteyoga.com/schedule",
+        "https://www.ignyteyoga.com/book-a-class",
+        "https://www.ignyteyoga.com/policy-procedures",
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/rates",
+        "https://www.ignyteyoga.com/schedule-1",
+        "https://www.ignyteyoga.com/texasbigstar",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-schedule",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-sign-up",
+        "https://www.ignyteyoga.com/instructors-1",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com/cart",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://www.ignyteyoga.com/universal/svg/social-accounts.svg#instagram-unauth-icon"
+      ],
+      "downloaded_from": "https://www.ignyteyoga.com/universal/svg/social-accounts.svg#instagram-unauth-icon",
+      "file": "assets/source/images/social-accounts.svg",
+      "bytes": 119426
+    },
+    {
+      "source_url": "https://www.ignyteyoga.com/universal/svg/social-accounts.svg#instagram-unauth-mask",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog",
+        "https://www.ignyteyoga.com/blog/soul-gph5c",
+        "https://www.ignyteyoga.com/blog/summer-retreat-96jbz",
+        "https://www.ignyteyoga.com/blog/yoga-wyy9d",
+        "https://www.ignyteyoga.com/blog/exploring-kfzll",
+        "https://www.ignyteyoga.com/about",
+        "https://www.ignyteyoga.com/home-original",
+        "https://www.ignyteyoga.com/classes",
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "https://www.ignyteyoga.com/schedule",
+        "https://www.ignyteyoga.com/book-a-class",
+        "https://www.ignyteyoga.com/policy-procedures",
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/rates",
+        "https://www.ignyteyoga.com/schedule-1",
+        "https://www.ignyteyoga.com/texasbigstar",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-schedule",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-sign-up",
+        "https://www.ignyteyoga.com/instructors-1",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com/cart",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://www.ignyteyoga.com/universal/svg/social-accounts.svg#instagram-unauth-mask"
+      ],
+      "downloaded_from": "https://www.ignyteyoga.com/universal/svg/social-accounts.svg#instagram-unauth-mask",
+      "file": "assets/source/images/social-accounts-91178691.svg",
+      "bytes": 119426
+    },
+    {
+      "source_url": "https://www.ignyteyoga.com/universal/svg/social-accounts.svg#facebook-unauth-icon",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog",
+        "https://www.ignyteyoga.com/blog/soul-gph5c",
+        "https://www.ignyteyoga.com/blog/summer-retreat-96jbz",
+        "https://www.ignyteyoga.com/blog/yoga-wyy9d",
+        "https://www.ignyteyoga.com/blog/exploring-kfzll",
+        "https://www.ignyteyoga.com/about",
+        "https://www.ignyteyoga.com/home-original",
+        "https://www.ignyteyoga.com/classes",
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "https://www.ignyteyoga.com/schedule",
+        "https://www.ignyteyoga.com/book-a-class",
+        "https://www.ignyteyoga.com/policy-procedures",
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/rates",
+        "https://www.ignyteyoga.com/schedule-1",
+        "https://www.ignyteyoga.com/texasbigstar",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-schedule",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-sign-up",
+        "https://www.ignyteyoga.com/instructors-1",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com/cart",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://www.ignyteyoga.com/universal/svg/social-accounts.svg#facebook-unauth-icon"
+      ],
+      "downloaded_from": "https://www.ignyteyoga.com/universal/svg/social-accounts.svg#facebook-unauth-icon",
+      "file": "assets/source/images/social-accounts-0df23773.svg",
+      "bytes": 119426
+    },
+    {
+      "source_url": "https://www.ignyteyoga.com/universal/svg/social-accounts.svg#facebook-unauth-mask",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog",
+        "https://www.ignyteyoga.com/blog/soul-gph5c",
+        "https://www.ignyteyoga.com/blog/summer-retreat-96jbz",
+        "https://www.ignyteyoga.com/blog/yoga-wyy9d",
+        "https://www.ignyteyoga.com/blog/exploring-kfzll",
+        "https://www.ignyteyoga.com/about",
+        "https://www.ignyteyoga.com/home-original",
+        "https://www.ignyteyoga.com/classes",
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "https://www.ignyteyoga.com/schedule",
+        "https://www.ignyteyoga.com/book-a-class",
+        "https://www.ignyteyoga.com/policy-procedures",
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/rates",
+        "https://www.ignyteyoga.com/schedule-1",
+        "https://www.ignyteyoga.com/texasbigstar",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-schedule",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-sign-up",
+        "https://www.ignyteyoga.com/instructors-1",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com/cart",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://www.ignyteyoga.com/universal/svg/social-accounts.svg#facebook-unauth-mask"
+      ],
+      "downloaded_from": "https://www.ignyteyoga.com/universal/svg/social-accounts.svg#facebook-unauth-mask",
+      "file": "assets/source/images/social-accounts-b7b9ead6.svg",
+      "bytes": 119426
+    },
+    {
+      "source_url": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/604c07272e1e471f1bb4c09f/604c07272e1e471f1bb4c0a5/1565880963923/Aro%252BHa_0411.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog/soul-gph5c"
+      ],
+      "references": [
+        "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/604c07272e1e471f1bb4c09f/604c07272e1e471f1bb4c0a5/1565880963923/Aro%252BHa_0411.jpg?format=1500w"
+      ],
+      "downloaded_from": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/604c07272e1e471f1bb4c09f/604c07272e1e471f1bb4c0a5/1565880963923/Aro%252BHa_0411.jpg?format=original",
+      "file": "assets/source/images/Aro-2BHa_0411-24ceaf8b.jpg",
+      "bytes": 206278
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797388353-ZNIL9DIOB2P9Q5AICP8I/Aro+Ha_0411.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog/soul-gph5c",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797388353-ZNIL9DIOB2P9Q5AICP8I/Aro+Ha_0411.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797388353-ZNIL9DIOB2P9Q5AICP8I/Aro+Ha_0411.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797388353-ZNIL9DIOB2P9Q5AICP8I/Aro+Ha_0411.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797388353-ZNIL9DIOB2P9Q5AICP8I/Aro+Ha_0411.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797388353-ZNIL9DIOB2P9Q5AICP8I/Aro+Ha_0411.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797388353-ZNIL9DIOB2P9Q5AICP8I/Aro+Ha_0411.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797388353-ZNIL9DIOB2P9Q5AICP8I/Aro+Ha_0411.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797388353-ZNIL9DIOB2P9Q5AICP8I/Aro+Ha_0411.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797388353-ZNIL9DIOB2P9Q5AICP8I/Aro+Ha_0411.jpg?format=original",
+      "file": "assets/source/images/Aro+Ha_0411.jpg",
+      "bytes": 845416
+    },
+    {
+      "source_url": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/604c07272e1e471f1bb4c09f/604c07272e1e471f1bb4c0aa/1565880963907/Aro+Ha_0394.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog/summer-retreat-96jbz"
+      ],
+      "references": [
+        "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/604c07272e1e471f1bb4c09f/604c07272e1e471f1bb4c0aa/1565880963907/Aro+Ha_0394.jpg?format=1500w"
+      ],
+      "downloaded_from": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/604c07272e1e471f1bb4c09f/604c07272e1e471f1bb4c0aa/1565880963907/Aro+Ha_0394.jpg?format=original",
+      "file": "assets/source/images/Aro+Ha_0394-dc4f452c.jpg",
+      "bytes": 927292
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796730347-F967A8VZLRZX25KHDFKR/Aro+Ha_0394.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog/summer-retreat-96jbz",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796730347-F967A8VZLRZX25KHDFKR/Aro+Ha_0394.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796730347-F967A8VZLRZX25KHDFKR/Aro+Ha_0394.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796730347-F967A8VZLRZX25KHDFKR/Aro+Ha_0394.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796730347-F967A8VZLRZX25KHDFKR/Aro+Ha_0394.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796730347-F967A8VZLRZX25KHDFKR/Aro+Ha_0394.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796730347-F967A8VZLRZX25KHDFKR/Aro+Ha_0394.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796730347-F967A8VZLRZX25KHDFKR/Aro+Ha_0394.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796730347-F967A8VZLRZX25KHDFKR/Aro+Ha_0394.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565796730347-F967A8VZLRZX25KHDFKR/Aro+Ha_0394.jpg?format=original",
+      "file": "assets/source/images/Aro+Ha_0394-54b88a34.jpg",
+      "bytes": 927292
+    },
+    {
+      "source_url": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/604c07272e1e471f1bb4c09f/604c07272e1e471f1bb4c0af/1565880963930/Aro-Ha_1169.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog/yoga-wyy9d"
+      ],
+      "references": [
+        "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/604c07272e1e471f1bb4c09f/604c07272e1e471f1bb4c0af/1565880963930/Aro-Ha_1169.jpg?format=1500w"
+      ],
+      "downloaded_from": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/604c07272e1e471f1bb4c09f/604c07272e1e471f1bb4c0af/1565880963930/Aro-Ha_1169.jpg?format=original",
+      "file": "assets/source/images/Aro-Ha_1169-0b4e3b4e.jpg",
+      "bytes": 515364
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795875642-R6M0H2EEIP23VHI244L5/Aro-Ha_1169.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog/yoga-wyy9d",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795875642-R6M0H2EEIP23VHI244L5/Aro-Ha_1169.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795875642-R6M0H2EEIP23VHI244L5/Aro-Ha_1169.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795875642-R6M0H2EEIP23VHI244L5/Aro-Ha_1169.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795875642-R6M0H2EEIP23VHI244L5/Aro-Ha_1169.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795875642-R6M0H2EEIP23VHI244L5/Aro-Ha_1169.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795875642-R6M0H2EEIP23VHI244L5/Aro-Ha_1169.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795875642-R6M0H2EEIP23VHI244L5/Aro-Ha_1169.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795875642-R6M0H2EEIP23VHI244L5/Aro-Ha_1169.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565795875642-R6M0H2EEIP23VHI244L5/Aro-Ha_1169.jpg?format=original",
+      "file": "assets/source/images/Aro-Ha_1169-8ff5456c.jpg",
+      "bytes": 515364
+    },
+    {
+      "source_url": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/604c07272e1e471f1bb4c09f/604c07272e1e471f1bb4c0a0/1565880963916/20140302_trade-151_0742-copy.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog/exploring-kfzll"
+      ],
+      "references": [
+        "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/604c07272e1e471f1bb4c09f/604c07272e1e471f1bb4c0a0/1565880963916/20140302_trade-151_0742-copy.jpg?format=1500w"
+      ],
+      "downloaded_from": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/604c07272e1e471f1bb4c09f/604c07272e1e471f1bb4c0a0/1565880963916/20140302_trade-151_0742-copy.jpg?format=original",
+      "file": "assets/source/images/20140302_trade-151_0742-copy-2e322329.jpg",
+      "bytes": 1586236
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797613488-VGVMGKNK8VDIMJ36QTC8/20140302_trade-151_0742-copy.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/blog/exploring-kfzll",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797613488-VGVMGKNK8VDIMJ36QTC8/20140302_trade-151_0742-copy.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797613488-VGVMGKNK8VDIMJ36QTC8/20140302_trade-151_0742-copy.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797613488-VGVMGKNK8VDIMJ36QTC8/20140302_trade-151_0742-copy.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797613488-VGVMGKNK8VDIMJ36QTC8/20140302_trade-151_0742-copy.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797613488-VGVMGKNK8VDIMJ36QTC8/20140302_trade-151_0742-copy.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797613488-VGVMGKNK8VDIMJ36QTC8/20140302_trade-151_0742-copy.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797613488-VGVMGKNK8VDIMJ36QTC8/20140302_trade-151_0742-copy.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797613488-VGVMGKNK8VDIMJ36QTC8/20140302_trade-151_0742-copy.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ce592c8732098000152407a/1565797613488-VGVMGKNK8VDIMJ36QTC8/20140302_trade-151_0742-copy.jpg?format=original",
+      "file": "assets/source/images/20140302_trade-151_0742-copy-878b24bc.jpg",
+      "bytes": 636352
+    },
+    {
+      "source_url": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066ef8c6de0d481c13f0ff/1644588797159/73-DSC_5601.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/about"
+      ],
+      "references": [
+        "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066ef8c6de0d481c13f0ff/1644588797159/73-DSC_5601.jpg?format=1500w"
+      ],
+      "downloaded_from": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066ef8c6de0d481c13f0ff/1644588797159/73-DSC_5601.jpg?format=original",
+      "file": "assets/source/images/73-DSC_5601.jpg",
+      "bytes": 232244
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/c8e2c20f-4511-452c-bf3d-da93b248871a/74-DSC_5606.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/about"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/c8e2c20f-4511-452c-bf3d-da93b248871a/74-DSC_5606.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/c8e2c20f-4511-452c-bf3d-da93b248871a/74-DSC_5606.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/c8e2c20f-4511-452c-bf3d-da93b248871a/74-DSC_5606.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/c8e2c20f-4511-452c-bf3d-da93b248871a/74-DSC_5606.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/c8e2c20f-4511-452c-bf3d-da93b248871a/74-DSC_5606.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/c8e2c20f-4511-452c-bf3d-da93b248871a/74-DSC_5606.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/c8e2c20f-4511-452c-bf3d-da93b248871a/74-DSC_5606.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/c8e2c20f-4511-452c-bf3d-da93b248871a/74-DSC_5606.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/c8e2c20f-4511-452c-bf3d-da93b248871a/74-DSC_5606.jpg?format=original",
+      "file": "assets/source/images/74-DSC_5606.jpg",
+      "bytes": 250260
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/39b800ad-52ba-42f5-a495-840946f236eb/ignyte+0323-062.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/about"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/39b800ad-52ba-42f5-a495-840946f236eb/ignyte+0323-062.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/39b800ad-52ba-42f5-a495-840946f236eb/ignyte+0323-062.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/39b800ad-52ba-42f5-a495-840946f236eb/ignyte+0323-062.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/39b800ad-52ba-42f5-a495-840946f236eb/ignyte+0323-062.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/39b800ad-52ba-42f5-a495-840946f236eb/ignyte+0323-062.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/39b800ad-52ba-42f5-a495-840946f236eb/ignyte+0323-062.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/39b800ad-52ba-42f5-a495-840946f236eb/ignyte+0323-062.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/39b800ad-52ba-42f5-a495-840946f236eb/ignyte+0323-062.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/39b800ad-52ba-42f5-a495-840946f236eb/ignyte+0323-062.jpg?format=original",
+      "file": "assets/source/images/ignyte+0323-062.jpg",
+      "bytes": 1025150
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f78116a2-7e1c-4c77-95b0-228c14e8b4db/75-DSC_5635.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/about",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f78116a2-7e1c-4c77-95b0-228c14e8b4db/75-DSC_5635.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f78116a2-7e1c-4c77-95b0-228c14e8b4db/75-DSC_5635.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f78116a2-7e1c-4c77-95b0-228c14e8b4db/75-DSC_5635.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f78116a2-7e1c-4c77-95b0-228c14e8b4db/75-DSC_5635.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f78116a2-7e1c-4c77-95b0-228c14e8b4db/75-DSC_5635.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f78116a2-7e1c-4c77-95b0-228c14e8b4db/75-DSC_5635.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f78116a2-7e1c-4c77-95b0-228c14e8b4db/75-DSC_5635.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f78116a2-7e1c-4c77-95b0-228c14e8b4db/75-DSC_5635.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f78116a2-7e1c-4c77-95b0-228c14e8b4db/75-DSC_5635.jpg?format=original",
+      "file": "assets/source/images/75-DSC_5635.jpg",
+      "bytes": 495546
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/d3aa95dc-edc2-40b6-899d-fcedec2434c6/ignyte+0323-065.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/about",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/d3aa95dc-edc2-40b6-899d-fcedec2434c6/ignyte+0323-065.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/d3aa95dc-edc2-40b6-899d-fcedec2434c6/ignyte+0323-065.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/d3aa95dc-edc2-40b6-899d-fcedec2434c6/ignyte+0323-065.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/d3aa95dc-edc2-40b6-899d-fcedec2434c6/ignyte+0323-065.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/d3aa95dc-edc2-40b6-899d-fcedec2434c6/ignyte+0323-065.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/d3aa95dc-edc2-40b6-899d-fcedec2434c6/ignyte+0323-065.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/d3aa95dc-edc2-40b6-899d-fcedec2434c6/ignyte+0323-065.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/d3aa95dc-edc2-40b6-899d-fcedec2434c6/ignyte+0323-065.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/d3aa95dc-edc2-40b6-899d-fcedec2434c6/ignyte+0323-065.jpg?format=original",
+      "file": "assets/source/images/ignyte+0323-065.jpg",
+      "bytes": 676872
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/71f8edb4-8376-457e-b7c1-75b4a6c28a62/ignyte+0323-090.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/about",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/71f8edb4-8376-457e-b7c1-75b4a6c28a62/ignyte+0323-090.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/71f8edb4-8376-457e-b7c1-75b4a6c28a62/ignyte+0323-090.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/71f8edb4-8376-457e-b7c1-75b4a6c28a62/ignyte+0323-090.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/71f8edb4-8376-457e-b7c1-75b4a6c28a62/ignyte+0323-090.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/71f8edb4-8376-457e-b7c1-75b4a6c28a62/ignyte+0323-090.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/71f8edb4-8376-457e-b7c1-75b4a6c28a62/ignyte+0323-090.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/71f8edb4-8376-457e-b7c1-75b4a6c28a62/ignyte+0323-090.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/71f8edb4-8376-457e-b7c1-75b4a6c28a62/ignyte+0323-090.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/71f8edb4-8376-457e-b7c1-75b4a6c28a62/ignyte+0323-090.jpg?format=original",
+      "file": "assets/source/images/ignyte+0323-090.jpg",
+      "bytes": 3605256
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/918c1eb4-6364-4089-832d-ef6531913d86/ignyte+0323-016.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/about",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/918c1eb4-6364-4089-832d-ef6531913d86/ignyte+0323-016.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/918c1eb4-6364-4089-832d-ef6531913d86/ignyte+0323-016.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/918c1eb4-6364-4089-832d-ef6531913d86/ignyte+0323-016.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/918c1eb4-6364-4089-832d-ef6531913d86/ignyte+0323-016.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/918c1eb4-6364-4089-832d-ef6531913d86/ignyte+0323-016.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/918c1eb4-6364-4089-832d-ef6531913d86/ignyte+0323-016.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/918c1eb4-6364-4089-832d-ef6531913d86/ignyte+0323-016.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/918c1eb4-6364-4089-832d-ef6531913d86/ignyte+0323-016.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/918c1eb4-6364-4089-832d-ef6531913d86/ignyte+0323-016.jpg?format=original",
+      "file": "assets/source/images/ignyte+0323-016.jpg",
+      "bytes": 1055631
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f02c1a01-2b5b-4c3f-b20d-f15b9a170f9b/ignyte+0323-008+%281%29.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/about",
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-sign-up",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f02c1a01-2b5b-4c3f-b20d-f15b9a170f9b/ignyte+0323-008+%281%29.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f02c1a01-2b5b-4c3f-b20d-f15b9a170f9b/ignyte+0323-008+%281%29.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f02c1a01-2b5b-4c3f-b20d-f15b9a170f9b/ignyte+0323-008+%281%29.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f02c1a01-2b5b-4c3f-b20d-f15b9a170f9b/ignyte+0323-008+%281%29.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f02c1a01-2b5b-4c3f-b20d-f15b9a170f9b/ignyte+0323-008+%281%29.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f02c1a01-2b5b-4c3f-b20d-f15b9a170f9b/ignyte+0323-008+%281%29.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f02c1a01-2b5b-4c3f-b20d-f15b9a170f9b/ignyte+0323-008+%281%29.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f02c1a01-2b5b-4c3f-b20d-f15b9a170f9b/ignyte+0323-008+%281%29.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/f02c1a01-2b5b-4c3f-b20d-f15b9a170f9b/ignyte+0323-008+%281%29.jpg?format=original",
+      "file": "assets/source/images/ignyte+0323-008+-1-.jpg",
+      "bytes": 1331984
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615494067678-5RHVMMU7ZFDRUM49D3YE/Hot+Body+Website+Assets+%281%29.png?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home-original"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615494067678-5RHVMMU7ZFDRUM49D3YE/Hot+Body+Website+Assets+%281%29.png",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615494067678-5RHVMMU7ZFDRUM49D3YE/Hot+Body+Website+Assets+%281%29.png?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615494067678-5RHVMMU7ZFDRUM49D3YE/Hot+Body+Website+Assets+%281%29.png?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615494067678-5RHVMMU7ZFDRUM49D3YE/Hot+Body+Website+Assets+%281%29.png?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615494067678-5RHVMMU7ZFDRUM49D3YE/Hot+Body+Website+Assets+%281%29.png?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615494067678-5RHVMMU7ZFDRUM49D3YE/Hot+Body+Website+Assets+%281%29.png?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615494067678-5RHVMMU7ZFDRUM49D3YE/Hot+Body+Website+Assets+%281%29.png?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615494067678-5RHVMMU7ZFDRUM49D3YE/Hot+Body+Website+Assets+%281%29.png?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615494067678-5RHVMMU7ZFDRUM49D3YE/Hot+Body+Website+Assets+%281%29.png?format=original",
+      "file": "assets/source/images/Hot+Body+Website+Assets+-1-.png",
+      "bytes": 645414
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523403670-EWTJ7OKGIEMWL80Q0HBU/unsplash-image-Vz0RbclzG_w.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home-original",
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523403670-EWTJ7OKGIEMWL80Q0HBU/unsplash-image-Vz0RbclzG_w.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523403670-EWTJ7OKGIEMWL80Q0HBU/unsplash-image-Vz0RbclzG_w.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523403670-EWTJ7OKGIEMWL80Q0HBU/unsplash-image-Vz0RbclzG_w.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523403670-EWTJ7OKGIEMWL80Q0HBU/unsplash-image-Vz0RbclzG_w.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523403670-EWTJ7OKGIEMWL80Q0HBU/unsplash-image-Vz0RbclzG_w.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523403670-EWTJ7OKGIEMWL80Q0HBU/unsplash-image-Vz0RbclzG_w.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523403670-EWTJ7OKGIEMWL80Q0HBU/unsplash-image-Vz0RbclzG_w.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523403670-EWTJ7OKGIEMWL80Q0HBU/unsplash-image-Vz0RbclzG_w.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523403670-EWTJ7OKGIEMWL80Q0HBU/unsplash-image-Vz0RbclzG_w.jpg?format=original",
+      "file": "assets/source/images/unsplash-image-Vz0RbclzG_w.jpg",
+      "bytes": 649205
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523535260-C6HREJ4WGRU6SGKFEDYO/unsplash-image-Mgx1oe2vlVY.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home-original",
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523535260-C6HREJ4WGRU6SGKFEDYO/unsplash-image-Mgx1oe2vlVY.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523535260-C6HREJ4WGRU6SGKFEDYO/unsplash-image-Mgx1oe2vlVY.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523535260-C6HREJ4WGRU6SGKFEDYO/unsplash-image-Mgx1oe2vlVY.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523535260-C6HREJ4WGRU6SGKFEDYO/unsplash-image-Mgx1oe2vlVY.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523535260-C6HREJ4WGRU6SGKFEDYO/unsplash-image-Mgx1oe2vlVY.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523535260-C6HREJ4WGRU6SGKFEDYO/unsplash-image-Mgx1oe2vlVY.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523535260-C6HREJ4WGRU6SGKFEDYO/unsplash-image-Mgx1oe2vlVY.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523535260-C6HREJ4WGRU6SGKFEDYO/unsplash-image-Mgx1oe2vlVY.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523535260-C6HREJ4WGRU6SGKFEDYO/unsplash-image-Mgx1oe2vlVY.jpg?format=original",
+      "file": "assets/source/images/unsplash-image-Mgx1oe2vlVY.jpg",
+      "bytes": 378882
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523586035-88GW7PYJETZQKOGET599/unsplash-image-xB4ExGcUai0.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home-original",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523586035-88GW7PYJETZQKOGET599/unsplash-image-xB4ExGcUai0.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523586035-88GW7PYJETZQKOGET599/unsplash-image-xB4ExGcUai0.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523586035-88GW7PYJETZQKOGET599/unsplash-image-xB4ExGcUai0.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523586035-88GW7PYJETZQKOGET599/unsplash-image-xB4ExGcUai0.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523586035-88GW7PYJETZQKOGET599/unsplash-image-xB4ExGcUai0.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523586035-88GW7PYJETZQKOGET599/unsplash-image-xB4ExGcUai0.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523586035-88GW7PYJETZQKOGET599/unsplash-image-xB4ExGcUai0.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523586035-88GW7PYJETZQKOGET599/unsplash-image-xB4ExGcUai0.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523586035-88GW7PYJETZQKOGET599/unsplash-image-xB4ExGcUai0.jpg?format=original",
+      "file": "assets/source/images/unsplash-image-xB4ExGcUai0.jpg",
+      "bytes": 186452
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523746245-AHWJFKRUYERF7SWNWRYJ/Hot+Body+Website+Assets+%288%29.png?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home-original"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523746245-AHWJFKRUYERF7SWNWRYJ/Hot+Body+Website+Assets+%288%29.png",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523746245-AHWJFKRUYERF7SWNWRYJ/Hot+Body+Website+Assets+%288%29.png?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523746245-AHWJFKRUYERF7SWNWRYJ/Hot+Body+Website+Assets+%288%29.png?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523746245-AHWJFKRUYERF7SWNWRYJ/Hot+Body+Website+Assets+%288%29.png?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523746245-AHWJFKRUYERF7SWNWRYJ/Hot+Body+Website+Assets+%288%29.png?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523746245-AHWJFKRUYERF7SWNWRYJ/Hot+Body+Website+Assets+%288%29.png?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523746245-AHWJFKRUYERF7SWNWRYJ/Hot+Body+Website+Assets+%288%29.png?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523746245-AHWJFKRUYERF7SWNWRYJ/Hot+Body+Website+Assets+%288%29.png?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615523746245-AHWJFKRUYERF7SWNWRYJ/Hot+Body+Website+Assets+%288%29.png?format=original",
+      "file": "assets/source/images/Hot+Body+Website+Assets+-8-.png",
+      "bytes": 10468
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621729311207-CY09KMC0JLA9HGVSLP1A/unsplash-image-YuJm-d7k2Jg.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home-original"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621729311207-CY09KMC0JLA9HGVSLP1A/unsplash-image-YuJm-d7k2Jg.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621729311207-CY09KMC0JLA9HGVSLP1A/unsplash-image-YuJm-d7k2Jg.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621729311207-CY09KMC0JLA9HGVSLP1A/unsplash-image-YuJm-d7k2Jg.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621729311207-CY09KMC0JLA9HGVSLP1A/unsplash-image-YuJm-d7k2Jg.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621729311207-CY09KMC0JLA9HGVSLP1A/unsplash-image-YuJm-d7k2Jg.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621729311207-CY09KMC0JLA9HGVSLP1A/unsplash-image-YuJm-d7k2Jg.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621729311207-CY09KMC0JLA9HGVSLP1A/unsplash-image-YuJm-d7k2Jg.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621729311207-CY09KMC0JLA9HGVSLP1A/unsplash-image-YuJm-d7k2Jg.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621729311207-CY09KMC0JLA9HGVSLP1A/unsplash-image-YuJm-d7k2Jg.jpg?format=original",
+      "file": "assets/source/images/unsplash-image-YuJm-d7k2Jg.jpg",
+      "bytes": 851311
+    },
+    {
+      "source_url": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066eb078a41b3f25f02142/1644588725521/73-DSC_5601.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/classes"
+      ],
+      "references": [
+        "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066eb078a41b3f25f02142/1644588725521/73-DSC_5601.jpg?format=1500w"
+      ],
+      "downloaded_from": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066eb078a41b3f25f02142/1644588725521/73-DSC_5601.jpg?format=original",
+      "file": "assets/source/images/73-DSC_5601-571d4d99.jpg",
+      "bytes": 232244
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6b5fedd3-71b8-4854-906d-de8d95df00b5/40-DSC_5233.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/classes"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6b5fedd3-71b8-4854-906d-de8d95df00b5/40-DSC_5233.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6b5fedd3-71b8-4854-906d-de8d95df00b5/40-DSC_5233.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6b5fedd3-71b8-4854-906d-de8d95df00b5/40-DSC_5233.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6b5fedd3-71b8-4854-906d-de8d95df00b5/40-DSC_5233.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6b5fedd3-71b8-4854-906d-de8d95df00b5/40-DSC_5233.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6b5fedd3-71b8-4854-906d-de8d95df00b5/40-DSC_5233.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6b5fedd3-71b8-4854-906d-de8d95df00b5/40-DSC_5233.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6b5fedd3-71b8-4854-906d-de8d95df00b5/40-DSC_5233.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6b5fedd3-71b8-4854-906d-de8d95df00b5/40-DSC_5233.jpg?format=original",
+      "file": "assets/source/images/40-DSC_5233.jpg",
+      "bytes": 432302
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/e1898e8f-3705-438a-9649-0ed0880c6f16/IMG_4441.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/classes"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/e1898e8f-3705-438a-9649-0ed0880c6f16/IMG_4441.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/e1898e8f-3705-438a-9649-0ed0880c6f16/IMG_4441.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/e1898e8f-3705-438a-9649-0ed0880c6f16/IMG_4441.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/e1898e8f-3705-438a-9649-0ed0880c6f16/IMG_4441.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/e1898e8f-3705-438a-9649-0ed0880c6f16/IMG_4441.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/e1898e8f-3705-438a-9649-0ed0880c6f16/IMG_4441.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/e1898e8f-3705-438a-9649-0ed0880c6f16/IMG_4441.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/e1898e8f-3705-438a-9649-0ed0880c6f16/IMG_4441.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/e1898e8f-3705-438a-9649-0ed0880c6f16/IMG_4441.jpg?format=original",
+      "file": "assets/source/images/IMG_4441.jpg",
+      "bytes": 43532
+    },
+    {
+      "source_url": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066ee77f1a9d535cf95c64/1758494525126/73-DSC_5601.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam"
+      ],
+      "references": [
+        "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066ee77f1a9d535cf95c64/1758494525126/73-DSC_5601.jpg?format=1500w"
+      ],
+      "downloaded_from": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066ee77f1a9d535cf95c64/1758494525126/73-DSC_5601.jpg?format=original",
+      "file": "assets/source/images/73-DSC_5601-26a733c1.jpg",
+      "bytes": 232244
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/b4bd864d-ea44-49ee-a42d-0fba80297bc5/45-DSC_5291.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/b4bd864d-ea44-49ee-a42d-0fba80297bc5/45-DSC_5291.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/b4bd864d-ea44-49ee-a42d-0fba80297bc5/45-DSC_5291.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/b4bd864d-ea44-49ee-a42d-0fba80297bc5/45-DSC_5291.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/b4bd864d-ea44-49ee-a42d-0fba80297bc5/45-DSC_5291.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/b4bd864d-ea44-49ee-a42d-0fba80297bc5/45-DSC_5291.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/b4bd864d-ea44-49ee-a42d-0fba80297bc5/45-DSC_5291.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/b4bd864d-ea44-49ee-a42d-0fba80297bc5/45-DSC_5291.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/b4bd864d-ea44-49ee-a42d-0fba80297bc5/45-DSC_5291.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/b4bd864d-ea44-49ee-a42d-0fba80297bc5/45-DSC_5291.jpg?format=original",
+      "file": "assets/source/images/45-DSC_5291.jpg",
+      "bytes": 400474
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805848545-G5UU76UN4UUBQ9A031G4/71-DSC_5583.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805848545-G5UU76UN4UUBQ9A031G4/71-DSC_5583.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805848545-G5UU76UN4UUBQ9A031G4/71-DSC_5583.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805848545-G5UU76UN4UUBQ9A031G4/71-DSC_5583.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805848545-G5UU76UN4UUBQ9A031G4/71-DSC_5583.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805848545-G5UU76UN4UUBQ9A031G4/71-DSC_5583.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805848545-G5UU76UN4UUBQ9A031G4/71-DSC_5583.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805848545-G5UU76UN4UUBQ9A031G4/71-DSC_5583.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805848545-G5UU76UN4UUBQ9A031G4/71-DSC_5583.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805848545-G5UU76UN4UUBQ9A031G4/71-DSC_5583.jpg?format=original",
+      "file": "assets/source/images/71-DSC_5583.jpg",
+      "bytes": 148276
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640806305173-BJP1ENTMNEQWV8MYCKOW/27-DSC_5108.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640806305173-BJP1ENTMNEQWV8MYCKOW/27-DSC_5108.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640806305173-BJP1ENTMNEQWV8MYCKOW/27-DSC_5108.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640806305173-BJP1ENTMNEQWV8MYCKOW/27-DSC_5108.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640806305173-BJP1ENTMNEQWV8MYCKOW/27-DSC_5108.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640806305173-BJP1ENTMNEQWV8MYCKOW/27-DSC_5108.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640806305173-BJP1ENTMNEQWV8MYCKOW/27-DSC_5108.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640806305173-BJP1ENTMNEQWV8MYCKOW/27-DSC_5108.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640806305173-BJP1ENTMNEQWV8MYCKOW/27-DSC_5108.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640806305173-BJP1ENTMNEQWV8MYCKOW/27-DSC_5108.jpg?format=original",
+      "file": "assets/source/images/27-DSC_5108.jpg",
+      "bytes": 289222
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805203480-E6JEQMGGWS4S2VXHNT05/Jeanny%2BSculpt.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805203480-E6JEQMGGWS4S2VXHNT05/Jeanny%2BSculpt.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805203480-E6JEQMGGWS4S2VXHNT05/Jeanny%2BSculpt.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805203480-E6JEQMGGWS4S2VXHNT05/Jeanny%2BSculpt.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805203480-E6JEQMGGWS4S2VXHNT05/Jeanny%2BSculpt.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805203480-E6JEQMGGWS4S2VXHNT05/Jeanny%2BSculpt.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805203480-E6JEQMGGWS4S2VXHNT05/Jeanny%2BSculpt.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805203480-E6JEQMGGWS4S2VXHNT05/Jeanny%2BSculpt.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805203480-E6JEQMGGWS4S2VXHNT05/Jeanny%2BSculpt.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805203480-E6JEQMGGWS4S2VXHNT05/Jeanny%2BSculpt.jpg?format=original",
+      "file": "assets/source/images/Jeanny+Sculpt.jpg",
+      "bytes": 117390
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805087671-3RRWH8PHS3YHB73OFK8A/Allyson.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805087671-3RRWH8PHS3YHB73OFK8A/Allyson.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805087671-3RRWH8PHS3YHB73OFK8A/Allyson.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805087671-3RRWH8PHS3YHB73OFK8A/Allyson.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805087671-3RRWH8PHS3YHB73OFK8A/Allyson.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805087671-3RRWH8PHS3YHB73OFK8A/Allyson.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805087671-3RRWH8PHS3YHB73OFK8A/Allyson.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805087671-3RRWH8PHS3YHB73OFK8A/Allyson.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805087671-3RRWH8PHS3YHB73OFK8A/Allyson.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805087671-3RRWH8PHS3YHB73OFK8A/Allyson.jpg?format=original",
+      "file": "assets/source/images/Allyson.jpg",
+      "bytes": 120584
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1642020744253-L21CXYO349HE6N15QNHB/58-DSC_5410.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1642020744253-L21CXYO349HE6N15QNHB/58-DSC_5410.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1642020744253-L21CXYO349HE6N15QNHB/58-DSC_5410.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1642020744253-L21CXYO349HE6N15QNHB/58-DSC_5410.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1642020744253-L21CXYO349HE6N15QNHB/58-DSC_5410.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1642020744253-L21CXYO349HE6N15QNHB/58-DSC_5410.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1642020744253-L21CXYO349HE6N15QNHB/58-DSC_5410.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1642020744253-L21CXYO349HE6N15QNHB/58-DSC_5410.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1642020744253-L21CXYO349HE6N15QNHB/58-DSC_5410.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1642020744253-L21CXYO349HE6N15QNHB/58-DSC_5410.jpg?format=original",
+      "file": "assets/source/images/58-DSC_5410.jpg",
+      "bytes": 155748
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805261618-I2LO1RA843O0HZLI7QN8/Kristin%2BG.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805261618-I2LO1RA843O0HZLI7QN8/Kristin%2BG.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805261618-I2LO1RA843O0HZLI7QN8/Kristin%2BG.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805261618-I2LO1RA843O0HZLI7QN8/Kristin%2BG.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805261618-I2LO1RA843O0HZLI7QN8/Kristin%2BG.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805261618-I2LO1RA843O0HZLI7QN8/Kristin%2BG.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805261618-I2LO1RA843O0HZLI7QN8/Kristin%2BG.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805261618-I2LO1RA843O0HZLI7QN8/Kristin%2BG.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805261618-I2LO1RA843O0HZLI7QN8/Kristin%2BG.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805261618-I2LO1RA843O0HZLI7QN8/Kristin%2BG.jpg?format=original",
+      "file": "assets/source/images/Kristin+G.jpg",
+      "bytes": 152086
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/55747481-b23b-44d7-80f6-0a19cb659b59/Uni2.PNG?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/55747481-b23b-44d7-80f6-0a19cb659b59/Uni2.PNG",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/55747481-b23b-44d7-80f6-0a19cb659b59/Uni2.PNG?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/55747481-b23b-44d7-80f6-0a19cb659b59/Uni2.PNG?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/55747481-b23b-44d7-80f6-0a19cb659b59/Uni2.PNG?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/55747481-b23b-44d7-80f6-0a19cb659b59/Uni2.PNG?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/55747481-b23b-44d7-80f6-0a19cb659b59/Uni2.PNG?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/55747481-b23b-44d7-80f6-0a19cb659b59/Uni2.PNG?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/55747481-b23b-44d7-80f6-0a19cb659b59/Uni2.PNG?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/55747481-b23b-44d7-80f6-0a19cb659b59/Uni2.PNG?format=original",
+      "file": "assets/source/images/Uni2.PNG",
+      "bytes": 56900
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805447143-40354N3EPHE21KDGMWVX/Olivia%2BHorizontal.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805447143-40354N3EPHE21KDGMWVX/Olivia%2BHorizontal.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805447143-40354N3EPHE21KDGMWVX/Olivia%2BHorizontal.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805447143-40354N3EPHE21KDGMWVX/Olivia%2BHorizontal.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805447143-40354N3EPHE21KDGMWVX/Olivia%2BHorizontal.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805447143-40354N3EPHE21KDGMWVX/Olivia%2BHorizontal.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805447143-40354N3EPHE21KDGMWVX/Olivia%2BHorizontal.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805447143-40354N3EPHE21KDGMWVX/Olivia%2BHorizontal.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805447143-40354N3EPHE21KDGMWVX/Olivia%2BHorizontal.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805447143-40354N3EPHE21KDGMWVX/Olivia%2BHorizontal.jpg?format=original",
+      "file": "assets/source/images/Olivia+Horizontal.jpg",
+      "bytes": 239994
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805322977-JZ2AH48RLT8VFTHC7D7J/Laurel%2BHorizontal%2BPic.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805322977-JZ2AH48RLT8VFTHC7D7J/Laurel%2BHorizontal%2BPic.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805322977-JZ2AH48RLT8VFTHC7D7J/Laurel%2BHorizontal%2BPic.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805322977-JZ2AH48RLT8VFTHC7D7J/Laurel%2BHorizontal%2BPic.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805322977-JZ2AH48RLT8VFTHC7D7J/Laurel%2BHorizontal%2BPic.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805322977-JZ2AH48RLT8VFTHC7D7J/Laurel%2BHorizontal%2BPic.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805322977-JZ2AH48RLT8VFTHC7D7J/Laurel%2BHorizontal%2BPic.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805322977-JZ2AH48RLT8VFTHC7D7J/Laurel%2BHorizontal%2BPic.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805322977-JZ2AH48RLT8VFTHC7D7J/Laurel%2BHorizontal%2BPic.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805322977-JZ2AH48RLT8VFTHC7D7J/Laurel%2BHorizontal%2BPic.jpg?format=original",
+      "file": "assets/source/images/Laurel+Horizontal+Pic.jpg",
+      "bytes": 221878
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805135322-9DWP276AFK843BWR88W8/Aadya%2B.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805135322-9DWP276AFK843BWR88W8/Aadya%2B.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805135322-9DWP276AFK843BWR88W8/Aadya%2B.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805135322-9DWP276AFK843BWR88W8/Aadya%2B.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805135322-9DWP276AFK843BWR88W8/Aadya%2B.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805135322-9DWP276AFK843BWR88W8/Aadya%2B.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805135322-9DWP276AFK843BWR88W8/Aadya%2B.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805135322-9DWP276AFK843BWR88W8/Aadya%2B.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805135322-9DWP276AFK843BWR88W8/Aadya%2B.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805135322-9DWP276AFK843BWR88W8/Aadya%2B.jpg?format=original",
+      "file": "assets/source/images/Aadya+.jpg",
+      "bytes": 159928
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805498777-WH54U93X7BERJ4V613YL/Rachel%2BCrescent.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805498777-WH54U93X7BERJ4V613YL/Rachel%2BCrescent.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805498777-WH54U93X7BERJ4V613YL/Rachel%2BCrescent.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805498777-WH54U93X7BERJ4V613YL/Rachel%2BCrescent.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805498777-WH54U93X7BERJ4V613YL/Rachel%2BCrescent.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805498777-WH54U93X7BERJ4V613YL/Rachel%2BCrescent.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805498777-WH54U93X7BERJ4V613YL/Rachel%2BCrescent.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805498777-WH54U93X7BERJ4V613YL/Rachel%2BCrescent.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805498777-WH54U93X7BERJ4V613YL/Rachel%2BCrescent.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805498777-WH54U93X7BERJ4V613YL/Rachel%2BCrescent.jpg?format=original",
+      "file": "assets/source/images/Rachel+Crescent.jpg",
+      "bytes": 100818
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805559687-PSQCOIUFB89FKQ2MA92C/Natonia.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805559687-PSQCOIUFB89FKQ2MA92C/Natonia.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805559687-PSQCOIUFB89FKQ2MA92C/Natonia.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805559687-PSQCOIUFB89FKQ2MA92C/Natonia.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805559687-PSQCOIUFB89FKQ2MA92C/Natonia.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805559687-PSQCOIUFB89FKQ2MA92C/Natonia.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805559687-PSQCOIUFB89FKQ2MA92C/Natonia.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805559687-PSQCOIUFB89FKQ2MA92C/Natonia.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805559687-PSQCOIUFB89FKQ2MA92C/Natonia.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805559687-PSQCOIUFB89FKQ2MA92C/Natonia.jpg?format=original",
+      "file": "assets/source/images/Natonia.jpg",
+      "bytes": 329856
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805610839-ZSYLVZW9BWXMCXE26T55/Sierra%2B%2BLooking%2Bforward.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805610839-ZSYLVZW9BWXMCXE26T55/Sierra%2B%2BLooking%2Bforward.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805610839-ZSYLVZW9BWXMCXE26T55/Sierra%2B%2BLooking%2Bforward.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805610839-ZSYLVZW9BWXMCXE26T55/Sierra%2B%2BLooking%2Bforward.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805610839-ZSYLVZW9BWXMCXE26T55/Sierra%2B%2BLooking%2Bforward.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805610839-ZSYLVZW9BWXMCXE26T55/Sierra%2B%2BLooking%2Bforward.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805610839-ZSYLVZW9BWXMCXE26T55/Sierra%2B%2BLooking%2Bforward.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805610839-ZSYLVZW9BWXMCXE26T55/Sierra%2B%2BLooking%2Bforward.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805610839-ZSYLVZW9BWXMCXE26T55/Sierra%2B%2BLooking%2Bforward.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1640805610839-ZSYLVZW9BWXMCXE26T55/Sierra%2B%2BLooking%2Bforward.jpg?format=original",
+      "file": "assets/source/images/Sierra++Looking+forward.jpg",
+      "bytes": 110548
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/df21dcc6-6143-43e7-a8b7-b2995ddac333/Wood+texture.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/ourteam",
+        "https://www.ignyteyoga.com/instructors-1"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/df21dcc6-6143-43e7-a8b7-b2995ddac333/Wood+texture.jpeg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/df21dcc6-6143-43e7-a8b7-b2995ddac333/Wood+texture.jpeg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/df21dcc6-6143-43e7-a8b7-b2995ddac333/Wood+texture.jpeg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/df21dcc6-6143-43e7-a8b7-b2995ddac333/Wood+texture.jpeg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/df21dcc6-6143-43e7-a8b7-b2995ddac333/Wood+texture.jpeg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/df21dcc6-6143-43e7-a8b7-b2995ddac333/Wood+texture.jpeg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/df21dcc6-6143-43e7-a8b7-b2995ddac333/Wood+texture.jpeg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/df21dcc6-6143-43e7-a8b7-b2995ddac333/Wood+texture.jpeg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/df21dcc6-6143-43e7-a8b7-b2995ddac333/Wood+texture.jpeg?format=original",
+      "file": "assets/source/images/Wood+texture.jpeg",
+      "bytes": 59617
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519378077-MYYA9ZTNCHQF2FPR49SJ/Hot+Body+Website+Assets+%283%29.png?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/instructorschristiecheney"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519378077-MYYA9ZTNCHQF2FPR49SJ/Hot+Body+Website+Assets+%283%29.png",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519378077-MYYA9ZTNCHQF2FPR49SJ/Hot+Body+Website+Assets+%283%29.png?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519378077-MYYA9ZTNCHQF2FPR49SJ/Hot+Body+Website+Assets+%283%29.png?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519378077-MYYA9ZTNCHQF2FPR49SJ/Hot+Body+Website+Assets+%283%29.png?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519378077-MYYA9ZTNCHQF2FPR49SJ/Hot+Body+Website+Assets+%283%29.png?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519378077-MYYA9ZTNCHQF2FPR49SJ/Hot+Body+Website+Assets+%283%29.png?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519378077-MYYA9ZTNCHQF2FPR49SJ/Hot+Body+Website+Assets+%283%29.png?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519378077-MYYA9ZTNCHQF2FPR49SJ/Hot+Body+Website+Assets+%283%29.png?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519378077-MYYA9ZTNCHQF2FPR49SJ/Hot+Body+Website+Assets+%283%29.png?format=original",
+      "file": "assets/source/images/Hot+Body+Website+Assets+-3-.png",
+      "bytes": 566242
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519723399-HXIFGYVHAA93X35OCCG1/unsplash-image-CDJCAcAAPlU.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519723399-HXIFGYVHAA93X35OCCG1/unsplash-image-CDJCAcAAPlU.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519723399-HXIFGYVHAA93X35OCCG1/unsplash-image-CDJCAcAAPlU.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519723399-HXIFGYVHAA93X35OCCG1/unsplash-image-CDJCAcAAPlU.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519723399-HXIFGYVHAA93X35OCCG1/unsplash-image-CDJCAcAAPlU.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519723399-HXIFGYVHAA93X35OCCG1/unsplash-image-CDJCAcAAPlU.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519723399-HXIFGYVHAA93X35OCCG1/unsplash-image-CDJCAcAAPlU.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519723399-HXIFGYVHAA93X35OCCG1/unsplash-image-CDJCAcAAPlU.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519723399-HXIFGYVHAA93X35OCCG1/unsplash-image-CDJCAcAAPlU.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519723399-HXIFGYVHAA93X35OCCG1/unsplash-image-CDJCAcAAPlU.jpg?format=original",
+      "file": "assets/source/images/unsplash-image-CDJCAcAAPlU.jpg",
+      "bytes": 242466
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519817382-I1YZWUXYAAQ9V2S8JE3R/Hot+Body+Website+Assets+%282%29.png?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/instructorschristiecheney"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519817382-I1YZWUXYAAQ9V2S8JE3R/Hot+Body+Website+Assets+%282%29.png",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519817382-I1YZWUXYAAQ9V2S8JE3R/Hot+Body+Website+Assets+%282%29.png?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519817382-I1YZWUXYAAQ9V2S8JE3R/Hot+Body+Website+Assets+%282%29.png?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519817382-I1YZWUXYAAQ9V2S8JE3R/Hot+Body+Website+Assets+%282%29.png?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519817382-I1YZWUXYAAQ9V2S8JE3R/Hot+Body+Website+Assets+%282%29.png?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519817382-I1YZWUXYAAQ9V2S8JE3R/Hot+Body+Website+Assets+%282%29.png?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519817382-I1YZWUXYAAQ9V2S8JE3R/Hot+Body+Website+Assets+%282%29.png?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519817382-I1YZWUXYAAQ9V2S8JE3R/Hot+Body+Website+Assets+%282%29.png?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615519817382-I1YZWUXYAAQ9V2S8JE3R/Hot+Body+Website+Assets+%282%29.png?format=original",
+      "file": "assets/source/images/Hot+Body+Website+Assets+-2-.png",
+      "bytes": 10170
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318774-JS502KT9XE3KPJHQQ6E3/20140301_Trade-151_0124-copy.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318774-JS502KT9XE3KPJHQQ6E3/20140301_Trade-151_0124-copy.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318774-JS502KT9XE3KPJHQQ6E3/20140301_Trade-151_0124-copy.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318774-JS502KT9XE3KPJHQQ6E3/20140301_Trade-151_0124-copy.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318774-JS502KT9XE3KPJHQQ6E3/20140301_Trade-151_0124-copy.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318774-JS502KT9XE3KPJHQQ6E3/20140301_Trade-151_0124-copy.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318774-JS502KT9XE3KPJHQQ6E3/20140301_Trade-151_0124-copy.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318774-JS502KT9XE3KPJHQQ6E3/20140301_Trade-151_0124-copy.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318774-JS502KT9XE3KPJHQQ6E3/20140301_Trade-151_0124-copy.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318774-JS502KT9XE3KPJHQQ6E3/20140301_Trade-151_0124-copy.jpg?format=original",
+      "file": "assets/source/images/20140301_Trade-151_0124-copy.jpg",
+      "bytes": 220220
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318080-B9F72DEHK9FXZN08KRIP/Large%2BJPG-20140228_Trade%2B151_0046.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318080-B9F72DEHK9FXZN08KRIP/Large%2BJPG-20140228_Trade%2B151_0046.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318080-B9F72DEHK9FXZN08KRIP/Large%2BJPG-20140228_Trade%2B151_0046.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318080-B9F72DEHK9FXZN08KRIP/Large%2BJPG-20140228_Trade%2B151_0046.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318080-B9F72DEHK9FXZN08KRIP/Large%2BJPG-20140228_Trade%2B151_0046.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318080-B9F72DEHK9FXZN08KRIP/Large%2BJPG-20140228_Trade%2B151_0046.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318080-B9F72DEHK9FXZN08KRIP/Large%2BJPG-20140228_Trade%2B151_0046.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318080-B9F72DEHK9FXZN08KRIP/Large%2BJPG-20140228_Trade%2B151_0046.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318080-B9F72DEHK9FXZN08KRIP/Large%2BJPG-20140228_Trade%2B151_0046.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847318080-B9F72DEHK9FXZN08KRIP/Large%2BJPG-20140228_Trade%2B151_0046.jpg?format=original",
+      "file": "assets/source/images/Large+JPG-20140228_Trade+151_0046.jpg",
+      "bytes": 59904
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317621-5SEXVL3M0LSMZVYRL6PC/Large%2BJPG-Aro%2BHa_0428.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317621-5SEXVL3M0LSMZVYRL6PC/Large%2BJPG-Aro%2BHa_0428.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317621-5SEXVL3M0LSMZVYRL6PC/Large%2BJPG-Aro%2BHa_0428.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317621-5SEXVL3M0LSMZVYRL6PC/Large%2BJPG-Aro%2BHa_0428.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317621-5SEXVL3M0LSMZVYRL6PC/Large%2BJPG-Aro%2BHa_0428.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317621-5SEXVL3M0LSMZVYRL6PC/Large%2BJPG-Aro%2BHa_0428.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317621-5SEXVL3M0LSMZVYRL6PC/Large%2BJPG-Aro%2BHa_0428.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317621-5SEXVL3M0LSMZVYRL6PC/Large%2BJPG-Aro%2BHa_0428.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317621-5SEXVL3M0LSMZVYRL6PC/Large%2BJPG-Aro%2BHa_0428.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317621-5SEXVL3M0LSMZVYRL6PC/Large%2BJPG-Aro%2BHa_0428.jpg?format=original",
+      "file": "assets/source/images/Large+JPG-Aro+Ha_0428.jpg",
+      "bytes": 61888
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317308-TDOFWH9YJEOMMRVEO7D9/Large%2BJPG-Aro%2BHa_0010.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317308-TDOFWH9YJEOMMRVEO7D9/Large%2BJPG-Aro%2BHa_0010.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317308-TDOFWH9YJEOMMRVEO7D9/Large%2BJPG-Aro%2BHa_0010.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317308-TDOFWH9YJEOMMRVEO7D9/Large%2BJPG-Aro%2BHa_0010.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317308-TDOFWH9YJEOMMRVEO7D9/Large%2BJPG-Aro%2BHa_0010.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317308-TDOFWH9YJEOMMRVEO7D9/Large%2BJPG-Aro%2BHa_0010.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317308-TDOFWH9YJEOMMRVEO7D9/Large%2BJPG-Aro%2BHa_0010.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317308-TDOFWH9YJEOMMRVEO7D9/Large%2BJPG-Aro%2BHa_0010.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317308-TDOFWH9YJEOMMRVEO7D9/Large%2BJPG-Aro%2BHa_0010.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847317308-TDOFWH9YJEOMMRVEO7D9/Large%2BJPG-Aro%2BHa_0010.jpg?format=original",
+      "file": "assets/source/images/Large+JPG-Aro+Ha_0010.jpg",
+      "bytes": 97258
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316926-7EAMTNMIVN6J7Y8IJQEJ/Large%2BJPG-Aro%2BHa_0393.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316926-7EAMTNMIVN6J7Y8IJQEJ/Large%2BJPG-Aro%2BHa_0393.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316926-7EAMTNMIVN6J7Y8IJQEJ/Large%2BJPG-Aro%2BHa_0393.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316926-7EAMTNMIVN6J7Y8IJQEJ/Large%2BJPG-Aro%2BHa_0393.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316926-7EAMTNMIVN6J7Y8IJQEJ/Large%2BJPG-Aro%2BHa_0393.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316926-7EAMTNMIVN6J7Y8IJQEJ/Large%2BJPG-Aro%2BHa_0393.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316926-7EAMTNMIVN6J7Y8IJQEJ/Large%2BJPG-Aro%2BHa_0393.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316926-7EAMTNMIVN6J7Y8IJQEJ/Large%2BJPG-Aro%2BHa_0393.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316926-7EAMTNMIVN6J7Y8IJQEJ/Large%2BJPG-Aro%2BHa_0393.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316926-7EAMTNMIVN6J7Y8IJQEJ/Large%2BJPG-Aro%2BHa_0393.jpg?format=original",
+      "file": "assets/source/images/Large+JPG-Aro+Ha_0393.jpg",
+      "bytes": 56538
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316328-ZCDAOUA1PY1R3CA7PD1K/Large%2BJPG-Aro%2BHa_0380.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316328-ZCDAOUA1PY1R3CA7PD1K/Large%2BJPG-Aro%2BHa_0380.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316328-ZCDAOUA1PY1R3CA7PD1K/Large%2BJPG-Aro%2BHa_0380.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316328-ZCDAOUA1PY1R3CA7PD1K/Large%2BJPG-Aro%2BHa_0380.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316328-ZCDAOUA1PY1R3CA7PD1K/Large%2BJPG-Aro%2BHa_0380.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316328-ZCDAOUA1PY1R3CA7PD1K/Large%2BJPG-Aro%2BHa_0380.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316328-ZCDAOUA1PY1R3CA7PD1K/Large%2BJPG-Aro%2BHa_0380.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316328-ZCDAOUA1PY1R3CA7PD1K/Large%2BJPG-Aro%2BHa_0380.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316328-ZCDAOUA1PY1R3CA7PD1K/Large%2BJPG-Aro%2BHa_0380.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847316328-ZCDAOUA1PY1R3CA7PD1K/Large%2BJPG-Aro%2BHa_0380.jpg?format=original",
+      "file": "assets/source/images/Large+JPG-Aro+Ha_0380.jpg",
+      "bytes": 52054
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847315857-HXSHJG4PKSDRYVEJLCHD/Large%2BJPG-Aro%2BHa_0387.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847315857-HXSHJG4PKSDRYVEJLCHD/Large%2BJPG-Aro%2BHa_0387.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847315857-HXSHJG4PKSDRYVEJLCHD/Large%2BJPG-Aro%2BHa_0387.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847315857-HXSHJG4PKSDRYVEJLCHD/Large%2BJPG-Aro%2BHa_0387.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847315857-HXSHJG4PKSDRYVEJLCHD/Large%2BJPG-Aro%2BHa_0387.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847315857-HXSHJG4PKSDRYVEJLCHD/Large%2BJPG-Aro%2BHa_0387.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847315857-HXSHJG4PKSDRYVEJLCHD/Large%2BJPG-Aro%2BHa_0387.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847315857-HXSHJG4PKSDRYVEJLCHD/Large%2BJPG-Aro%2BHa_0387.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847315857-HXSHJG4PKSDRYVEJLCHD/Large%2BJPG-Aro%2BHa_0387.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/1589847315857-HXSHJG4PKSDRYVEJLCHD/Large%2BJPG-Aro%2BHa_0387.jpg?format=original",
+      "file": "assets/source/images/Large+JPG-Aro+Ha_0387.jpg",
+      "bytes": 54086
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520290813-3KSF5J17K1Q3PXNR3KNF/Hot+Body+Website+Assets+%282%29.png?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/instructorschristiecheney"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520290813-3KSF5J17K1Q3PXNR3KNF/Hot+Body+Website+Assets+%282%29.png",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520290813-3KSF5J17K1Q3PXNR3KNF/Hot+Body+Website+Assets+%282%29.png?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520290813-3KSF5J17K1Q3PXNR3KNF/Hot+Body+Website+Assets+%282%29.png?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520290813-3KSF5J17K1Q3PXNR3KNF/Hot+Body+Website+Assets+%282%29.png?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520290813-3KSF5J17K1Q3PXNR3KNF/Hot+Body+Website+Assets+%282%29.png?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520290813-3KSF5J17K1Q3PXNR3KNF/Hot+Body+Website+Assets+%282%29.png?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520290813-3KSF5J17K1Q3PXNR3KNF/Hot+Body+Website+Assets+%282%29.png?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520290813-3KSF5J17K1Q3PXNR3KNF/Hot+Body+Website+Assets+%282%29.png?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520290813-3KSF5J17K1Q3PXNR3KNF/Hot+Body+Website+Assets+%282%29.png?format=original",
+      "file": "assets/source/images/Hot+Body+Website+Assets+-2--6e8bde60.png",
+      "bytes": 10170
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520368838-FQ2KUI3PMCV5QYRXBNHQ/HB+Profile+Pics.png?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/instructorschristiecheney",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520368838-FQ2KUI3PMCV5QYRXBNHQ/HB+Profile+Pics.png",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520368838-FQ2KUI3PMCV5QYRXBNHQ/HB+Profile+Pics.png?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520368838-FQ2KUI3PMCV5QYRXBNHQ/HB+Profile+Pics.png?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520368838-FQ2KUI3PMCV5QYRXBNHQ/HB+Profile+Pics.png?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520368838-FQ2KUI3PMCV5QYRXBNHQ/HB+Profile+Pics.png?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520368838-FQ2KUI3PMCV5QYRXBNHQ/HB+Profile+Pics.png?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520368838-FQ2KUI3PMCV5QYRXBNHQ/HB+Profile+Pics.png?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520368838-FQ2KUI3PMCV5QYRXBNHQ/HB+Profile+Pics.png?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1615520368838-FQ2KUI3PMCV5QYRXBNHQ/HB+Profile+Pics.png?format=original",
+      "file": "assets/source/images/HB+Profile+Pics.png",
+      "bytes": 231770
+    },
+    {
+      "source_url": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066e99bfd5eb31c6a7bc18/1644588701853/73-DSC_5601.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/schedule"
+      ],
+      "references": [
+        "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066e99bfd5eb31c6a7bc18/1644588701853/73-DSC_5601.jpg?format=1500w"
+      ],
+      "downloaded_from": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066e99bfd5eb31c6a7bc18/1644588701853/73-DSC_5601.jpg?format=original",
+      "file": "assets/source/images/73-DSC_5601-00e5b6cf.jpg",
+      "bytes": 232244
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/45fa8add-9756-4646-9da5-1e779ec5b2e2/19-DSC_4992.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/schedule"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/45fa8add-9756-4646-9da5-1e779ec5b2e2/19-DSC_4992.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/45fa8add-9756-4646-9da5-1e779ec5b2e2/19-DSC_4992.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/45fa8add-9756-4646-9da5-1e779ec5b2e2/19-DSC_4992.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/45fa8add-9756-4646-9da5-1e779ec5b2e2/19-DSC_4992.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/45fa8add-9756-4646-9da5-1e779ec5b2e2/19-DSC_4992.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/45fa8add-9756-4646-9da5-1e779ec5b2e2/19-DSC_4992.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/45fa8add-9756-4646-9da5-1e779ec5b2e2/19-DSC_4992.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/45fa8add-9756-4646-9da5-1e779ec5b2e2/19-DSC_4992.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/45fa8add-9756-4646-9da5-1e779ec5b2e2/19-DSC_4992.jpg?format=original",
+      "file": "assets/source/images/19-DSC_4992.jpg",
+      "bytes": 533976
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621736525641-DHLFTUS4WB8FQM2UNIRE/unsplash-image-YJdCZba0TYE.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/schedule",
+        "https://www.ignyteyoga.com/schedule-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621736525641-DHLFTUS4WB8FQM2UNIRE/unsplash-image-YJdCZba0TYE.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621736525641-DHLFTUS4WB8FQM2UNIRE/unsplash-image-YJdCZba0TYE.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621736525641-DHLFTUS4WB8FQM2UNIRE/unsplash-image-YJdCZba0TYE.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621736525641-DHLFTUS4WB8FQM2UNIRE/unsplash-image-YJdCZba0TYE.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621736525641-DHLFTUS4WB8FQM2UNIRE/unsplash-image-YJdCZba0TYE.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621736525641-DHLFTUS4WB8FQM2UNIRE/unsplash-image-YJdCZba0TYE.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621736525641-DHLFTUS4WB8FQM2UNIRE/unsplash-image-YJdCZba0TYE.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621736525641-DHLFTUS4WB8FQM2UNIRE/unsplash-image-YJdCZba0TYE.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621736525641-DHLFTUS4WB8FQM2UNIRE/unsplash-image-YJdCZba0TYE.jpg?format=original",
+      "file": "assets/source/images/unsplash-image-YJdCZba0TYE.jpg",
+      "bytes": 237128
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492287949-DRV3BV8E5D8NUMHQV019/IMG_2367.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/schedule",
+        "https://www.ignyteyoga.com/schedule-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492287949-DRV3BV8E5D8NUMHQV019/IMG_2367.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492287949-DRV3BV8E5D8NUMHQV019/IMG_2367.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492287949-DRV3BV8E5D8NUMHQV019/IMG_2367.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492287949-DRV3BV8E5D8NUMHQV019/IMG_2367.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492287949-DRV3BV8E5D8NUMHQV019/IMG_2367.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492287949-DRV3BV8E5D8NUMHQV019/IMG_2367.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492287949-DRV3BV8E5D8NUMHQV019/IMG_2367.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492287949-DRV3BV8E5D8NUMHQV019/IMG_2367.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492287949-DRV3BV8E5D8NUMHQV019/IMG_2367.jpg?format=original",
+      "file": "assets/source/images/IMG_2367.jpg",
+      "bytes": 20756
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492221470-KO8NDI3YORUOH7CFOI2X/IMG_2483.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/schedule",
+        "https://www.ignyteyoga.com/schedule-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492221470-KO8NDI3YORUOH7CFOI2X/IMG_2483.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492221470-KO8NDI3YORUOH7CFOI2X/IMG_2483.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492221470-KO8NDI3YORUOH7CFOI2X/IMG_2483.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492221470-KO8NDI3YORUOH7CFOI2X/IMG_2483.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492221470-KO8NDI3YORUOH7CFOI2X/IMG_2483.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492221470-KO8NDI3YORUOH7CFOI2X/IMG_2483.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492221470-KO8NDI3YORUOH7CFOI2X/IMG_2483.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492221470-KO8NDI3YORUOH7CFOI2X/IMG_2483.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626492221470-KO8NDI3YORUOH7CFOI2X/IMG_2483.jpg?format=original",
+      "file": "assets/source/images/IMG_2483.jpg",
+      "bytes": 89840
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493494220-NJ5J2Z91D4DX4LN7O4UY/IMG_0325.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/schedule",
+        "https://www.ignyteyoga.com/schedule-1",
+        "sitemap.xml",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493494220-NJ5J2Z91D4DX4LN7O4UY/IMG_0325.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493494220-NJ5J2Z91D4DX4LN7O4UY/IMG_0325.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493494220-NJ5J2Z91D4DX4LN7O4UY/IMG_0325.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493494220-NJ5J2Z91D4DX4LN7O4UY/IMG_0325.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493494220-NJ5J2Z91D4DX4LN7O4UY/IMG_0325.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493494220-NJ5J2Z91D4DX4LN7O4UY/IMG_0325.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493494220-NJ5J2Z91D4DX4LN7O4UY/IMG_0325.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493494220-NJ5J2Z91D4DX4LN7O4UY/IMG_0325.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493494220-NJ5J2Z91D4DX4LN7O4UY/IMG_0325.jpg?format=original",
+      "file": "assets/source/images/IMG_0325.jpg",
+      "bytes": 260770
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/a99a0e53-6e36-4e88-8c35-d85e9fe62f84/58-DSC_5410.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/policy-procedures"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/a99a0e53-6e36-4e88-8c35-d85e9fe62f84/58-DSC_5410.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/a99a0e53-6e36-4e88-8c35-d85e9fe62f84/58-DSC_5410.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/a99a0e53-6e36-4e88-8c35-d85e9fe62f84/58-DSC_5410.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/a99a0e53-6e36-4e88-8c35-d85e9fe62f84/58-DSC_5410.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/a99a0e53-6e36-4e88-8c35-d85e9fe62f84/58-DSC_5410.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/a99a0e53-6e36-4e88-8c35-d85e9fe62f84/58-DSC_5410.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/a99a0e53-6e36-4e88-8c35-d85e9fe62f84/58-DSC_5410.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/a99a0e53-6e36-4e88-8c35-d85e9fe62f84/58-DSC_5410.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/a99a0e53-6e36-4e88-8c35-d85e9fe62f84/58-DSC_5410.jpg?format=original",
+      "file": "assets/source/images/58-DSC_5410-b650314e.jpg",
+      "bytes": 220862
+    },
+    {
+      "source_url": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/6205ee51fdf9ed4682a7bf20/1693341388655/73-DSC_5601.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/6205ee51fdf9ed4682a7bf20/1693341388655/73-DSC_5601.jpg?format=1500w"
+      ],
+      "downloaded_from": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/6205ee51fdf9ed4682a7bf20/1693341388655/73-DSC_5601.jpg?format=original",
+      "file": "assets/source/images/73-DSC_5601-a938a37c.jpg",
+      "bytes": 410428
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/465ef4f2-a96f-43e6-b616-c66a94d1b11f/73-DSC_5601.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/465ef4f2-a96f-43e6-b616-c66a94d1b11f/73-DSC_5601.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/465ef4f2-a96f-43e6-b616-c66a94d1b11f/73-DSC_5601.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/465ef4f2-a96f-43e6-b616-c66a94d1b11f/73-DSC_5601.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/465ef4f2-a96f-43e6-b616-c66a94d1b11f/73-DSC_5601.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/465ef4f2-a96f-43e6-b616-c66a94d1b11f/73-DSC_5601.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/465ef4f2-a96f-43e6-b616-c66a94d1b11f/73-DSC_5601.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/465ef4f2-a96f-43e6-b616-c66a94d1b11f/73-DSC_5601.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/465ef4f2-a96f-43e6-b616-c66a94d1b11f/73-DSC_5601.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/465ef4f2-a96f-43e6-b616-c66a94d1b11f/73-DSC_5601.jpg?format=original",
+      "file": "assets/source/images/73-DSC_5601-365f4f69.jpg",
+      "bytes": 232244
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/dc2c720c-1b32-45a0-b23d-e6a6a724997c/Ignyte+Sculpt+Class.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/dc2c720c-1b32-45a0-b23d-e6a6a724997c/Ignyte+Sculpt+Class.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/dc2c720c-1b32-45a0-b23d-e6a6a724997c/Ignyte+Sculpt+Class.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/dc2c720c-1b32-45a0-b23d-e6a6a724997c/Ignyte+Sculpt+Class.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/dc2c720c-1b32-45a0-b23d-e6a6a724997c/Ignyte+Sculpt+Class.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/dc2c720c-1b32-45a0-b23d-e6a6a724997c/Ignyte+Sculpt+Class.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/dc2c720c-1b32-45a0-b23d-e6a6a724997c/Ignyte+Sculpt+Class.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/dc2c720c-1b32-45a0-b23d-e6a6a724997c/Ignyte+Sculpt+Class.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/dc2c720c-1b32-45a0-b23d-e6a6a724997c/Ignyte+Sculpt+Class.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/dc2c720c-1b32-45a0-b23d-e6a6a724997c/Ignyte+Sculpt+Class.jpg?format=original",
+      "file": "assets/source/images/Ignyte+Sculpt+Class.jpg",
+      "bytes": 234676
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621732876964-5ON0T1PV2YOFONN8WHC7/istockphoto-1152625740-612x612.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621732876964-5ON0T1PV2YOFONN8WHC7/istockphoto-1152625740-612x612.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621732876964-5ON0T1PV2YOFONN8WHC7/istockphoto-1152625740-612x612.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621732876964-5ON0T1PV2YOFONN8WHC7/istockphoto-1152625740-612x612.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621732876964-5ON0T1PV2YOFONN8WHC7/istockphoto-1152625740-612x612.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621732876964-5ON0T1PV2YOFONN8WHC7/istockphoto-1152625740-612x612.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621732876964-5ON0T1PV2YOFONN8WHC7/istockphoto-1152625740-612x612.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621732876964-5ON0T1PV2YOFONN8WHC7/istockphoto-1152625740-612x612.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621732876964-5ON0T1PV2YOFONN8WHC7/istockphoto-1152625740-612x612.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1621732876964-5ON0T1PV2YOFONN8WHC7/istockphoto-1152625740-612x612.jpg?format=original",
+      "file": "assets/source/images/istockphoto-1152625740-612x612.jpg",
+      "bytes": 22732
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6dbbd087-cdbb-48ef-bae6-94f9018f9ed5/IMG_8549.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6dbbd087-cdbb-48ef-bae6-94f9018f9ed5/IMG_8549.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6dbbd087-cdbb-48ef-bae6-94f9018f9ed5/IMG_8549.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6dbbd087-cdbb-48ef-bae6-94f9018f9ed5/IMG_8549.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6dbbd087-cdbb-48ef-bae6-94f9018f9ed5/IMG_8549.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6dbbd087-cdbb-48ef-bae6-94f9018f9ed5/IMG_8549.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6dbbd087-cdbb-48ef-bae6-94f9018f9ed5/IMG_8549.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6dbbd087-cdbb-48ef-bae6-94f9018f9ed5/IMG_8549.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6dbbd087-cdbb-48ef-bae6-94f9018f9ed5/IMG_8549.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/6dbbd087-cdbb-48ef-bae6-94f9018f9ed5/IMG_8549.jpg?format=original",
+      "file": "assets/source/images/IMG_8549.jpg",
+      "bytes": 369990
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1684439707056-88ZTCMNAP1HE2L01U6LM/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1684439707056-88ZTCMNAP1HE2L01U6LM/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1684439707056-88ZTCMNAP1HE2L01U6LM/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset.jpeg",
+      "bytes": 314938
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1683735786353-IPUPPNUWKO6DL3EMTDIG/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1683735786353-IPUPPNUWKO6DL3EMTDIG/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1683735786353-IPUPPNUWKO6DL3EMTDIG/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset-04c1813d.jpeg",
+      "bytes": 51302
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1682527588406-FBRP18CU9M9O9WIE5R4Q/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1682527588406-FBRP18CU9M9O9WIE5R4Q/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1682527588406-FBRP18CU9M9O9WIE5R4Q/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset-4863c99b.jpeg",
+      "bytes": 51818
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1682234381734-QRDPOKMNZWCTHIQ0U2UE/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1682234381734-QRDPOKMNZWCTHIQ0U2UE/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1682234381734-QRDPOKMNZWCTHIQ0U2UE/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset-6977e6bb.jpeg",
+      "bytes": 87184
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1681098973038-OLCW50RA048AIVUF6G5D/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1681098973038-OLCW50RA048AIVUF6G5D/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1681098973038-OLCW50RA048AIVUF6G5D/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset-70989ba0.jpeg",
+      "bytes": 77028
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712954165-2UAZX4CG7BXMY63F6ULW/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712954165-2UAZX4CG7BXMY63F6ULW/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712954165-2UAZX4CG7BXMY63F6ULW/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset-7052427b.jpeg",
+      "bytes": 157376
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712954790-4ZS35HET0DWZV3VIR3AB/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712954790-4ZS35HET0DWZV3VIR3AB/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712954790-4ZS35HET0DWZV3VIR3AB/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset-a8f60dad.jpeg",
+      "bytes": 157760
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712955439-ETQVGCNZJQX0W9Y05F5P/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712955439-ETQVGCNZJQX0W9Y05F5P/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712955439-ETQVGCNZJQX0W9Y05F5P/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset-bd6234c3.jpeg",
+      "bytes": 363272
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712956074-RFZ05W45JD6I9S6PAGJ9/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712956074-RFZ05W45JD6I9S6PAGJ9/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712956074-RFZ05W45JD6I9S6PAGJ9/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset-e58d4177.jpeg",
+      "bytes": 65682
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712956667-TJOWY589K0VYDAFSUM9A/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712956667-TJOWY589K0VYDAFSUM9A/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712956667-TJOWY589K0VYDAFSUM9A/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset-3cd64852.jpeg",
+      "bytes": 77732
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712957379-Z588QKF4MXDFS9S4H314/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712957379-Z588QKF4MXDFS9S4H314/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712957379-Z588QKF4MXDFS9S4H314/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset-90d1db64.jpeg",
+      "bytes": 111080
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712958080-Q19HGGBTCG26PKXM5F6R/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712958080-Q19HGGBTCG26PKXM5F6R/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712958080-Q19HGGBTCG26PKXM5F6R/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset-002519a6.jpeg",
+      "bytes": 91728
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712958693-2892D0LUKOWC9QES9U5Q/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712958693-2892D0LUKOWC9QES9U5Q/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712958693-2892D0LUKOWC9QES9U5Q/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset-35d971f5.jpeg",
+      "bytes": 110293
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712959251-VT0IP8LUYKBVGF5SUR12/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712959251-VT0IP8LUYKBVGF5SUR12/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712959251-VT0IP8LUYKBVGF5SUR12/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset-be168b67.jpeg",
+      "bytes": 27396
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712959893-WIGJ97205VI5VU54MV9Y/image-asset.jpeg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712959893-WIGJ97205VI5VU54MV9Y/image-asset.jpeg"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1680712959893-WIGJ97205VI5VU54MV9Y/image-asset.jpeg?format=original",
+      "file": "assets/source/images/image-asset-d83772e4.jpeg",
+      "bytes": 86916
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/415c27a9-ddad-451d-89aa-e7cc9ae4a40b/IMG_7482+2.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/home",
+        "https://www.ignyteyoga.com/",
+        "https://www.ignyteyoga.com"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/415c27a9-ddad-451d-89aa-e7cc9ae4a40b/IMG_7482+2.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/415c27a9-ddad-451d-89aa-e7cc9ae4a40b/IMG_7482+2.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/415c27a9-ddad-451d-89aa-e7cc9ae4a40b/IMG_7482+2.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/415c27a9-ddad-451d-89aa-e7cc9ae4a40b/IMG_7482+2.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/415c27a9-ddad-451d-89aa-e7cc9ae4a40b/IMG_7482+2.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/415c27a9-ddad-451d-89aa-e7cc9ae4a40b/IMG_7482+2.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/415c27a9-ddad-451d-89aa-e7cc9ae4a40b/IMG_7482+2.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/415c27a9-ddad-451d-89aa-e7cc9ae4a40b/IMG_7482+2.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/415c27a9-ddad-451d-89aa-e7cc9ae4a40b/IMG_7482+2.jpg?format=original",
+      "file": "assets/source/images/IMG_7482+2.jpg",
+      "bytes": 372444
+    },
+    {
+      "source_url": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066ed614576879899e2f82/1644588765127/73-DSC_5601.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/rates"
+      ],
+      "references": [
+        "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066ed614576879899e2f82/1644588765127/73-DSC_5601.jpg?format=1500w"
+      ],
+      "downloaded_from": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/62066ed614576879899e2f82/1644588765127/73-DSC_5601.jpg?format=original",
+      "file": "assets/source/images/73-DSC_5601-3b0e0f32.jpg",
+      "bytes": 232244
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/83295d18-1568-4fcf-b158-3fb04879a249/85-DSC_6379.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/rates"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/83295d18-1568-4fcf-b158-3fb04879a249/85-DSC_6379.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/83295d18-1568-4fcf-b158-3fb04879a249/85-DSC_6379.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/83295d18-1568-4fcf-b158-3fb04879a249/85-DSC_6379.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/83295d18-1568-4fcf-b158-3fb04879a249/85-DSC_6379.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/83295d18-1568-4fcf-b158-3fb04879a249/85-DSC_6379.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/83295d18-1568-4fcf-b158-3fb04879a249/85-DSC_6379.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/83295d18-1568-4fcf-b158-3fb04879a249/85-DSC_6379.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/83295d18-1568-4fcf-b158-3fb04879a249/85-DSC_6379.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/83295d18-1568-4fcf-b158-3fb04879a249/85-DSC_6379.jpg?format=original",
+      "file": "assets/source/images/85-DSC_6379.jpg",
+      "bytes": 383904
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/49ef6443-54d1-4f2d-9bb4-64ee78b3c940/20-DSC_4998.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/rates",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/49ef6443-54d1-4f2d-9bb4-64ee78b3c940/20-DSC_4998.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/49ef6443-54d1-4f2d-9bb4-64ee78b3c940/20-DSC_4998.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/49ef6443-54d1-4f2d-9bb4-64ee78b3c940/20-DSC_4998.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/49ef6443-54d1-4f2d-9bb4-64ee78b3c940/20-DSC_4998.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/49ef6443-54d1-4f2d-9bb4-64ee78b3c940/20-DSC_4998.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/49ef6443-54d1-4f2d-9bb4-64ee78b3c940/20-DSC_4998.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/49ef6443-54d1-4f2d-9bb4-64ee78b3c940/20-DSC_4998.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/49ef6443-54d1-4f2d-9bb4-64ee78b3c940/20-DSC_4998.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/49ef6443-54d1-4f2d-9bb4-64ee78b3c940/20-DSC_4998.jpg?format=original",
+      "file": "assets/source/images/20-DSC_4998.jpg",
+      "bytes": 2034720
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/ceb199ee-e09e-421b-bdbe-a1363e8bb3e0/67F106C1-D2F1-44EF-94FF-F4F8D6D2940E.JPG?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/rates",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/ceb199ee-e09e-421b-bdbe-a1363e8bb3e0/67F106C1-D2F1-44EF-94FF-F4F8D6D2940E.JPG",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/ceb199ee-e09e-421b-bdbe-a1363e8bb3e0/67F106C1-D2F1-44EF-94FF-F4F8D6D2940E.JPG?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/ceb199ee-e09e-421b-bdbe-a1363e8bb3e0/67F106C1-D2F1-44EF-94FF-F4F8D6D2940E.JPG?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/ceb199ee-e09e-421b-bdbe-a1363e8bb3e0/67F106C1-D2F1-44EF-94FF-F4F8D6D2940E.JPG?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/ceb199ee-e09e-421b-bdbe-a1363e8bb3e0/67F106C1-D2F1-44EF-94FF-F4F8D6D2940E.JPG?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/ceb199ee-e09e-421b-bdbe-a1363e8bb3e0/67F106C1-D2F1-44EF-94FF-F4F8D6D2940E.JPG?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/ceb199ee-e09e-421b-bdbe-a1363e8bb3e0/67F106C1-D2F1-44EF-94FF-F4F8D6D2940E.JPG?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/ceb199ee-e09e-421b-bdbe-a1363e8bb3e0/67F106C1-D2F1-44EF-94FF-F4F8D6D2940E.JPG?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/ceb199ee-e09e-421b-bdbe-a1363e8bb3e0/67F106C1-D2F1-44EF-94FF-F4F8D6D2940E.JPG?format=original",
+      "file": "assets/source/images/67F106C1-D2F1-44EF-94FF-F4F8D6D2940E.JPG",
+      "bytes": 87530
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/717651db-b00e-4b29-8d4d-0c21175542f0/B5225DD9-57A8-4CBB-B95E-15DF9F18E322.JPG?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/rates",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/717651db-b00e-4b29-8d4d-0c21175542f0/B5225DD9-57A8-4CBB-B95E-15DF9F18E322.JPG",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/717651db-b00e-4b29-8d4d-0c21175542f0/B5225DD9-57A8-4CBB-B95E-15DF9F18E322.JPG?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/717651db-b00e-4b29-8d4d-0c21175542f0/B5225DD9-57A8-4CBB-B95E-15DF9F18E322.JPG?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/717651db-b00e-4b29-8d4d-0c21175542f0/B5225DD9-57A8-4CBB-B95E-15DF9F18E322.JPG?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/717651db-b00e-4b29-8d4d-0c21175542f0/B5225DD9-57A8-4CBB-B95E-15DF9F18E322.JPG?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/717651db-b00e-4b29-8d4d-0c21175542f0/B5225DD9-57A8-4CBB-B95E-15DF9F18E322.JPG?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/717651db-b00e-4b29-8d4d-0c21175542f0/B5225DD9-57A8-4CBB-B95E-15DF9F18E322.JPG?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/717651db-b00e-4b29-8d4d-0c21175542f0/B5225DD9-57A8-4CBB-B95E-15DF9F18E322.JPG?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/717651db-b00e-4b29-8d4d-0c21175542f0/B5225DD9-57A8-4CBB-B95E-15DF9F18E322.JPG?format=original",
+      "file": "assets/source/images/B5225DD9-57A8-4CBB-B95E-15DF9F18E322.JPG",
+      "bytes": 317686
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493856199-JCXLPXODWN2XXYS27MN7/IMG_3817.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/rates",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493856199-JCXLPXODWN2XXYS27MN7/IMG_3817.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493856199-JCXLPXODWN2XXYS27MN7/IMG_3817.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493856199-JCXLPXODWN2XXYS27MN7/IMG_3817.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493856199-JCXLPXODWN2XXYS27MN7/IMG_3817.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493856199-JCXLPXODWN2XXYS27MN7/IMG_3817.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493856199-JCXLPXODWN2XXYS27MN7/IMG_3817.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493856199-JCXLPXODWN2XXYS27MN7/IMG_3817.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493856199-JCXLPXODWN2XXYS27MN7/IMG_3817.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/1626493856199-JCXLPXODWN2XXYS27MN7/IMG_3817.jpg?format=original",
+      "file": "assets/source/images/IMG_3817.jpg",
+      "bytes": 399556
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/25ada368-cefa-409c-bc2b-8d74056c3881/ignyte+0323-028.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/rates",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/25ada368-cefa-409c-bc2b-8d74056c3881/ignyte+0323-028.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/25ada368-cefa-409c-bc2b-8d74056c3881/ignyte+0323-028.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/25ada368-cefa-409c-bc2b-8d74056c3881/ignyte+0323-028.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/25ada368-cefa-409c-bc2b-8d74056c3881/ignyte+0323-028.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/25ada368-cefa-409c-bc2b-8d74056c3881/ignyte+0323-028.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/25ada368-cefa-409c-bc2b-8d74056c3881/ignyte+0323-028.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/25ada368-cefa-409c-bc2b-8d74056c3881/ignyte+0323-028.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/25ada368-cefa-409c-bc2b-8d74056c3881/ignyte+0323-028.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/25ada368-cefa-409c-bc2b-8d74056c3881/ignyte+0323-028.jpg?format=original",
+      "file": "assets/source/images/ignyte+0323-028.jpg",
+      "bytes": 588174
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/bcef1f5f-78c9-4bd0-894e-a298fcbfa0b8/74-DSC_5606+Flipped.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/texasbigstar",
+        "sitemap.xml"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/bcef1f5f-78c9-4bd0-894e-a298fcbfa0b8/74-DSC_5606+Flipped.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/bcef1f5f-78c9-4bd0-894e-a298fcbfa0b8/74-DSC_5606+Flipped.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/bcef1f5f-78c9-4bd0-894e-a298fcbfa0b8/74-DSC_5606+Flipped.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/bcef1f5f-78c9-4bd0-894e-a298fcbfa0b8/74-DSC_5606+Flipped.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/bcef1f5f-78c9-4bd0-894e-a298fcbfa0b8/74-DSC_5606+Flipped.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/bcef1f5f-78c9-4bd0-894e-a298fcbfa0b8/74-DSC_5606+Flipped.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/bcef1f5f-78c9-4bd0-894e-a298fcbfa0b8/74-DSC_5606+Flipped.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/bcef1f5f-78c9-4bd0-894e-a298fcbfa0b8/74-DSC_5606+Flipped.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/bcef1f5f-78c9-4bd0-894e-a298fcbfa0b8/74-DSC_5606+Flipped.jpg?format=original",
+      "file": "assets/source/images/74-DSC_5606+Flipped.jpg",
+      "bytes": 252734
+    },
+    {
+      "source_url": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/2afe22c4-f157-4093-a2b9-bc9b06385dff/ignyte+0323-074.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/200-hour-yoga-teacher-training-schedule"
+      ],
+      "references": [
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/2afe22c4-f157-4093-a2b9-bc9b06385dff/ignyte+0323-074.jpg",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/2afe22c4-f157-4093-a2b9-bc9b06385dff/ignyte+0323-074.jpg?format=100w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/2afe22c4-f157-4093-a2b9-bc9b06385dff/ignyte+0323-074.jpg?format=300w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/2afe22c4-f157-4093-a2b9-bc9b06385dff/ignyte+0323-074.jpg?format=500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/2afe22c4-f157-4093-a2b9-bc9b06385dff/ignyte+0323-074.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/2afe22c4-f157-4093-a2b9-bc9b06385dff/ignyte+0323-074.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/2afe22c4-f157-4093-a2b9-bc9b06385dff/ignyte+0323-074.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/2afe22c4-f157-4093-a2b9-bc9b06385dff/ignyte+0323-074.jpg?format=2500w"
+      ],
+      "downloaded_from": "https://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/2afe22c4-f157-4093-a2b9-bc9b06385dff/ignyte+0323-074.jpg?format=original",
+      "file": "assets/source/images/ignyte+0323-074.jpg",
+      "bytes": 1434520
+    },
+    {
+      "source_url": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/68d07f3c37da657f41678762/1644588781581/73-DSC_5601.jpg?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/instructors-1"
+      ],
+      "references": [
+        "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/68d07f3c37da657f41678762/1644588781581/73-DSC_5601.jpg?format=1500w"
+      ],
+      "downloaded_from": "http://static1.squarespace.com/static/604a7332c1d2975b43ff0fe3/t/68d07f3c37da657f41678762/1644588781581/73-DSC_5601.jpg?format=original",
+      "file": "assets/source/images/73-DSC_5601-2ae3a806.jpg",
+      "bytes": 232244
+    },
+    {
+      "source_url": "http://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/839be4dd-3ce5-4ac3-afab-5ae3617f0261/Your+paragraph+text.png?format=original",
+      "seen_on": [
+        "https://www.ignyteyoga.com/cart"
+      ],
+      "references": [
+        "http://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/839be4dd-3ce5-4ac3-afab-5ae3617f0261/Your+paragraph+text.png?format=1500w"
+      ],
+      "downloaded_from": "http://images.squarespace-cdn.com/content/v1/604a7332c1d2975b43ff0fe3/839be4dd-3ce5-4ac3-afab-5ae3617f0261/Your+paragraph+text.png?format=original",
+      "file": "assets/source/images/Your+paragraph+text-fb500a03.png",
+      "bytes": 72016
+    }
+  ]
+}
