@@ -36,7 +36,7 @@ Ask about private and small ground instruction.
 To learn more about what to bring, when to come, and the polite way to change or cancel a reservation, please see our Policy & Procedures.
 
 hello@ignyteyoga.com
-12021 Dallas Parkway Suite #300, Frisco, Texas 75033
+12021 Dallas Parkway Suite #300, Frisco, Texas 75034
 469.536.2540
 
 ## Images on the page

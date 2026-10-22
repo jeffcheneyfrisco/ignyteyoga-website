@@ -31,7 +31,7 @@ In fact, the Journal of the American College of Cardiology and the Mayo Clinic r
 A Picture is worth a thousand words
 
 hello@ignyteyoga.com
-12021 Dallas Parkway Suite #300, Frisco, Texas 75033
+12021 Dallas Parkway Suite #300, Frisco, Texas 75034
 469.536.2540
 
 ## Images on the page

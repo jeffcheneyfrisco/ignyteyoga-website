@@ -21,7 +21,7 @@ RESERVATIONS
 Space is limited so please reserve your spot in advance! But please be mindful and think of the rest of your Ignyte family. If you can’t make a class, please keep in mind that there is a 12-hour cancellation policy to give someone else an opportunity to take advantage of your spot. Otherwise, we’ll charge a no-show fee of $15 to the card on file.
 
 hello@ignyteyoga.com
-12021 Dallas Parkway Suite #300, Frisco, Texas 75033
+12021 Dallas Parkway Suite #300, Frisco, Texas 75034
 469.536.2540
 
 ## Images on the page

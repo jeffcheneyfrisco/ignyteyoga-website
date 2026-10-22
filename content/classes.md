@@ -44,7 +44,7 @@ Fire Up Your PRactice
 At Ignyte Yoga, we celebrate all levels and interests so try out different things, find the part of your practice that sets your soul on fire, and come sweat with us.
 
 hello@ignyteyoga.com
-12021 Dallas Parkway Suite #300, Frisco, Texas 75033
+12021 Dallas Parkway Suite #300, Frisco, Texas 75034
 469.536.2540
 
 ## Images on the page

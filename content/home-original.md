@@ -21,7 +21,7 @@ A Picture is worth a thousand words
 Below is a handful of ones that we love. You can check us out on Facebook and Instagram to see what we're up to. Follow us and stay connected to your Hot Body Yoga family.
 
 hello@ignyteyoga.com
-12021 Dallas Parkway Suite #300, Frisco, Texas 75033
+12021 Dallas Parkway Suite #300, Frisco, Texas 75034
 469.536.2540
 
 ## Images on the page
