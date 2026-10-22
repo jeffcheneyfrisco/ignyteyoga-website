@@ -11,7 +11,7 @@ Welcome to the transformative realm of yoga, where learning, growth, community, 
 Ready to take your practice to the next level?
 
 hello@ignyteyoga.com
-12021 Dallas Parkway Suite #300, Frisco, Texas 75033
+12021 Dallas Parkway Suite #300, Frisco, Texas 75034
 469.536.2540
 
 ## Images on the page

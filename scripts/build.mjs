@@ -164,8 +164,14 @@ function localBusinessScript(canonical) {
       streetAddress: "12021 Dallas Parkway, Suite 300",
       addressLocality: "Frisco",
       addressRegion: "TX",
-      postalCode: "75033",
+      postalCode: "75034",
       addressCountry: "US",
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "06:00",
+      closes: "20:00",
     },
   };
   return {

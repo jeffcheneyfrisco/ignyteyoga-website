@@ -31,7 +31,7 @@ what she has to say
 Christie is also the Founder of Younity Wellness Center, a practice based in Frisco, TX that encourages healthy and happy living. Younity Wellness focuses on a combination of cognitive behavioral therapy, mindfulness practices, and the use of movement in the pursuit of whole-body, holistic wellness.
 
 hello@ignyteyoga.com
-12021 Dallas Parkway Suite #300, Frisco, Texas 75033
+12021 Dallas Parkway Suite #300, Frisco, Texas 75034
 469.536.2540
 
 ## Images on the page

@@ -13,7 +13,7 @@ Want to become aN instructor?
 If you’ve got a spark in your heart, fire in your belly, and the ability to light up a room, we’d love to meet you.
 
 hello@ignyteyoga.com
-12021 Dallas Parkway Suite #300, Frisco, Texas 75033
+12021 Dallas Parkway Suite #300, Frisco, Texas 75034
 469.536.2540
 
 ## Images on the page

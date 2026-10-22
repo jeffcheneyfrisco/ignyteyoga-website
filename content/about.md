@@ -20,7 +20,7 @@ For me, I practice yoga to fire up my mind, body, and soul.
 What’s your why?
 
 hello@ignyteyoga.com
-12021 Dallas Parkway Suite #300, Frisco, Texas 75033
+12021 Dallas Parkway Suite #300, Frisco, Texas 75034
 469.536.2540
 
 ## Images on the page

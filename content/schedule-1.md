@@ -8,7 +8,7 @@ GET FIRED UP AND COME SWEAT WITH US
 To find a specific class, please click on the filter button to the far right under “My Account”.
 
 hello@ignyteyoga.com
-12021 Dallas Parkway Suite #300, Frisco, Texas 75033
+12021 Dallas Parkway Suite #300, Frisco, Texas 75034
 469.536.2540
 
 ## Images on the page

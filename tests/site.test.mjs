@@ -31,12 +31,22 @@ test("static build and SEO check", () => {
   assert.match(home, /data-netlify="true"/);
   assert.match(home, /href="\/schedule\/">Book a class/);
   assert.match(home, /class="btn book-btn book-btn-bar"/);
-  assert.match(home, /TODO: ZIP/);
+  assert.match(home, /75034/);
+  assert.match(home, /Open daily, 6:00 AM to 8:00 PM/);
+  assert.match(home, /openingHoursSpecification/);
+  assert.match(home, /"opens": "06:00"/);
+  assert.match(home, /"closes": "20:00"/);
+  assert.doesNotMatch(home, /75033/);
+  assert.doesNotMatch(home, /TODO: ZIP/);
+  assert.doesNotMatch(home, /TODO: Hours/);
 
   const newer = readFileSync("dist/new-here/index.html", "utf8");
   assert.match(newer, /id="intro-offer" hidden/);
   assert.match(newer, /TODO: Intro offer/);
-  assert.match(newer, /TODO: Hours/);
+  assert.match(newer, /75034/);
+  assert.match(newer, /Open daily, 6:00 AM to 8:00 PM/);
+  assert.doesNotMatch(newer, /TODO: Hours/);
+  assert.doesNotMatch(newer, /75033/);
   assert.match(newer, /href="\/new-here\/">New here\?/);
   assert.doesNotMatch(home, /lorem ipsum/i);
   assert.doesNotMatch(home, /acuity/i);
@@ -44,4 +54,7 @@ test("static build and SEO check", () => {
   const schedule = readFileSync("dist/schedule/index.html", "utf8");
   assert.match(schedule, /ce1600307310/);
   assert.match(schedule, /mindbody/i);
+  assert.match(schedule, /openingHoursSpecification/);
+  assert.match(schedule, /75034/);
+  assert.doesNotMatch(schedule, /75033/);
 });
