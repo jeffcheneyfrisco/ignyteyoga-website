@@ -408,11 +408,15 @@ button.btn,
 
 .adventures {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 1.2rem;
   margin-top: 2.2rem;
   align-items: start;
   text-align: left;
+}
+
+.lake-day {
+  grid-column: 1 / -1;
 }
 
 .adventure {
@@ -426,6 +430,7 @@ button.btn,
 .adventure img,
 .adventure video {
   width: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
   background: #111;
@@ -435,14 +440,67 @@ button.btn,
   height: 240px;
 }
 
+.adventure > .lake-media,
+.adventure > .tri-frame {
+  padding: 0;
+}
+
+.lake-media {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(200px, 0.72fr);
+  gap: 0.55rem;
+  align-items: start;
+}
+
+.lake-clips {
+  display: grid;
+  gap: 0.55rem;
+  align-content: start;
+}
+
 .adventure img.lake-photo {
   height: auto;
   aspect-ratio: 1187 / 1246;
 }
 
-.adventure img.tri-poster {
-  height: auto;
+.lake-clips .clip-wide {
+  aspect-ratio: 16 / 9;
+}
+
+.lake-clips .clip-tall {
+  width: 48%;
   aspect-ratio: 9 / 16;
+  object-position: center 18%;
+}
+
+.tri-frame {
+  position: relative;
+  width: min(100%, 340px);
+}
+
+.tri-frame video {
+  aspect-ratio: 9 / 16;
+}
+
+.sound-toggle {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  border: 0;
+  background: var(--accent);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.7rem 0.95rem;
+  cursor: pointer;
+}
+
+.sound-toggle:hover,
+.sound-toggle:focus-visible {
+  background: var(--accent-dark);
 }
 
 .adventure-tagline {
@@ -750,8 +808,26 @@ blockquote footer {
   .calendar,
   .post-card,
   .class-groups,
-  .adventures {
+  .adventures,
+  .lake-media {
     grid-template-columns: 1fr;
+  }
+
+  .lake-clips {
+    grid-template-columns: 1.4fr 0.8fr;
+  }
+
+  .lake-clips .clip-wide,
+  .lake-clips .clip-tall {
+    width: 100%;
+    height: 148px;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+
+  .tri-frame {
+    width: min(100%, 280px);
   }
 
   .gallery,
