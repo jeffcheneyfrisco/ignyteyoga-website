@@ -8,7 +8,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const srcDir = path.join(root, "src");
 const pagesDir = path.join(srcDir, "pages");
 const distDir = path.join(root, "dist");
-const siteOrigin = "https://www.ignyteyoga.com";
+const siteOrigin = "https://ignyteyoga.com";
 
 const imageCache = new Map();
 
@@ -151,6 +151,32 @@ function headElement(tag, attrs) {
   return { nodeName: tag, tagName: tag, attrs: Object.entries(attrs).map(([name, value]) => ({ name, value })), childNodes: [], namespaceURI: "http://www.w3.org/1999/xhtml" };
 }
 
+function localBusinessScript(canonical) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": ["ExerciseGym", "LocalBusiness"],
+    name: "Ignyte Yoga",
+    url: canonical,
+    telephone: "+1-469-536-2540",
+    email: "hello@ignyteyoga.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "12021 Dallas Parkway, Suite 300",
+      addressLocality: "Frisco",
+      addressRegion: "TX",
+      postalCode: "75033",
+      addressCountry: "US",
+    },
+  };
+  return {
+    nodeName: "script",
+    tagName: "script",
+    attrs: [{ name: "type", value: "application/ld+json" }],
+    childNodes: [{ nodeName: "#text", value: JSON.stringify(data) }],
+    namespaceURI: "http://www.w3.org/1999/xhtml",
+  };
+}
+
 async function buildPage(file, headerHtml, footerHtml) {
   const html = await readFile(file, "utf8");
   const document = parse5.parse(html);
@@ -191,6 +217,12 @@ async function buildPage(file, headerHtml, footerHtml) {
   body.childNodes = [...(header.childNodes ?? []), main, ...(footer.childNodes ?? [])];
   setAttr(main, "id", attr(main, "id") || "content");
 
+  const logo = findAll(header, "img")[0];
+  const logoSrc = attr(logo, "src");
+  const shareImage = logoSrc ? new URL(logoSrc, siteOrigin).href : "";
+  const hasLocalBusiness = jsonLd.some((script) => textOf(script).includes("LocalBusiness"));
+  const structuredData = hasLocalBusiness ? jsonLd : [localBusinessScript(canonical), ...jsonLd];
+
   const headNodes = [
     headElement("meta", { charset: "utf-8" }),
     headElement("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }),
@@ -203,9 +235,10 @@ async function buildPage(file, headerHtml, footerHtml) {
     headElement("meta", { property: "og:url", content: canonical }),
     headElement("meta", { property: "og:type", content: "website" }),
     headElement("meta", { property: "og:site_name", content: "Ignyte Yoga" }),
+    ...(shareImage ? [headElement("meta", { property: "og:image", content: shareImage })] : []),
     headElement("link", { rel: "icon", href: "/favicon.ico" }),
     headElement("link", { rel: "stylesheet", href: "/styles/site.css" }),
-    ...jsonLd,
+    ...structuredData,
   ];
   head.childNodes = headNodes;
   setAttr(body, "data-page", path.relative(pagesDir, file));

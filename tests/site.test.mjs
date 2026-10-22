@@ -13,6 +13,15 @@ test("static build and SEO check", () => {
   assert.equal(existsSync("dist/index.html"), true);
   assert.equal(existsSync("dist/schedule/index.html"), true);
   assert.equal(existsSync("dist/classes/index.html"), true);
+  assert.equal(existsSync("dist/new-here/index.html"), true);
+  assert.equal(existsSync("dist/classes/hotflo/index.html"), true);
+  assert.equal(existsSync("dist/classes/powerflo/index.html"), true);
+  assert.equal(existsSync("dist/classes/ignyte-sculpt/index.html"), true);
+  assert.equal(existsSync("dist/classes/ignyte-sculpt-45/index.html"), true);
+  assert.equal(existsSync("dist/classes/blissflo/index.html"), true);
+  assert.equal(existsSync("dist/classes/stretch/index.html"), true);
+  assert.equal(existsSync("dist/classes/hothiit/index.html"), true);
+  assert.equal(existsSync("dist/classes/powerhiit45/index.html"), true);
   assert.equal(existsSync("assets/source/inventory.md"), true);
   assert.equal(existsSync("content/home.md"), true);
   assert.equal(existsSync("notes/later-improvements.md"), true);
@@ -20,6 +29,15 @@ test("static build and SEO check", () => {
   const home = readFileSync("dist/index.html", "utf8");
   assert.match(home, /Energize your body/);
   assert.match(home, /data-netlify="true"/);
+  assert.match(home, /href="\/schedule\/">Book a class/);
+  assert.match(home, /class="btn book-btn book-btn-bar"/);
+  assert.match(home, /TODO: ZIP/);
+
+  const newer = readFileSync("dist/new-here/index.html", "utf8");
+  assert.match(newer, /id="intro-offer" hidden/);
+  assert.match(newer, /TODO: Intro offer/);
+  assert.match(newer, /TODO: Hours/);
+  assert.match(newer, /href="\/new-here\/">New here\?/);
   assert.doesNotMatch(home, /lorem ipsum/i);
   assert.doesNotMatch(home, /acuity/i);
 

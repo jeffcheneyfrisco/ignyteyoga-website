@@ -2,6 +2,8 @@
 
 v1 recreates the current Squarespace site: same URLs, same roster, same prices, same class copy, Mindbody schedule widget `ce1600307310`. This note is the improvement list for a follow-up PR. Do not merge v1 to production and do not change DNS. A Netlify site connected to this repo is what produces preview links and stores the Netlify Forms.
 
+A follow-up branch adds /new-here/, a page for each class under /classes/, a header Book a class button to the Mindbody schedule at /schedule/, and Frisco-focused titles. ZIP 75033 vs 75034, studio hours, and the intro offer are still unconfirmed and are marked TODO in the footer and on /new-here/.
+
 ## Page map to add
 
 The live navigation is only Schedule, Classes, Rates, Our Team, About, and Attend a Class. These pages are not on the current site and should be a later information architecture, not this preview:

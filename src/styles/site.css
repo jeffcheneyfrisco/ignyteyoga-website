@@ -131,6 +131,17 @@ p {
   width: auto;
 }
 
+.header-end {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-left: auto;
+}
+
+.book-btn-bar {
+  display: none;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -561,6 +572,20 @@ blockquote footer {
 }
 
 @media (max-width: 900px) {
+  .logo img {
+    height: 48px;
+  }
+
+  .header-end {
+    gap: 0.5rem;
+  }
+
+  .book-btn-bar {
+    display: inline-block;
+    padding: 0.55rem 0.65rem;
+    font-size: 0.68rem;
+  }
+
   .nav-toggle {
     display: inline-block;
   }

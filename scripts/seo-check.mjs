@@ -78,7 +78,20 @@ for (const file of files) {
   else if (description.length < 50 || description.length > 170) {
     fail(`${label} description length ${description.length} is outside 50-170`);
   }
-  if (!canonical.startsWith("https://www.ignyteyoga.com")) fail(`${label} canonical is not on ignyteyoga.com`);
+  if (!canonical.startsWith("https://ignyteyoga.com/")) fail(`${label} canonical is not on https://ignyteyoga.com`);
+  for (const property of ["og:title", "og:description", "og:url", "og:type", "og:site_name", "og:image"]) {
+    const tag = findAll(document, "meta").find((meta) => attr(meta, "property") === property);
+    if (!attr(tag, "content")) fail(`${label} is missing ${property}`);
+  }
+  const jsonLd = findAll(document, "script")
+    .filter((script) => attr(script, "type") === "application/ld+json")
+    .map((script) => textOf(script))
+    .join("\n");
+  if (!robots.includes("noindex")) {
+    if (!jsonLd.includes("LocalBusiness") || !jsonLd.includes("ExerciseGym")) {
+      fail(`${label} is missing LocalBusiness/ExerciseGym JSON-LD`);
+    }
+  }
   if (/lorem ipsum/i.test(html)) fail(`${label} still contains lorem ipsum`);
   if (/acuity/i.test(html)) fail(`${label} mentions Acuity`);
   for (const image of findAll(document, "img")) {
@@ -115,7 +128,7 @@ for (const agent of ["Googlebot", "GPTBot", "ClaudeBot", "PerplexityBot", "Googl
   if (!robots.includes(`User-agent: ${agent}`)) fail(`robots.txt does not name ${agent}`);
 }
 if (!/Allow:\s*\//.test(robots)) fail("robots.txt does not allow crawling");
-if (!robots.includes("Sitemap: https://www.ignyteyoga.com/sitemap.xml")) fail("robots.txt missing sitemap");
+if (!robots.includes("Sitemap: https://ignyteyoga.com/sitemap.xml")) fail("robots.txt missing sitemap");
 
 const netlify = await readFile(path.join(root, "netlify.toml"), "utf8");
 for (const header of [
