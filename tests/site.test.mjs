@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, statSync } from "node:fs";
 import test from "node:test";
 
 test("static build and SEO check", () => {
@@ -74,7 +74,32 @@ test("static build and SEO check", () => {
   const schedule = readFileSync("dist/schedule/index.html", "utf8");
   assert.match(schedule, /ce1600307310/);
   assert.match(schedule, /mindbody/i);
+  assert.match(schedule, /widgets\.mindbodyonline\.com\/iframe\/schedules\/ce1600307310/);
+  assert.doesNotMatch(schedule, /healcode\.js/);
   assert.match(schedule, /openingHoursSpecification/);
   assert.match(schedule, /75034/);
   assert.doesNotMatch(schedule, /75033/);
+
+  const address = "12021 Dallas Pkwy, Suite 300, Frisco, TX 75034";
+  assert.match(home, new RegExp(address));
+  assert.match(newer, new RegExp(address));
+  assert.match(home, /Find us/);
+  assert.match(newer, /Find us/);
+  assert.match(home, /width="1118"/);
+  assert.match(home, /height="257"/);
+  assert.doesNotMatch(home, /href="\/blog\//);
+  assert.equal(existsSync("dist/blog/index.html"), false);
+  assert.equal(existsSync("dist/blog/exploring-kfzll/index.html"), false);
+  assert.equal(existsSync("dist/apple-touch-icon.png"), true);
+  assert.equal(existsSync("dist/site.webmanifest"), true);
+  const icon = readFileSync("dist/apple-touch-icon.png");
+  assert.equal(icon.readUInt32BE(16), 180);
+  assert.equal(icon.readUInt32BE(20), 180);
+  const photo = statSync("dist/media/ignyte-0323-090-1600.webp");
+  assert.ok(photo.size <= 220 * 1024, `ignyte-0323-090-1600.webp is ${photo.size} bytes`);
+  assert.equal(existsSync("dist/media/ignyte-0323-090-800.webp"), true);
+  const about = readFileSync("dist/about/index.html", "utf8");
+  assert.match(about, /ignyte-0323-090-1600\.webp 1600w/);
+  assert.match(about, /ignyte-0323-090-800\.webp 800w/);
+  assert.match(about, /loading="lazy"/);
 });
