@@ -14,7 +14,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' https://widgets.mindbodyonline.com; frame-src https://widgets.mindbodyonline.com https://www.mindbodyonline.com https://clients.mindbodyonline.com https://*.mindbodyonline.com; connect-src 'self' https://widgets.mindbodyonline.com https://*.mindbodyonline.com; form-action 'self'; base-uri 'self'; object-src 'none'"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' https://widgets.mindbodyonline.com; frame-src https://widgets.mindbodyonline.com https://www.mindbodyonline.com https://clients.mindbodyonline.com https://*.mindbodyonline.com https://www.google.com https://maps.google.com; connect-src 'self' https://widgets.mindbodyonline.com https://*.mindbodyonline.com; form-action 'self'; base-uri 'self'; object-src 'none'"
 
 [[redirects]]
   from = "/home"
@@ -44,4 +44,84 @@
 [[redirects]]
   from = "/teachers/"
   to = "/ourteam/"
+  status = 301
+
+[[redirects]]
+  from = "/home-original"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home-original/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/schedule-1"
+  to = "/schedule/"
+  status = 301
+
+[[redirects]]
+  from = "/schedule-1/"
+  to = "/schedule/"
+  status = 301
+
+[[redirects]]
+  from = "/instructors-1"
+  to = "/ourteam/"
+  status = 301
+
+[[redirects]]
+  from = "/instructors-1/"
+  to = "/ourteam/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/exploring-kfzll"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/exploring-kfzll/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/summer-retreat-96jbz"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/summer-retreat-96jbz/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/soul-gph5c"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/soul-gph5c/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/yoga-wyy9d"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/yoga-wyy9d/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blog"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/"
+  to = "/"
   status = 301
