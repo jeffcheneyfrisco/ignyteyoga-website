@@ -1,0 +1,19 @@
+{
+  "name": "ignyteyoga-website",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@10.33.4",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "seo": "node scripts/seo-check.mjs",
+    "test": "node --test tests/site.test.mjs",
+    "preview": "pnpm build && python3 -m http.server 4321 -d dist"
+  },
+  "dependencies": {
+    "parse5": "^7.3.0",
+    "sharp": "^0.34.4"
+  }
+}
