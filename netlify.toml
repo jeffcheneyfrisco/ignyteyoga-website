@@ -181,3 +181,40 @@
   to = "/classes/"
   status = 301
   force = true
+
+# HotFlo is now Flo. BlissFlo45 is now Deep Surrender45. IgnyteSculpt45 is retired.
+[[redirects]]
+  from = "/classes/hotflo"
+  to = "/classes/flo/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/hotflo/"
+  to = "/classes/flo/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/blissflo"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/blissflo/"
+  to = "/classes/deep-surrender45/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/ignyte-sculpt-45"
+  to = "/classes/ignyte-sculpt/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/ignyte-sculpt-45/"
+  to = "/classes/ignyte-sculpt/"
+  status = 301
+  force = true
