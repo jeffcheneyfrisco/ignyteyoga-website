@@ -79,6 +79,13 @@ test("static build and SEO check", () => {
   assert.doesNotMatch(teachers, /lorem ipsum/i);
   assert.match(home, /Why infrared/);
   assert.match(home, /self-guided infrared sauna workout/);
+  assert.match(home, /<p class="card-title">POWERFLO<\/p>/);
+  assert.match(home, /<p class="card-title">FYREFLO<\/p>/);
+  assert.match(home, /<p class="card-title">IGNYTESCULPT<\/p>/);
+  assert.match(home, /white-space:\s*nowrap/);
+  assert.match(home, /We do<br>hard things\./);
+  assert.match(home, /Life happens,<br>yoga helps\./);
+  assert.doesNotMatch(home, /CLASS CLUB|THIS 5K IS LIKE LIFE|THIS WAY|YOU DID IT,\s*BADDIE/i);
   assert.match(home, /href="\/classes\/flo\/"/);
   assert.match(home, /href="\/classes\/fyreflo\/"/);
   assert.match(home, /href="\/classes\/hothiit\/"/);
@@ -253,6 +260,22 @@ test("static build and SEO check", () => {
     assert.doesNotMatch(html, /image-asset-90d1db64/, file);
     assert.doesNotMatch(html, /Diane Shaw/, file);
   }
+  assert.match(readFileSync("dist/classes/index.html", "utf8"), /You got this\./);
+  assert.match(readFileSync("dist/classes/flo/index.html", "utf8"), /just stretching/);
+  assert.match(readFileSync("dist/classes/hothiit/index.html", "utf8"), /That was my<br>warm-up\./);
+  assert.match(readFileSync("dist/classes/ignyte-sculpt/index.html", "utf8"), /What just<br>happened\?/);
+  assert.match(readFileSync("dist/classes/strength45-total-body/index.html", "utf8"), /My weights and I/);
+  assert.match(readFileSync("dist/new-here/index.html", "utf8"), /One step<br>at a time\./);
+  assert.match(readFileSync("dist/community/index.html", "utf8"), /We love this community\./);
+  assert.match(readFileSync("dist/community/index.html", "utf8"), /we rise together/);
+  assert.match(readFileSync("dist/about/index.html", "utf8"), /make the world<br>a brighter place/);
+  assert.match(readFileSync("dist/about/index.html", "utf8"), /Grateful for this space\./);
+  assert.match(readFileSync("dist/classes/fyreflo/index.html", "utf8"), /Embrace the future/);
+  assert.match(readFileSync("dist/classes/deep-surrender/index.html", "utf8"), /Celebrate the present/);
+  assert.match(readFileSync("dist/schedule/index.html", "utf8"), /Keep going\./);
+  assert.match(readFileSync("dist/private-events/index.html", "utf8"), /Found my people\./);
+  assert.match(readFileSync("dist/policy-procedures/index.html", "utf8"), /Even on a hard day,/);
+  assert.doesNotMatch(readFileSync("dist/classes/index.html", "utf8"), /CLASS CLUB|THIS 5K IS LIKE LIFE|THIS WAY|YOU DID IT,\s*BADDIE/i);
   assert.match(readFileSync("dist/classes/flo/index.html", "utf8"), /<h1>FLO<\/h1>/);
   assert.match(readFileSync("dist/classes/fyreflo/index.html", "utf8"), /<h1>FYREFLO<\/h1>/);
   assert.match(readFileSync("dist/classes/deep-surrender/index.html", "utf8"), /<h1>DEEP SURRENDER<\/h1>/);
