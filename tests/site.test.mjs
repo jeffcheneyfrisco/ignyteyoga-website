@@ -75,7 +75,8 @@ test("static build and SEO check", () => {
 
   const teachers = readFileSync("dist/ourteam/index.html", "utf8");
   assert.match(teachers, /Christie must confirm this roster/);
-  assert.match(teachers, /Christie Cheney Bone/);
+  assert.doesNotMatch(teachers, /Christie Cheney Bone/);
+  assert.doesNotMatch(teachers, /CLee|Younity Wellness|Christie Cheney Bone/);
   assert.match(teachers, /Dianne Powter/);
   assert.match(teachers, /Sierra Snyder/);
   assert.doesNotMatch(teachers, /lorem ipsum/i);
@@ -273,6 +274,9 @@ test("static build and SEO check", () => {
   assert.match(readFileSync("dist/community/index.html", "utf8"), /we rise together/);
   assert.match(readFileSync("dist/about/index.html", "utf8"), /make the world<br>a brighter place/);
   assert.match(readFileSync("dist/about/index.html", "utf8"), /Grateful for this space\./);
+  assert.doesNotMatch(readFileSync("dist/about/index.html", "utf8"), /A message from our owner|Christie at Ignyte Yoga/);
+  assert.doesNotMatch(home, /Christie Cheney Bone/);
+  assert.match(home, /"name": "Christie Cheney"/);
   assert.match(readFileSync("dist/classes/fyreflo/index.html", "utf8"), /Embrace the future/);
   assert.match(home, /alt="FYREFLO class in the Ignyte studio\."/);
   assert.match(home, /alt="FLO class in the Ignyte studio\."/);

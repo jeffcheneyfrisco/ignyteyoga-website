@@ -19,7 +19,7 @@ hello@ignyteyoga.com
 ## Images on the page
 
 - 45-DSC_5291.jpg
-- 71-DSC_5583.jpg — Christie Cheney Bone, Owner
+- 71-DSC_5583.jpg — Christie Cheney, Owner
 - 27-DSC_5108.jpg — Dianne Powter
 - Jeanny%2BSculpt.jpg — Jeanny Gallo
 - Allyson.jpg — Allyson Mendel
