@@ -9,7 +9,7 @@ A follow-up branch adds /new-here/, a page for each class under /classes/, a hea
 The live navigation is only Schedule, Classes, Rates, Our Team, About, and Attend a Class. These pages are not on the current site and should be a later information architecture, not this preview:
 
 - New here / first class
-- Dedicated class pages for Flow, PowerFlo, IgnyteSculpt, and Deep Surrender (HotHIIT and PowerHIIT45 can stay linked from Classes)
+- Dedicated class pages for FLO, POWERFLO, IGNYTESCULPT, and DEEP SURRENDER (HOTHIIT stays linked from Classes)
 - Contact and location, with a map and hours
 - Privacy policy and terms of use
 - Events (the homepage gallery still carries old pop-up captions: Goddess Flow, Booty Burn, spring equinox)
@@ -26,7 +26,7 @@ The live navigation is only Schedule, Classes, Rates, Our Team, About, and Atten
 ## Copy and claims to review
 
 - Infrared section cites the Journal of the American College of Cardiology and the Mayo Clinic for vessel function, cholesterol, circulation, flexibility, weight loss, recovery, and blood sugar. Those lines are still on v1 because they are on the live page. They are not linked to a paper. Review or remove them.
-- HotHIIT still repeats the live page’s calorie, metabolism, and body-composition lines. Same review.
+- HOTHIIT still repeats the live page’s calorie, metabolism, and body-composition lines. Same review.
 - Blog posts (Feeding your Soul, Summer Retreat 2019, Yoga Reimagined, Exploring Colima) were Squarespace sample text. v1 keeps the title, date, author, and photo and says the body was sample text.
 - Christie Cheney’s page had lorem ipsum under “A compelling title,” the inversion sections, and template class names (Etiam Ultricies and similar). v1 keeps her real bio, quote, favorite-pose line, and Younity paragraph.
 - Book a Class was lorem ipsum. v1 points it at the Mindbody schedule.

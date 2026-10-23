@@ -14,7 +14,9 @@ test("static build and SEO check", () => {
   assert.equal(existsSync("dist/schedule/index.html"), true);
   assert.equal(existsSync("dist/classes/index.html"), true);
   assert.equal(existsSync("dist/new-here/index.html"), true);
-  assert.equal(existsSync("dist/classes/flow/index.html"), true);
+  assert.equal(existsSync("dist/classes/flo/index.html"), true);
+  assert.equal(existsSync("dist/classes/flow/index.html"), false);
+  assert.equal(existsSync("src/pages/classes/flow.html"), false);
   assert.equal(existsSync("dist/classes/powerflo/index.html"), true);
   assert.equal(existsSync("dist/classes/ignyte-sculpt/index.html"), true);
   assert.equal(existsSync("dist/classes/ignyte-sculpt-45/index.html"), false);
@@ -28,7 +30,8 @@ test("static build and SEO check", () => {
   assert.equal(existsSync("dist/classes/hotflo/index.html"), false);
   assert.equal(existsSync("src/pages/classes/hotflo.html"), false);
   assert.equal(existsSync("dist/classes/hothiit/index.html"), true);
-  assert.equal(existsSync("dist/classes/powerhiit45/index.html"), true);
+  assert.equal(existsSync("dist/classes/powerhiit45/index.html"), false);
+  assert.equal(existsSync("src/pages/classes/powerhiit45.html"), false);
   assert.equal(existsSync("assets/source/inventory.md"), true);
   assert.equal(existsSync("content/home.md"), true);
   assert.equal(existsSync("notes/later-improvements.md"), true);
@@ -69,7 +72,14 @@ test("static build and SEO check", () => {
   assert.doesNotMatch(teachers, /lorem ipsum/i);
   assert.match(home, /Why infrared/);
   assert.match(home, /self-guided infrared sauna workout/);
-  assert.match(home, /href="\/classes\/flow\/"/);
+  assert.match(home, /href="\/classes\/flo\/"/);
+  assert.doesNotMatch(home, /href="\/classes\/flow\/"/);
+  assert.doesNotMatch(home, /PowerHIIT45/i);
+  assert.match(home, /<h1>Fire up your mind, body, and soul<\/h1>/);
+  assert.match(home, /FLO powered up/);
+  assert.match(home, /Goddess Flow/);
+  assert.match(home, /All-levels flow/);
+  assert.match(home, /Stronger flow/);
   assert.match(home, /href="\/classes\/hothiit\/"/);
   assert.doesNotMatch(home, /Journal of the American College of Cardiology/);
   assert.match(home, /class="mobile-bar"/);
@@ -142,9 +152,9 @@ test("static build and SEO check", () => {
   assert.match(community, /Fall 2026/);
   assert.match(community, /Our pace\. Our people\./);
   assert.match(community, /More Ignyte Tri to come!/);
-  assert.match(community, /Strength45 with Allyson/);
+  assert.match(community, /STRENGTH45 with Allyson/);
   assert.match(community, /href="\/classes\/powerflo\/"/);
-  assert.match(community, /PowerFlo/);
+  assert.match(community, /POWERFLO/);
   assert.match(community, /with Dianne/);
   assert.match(community, /5K fun run/);
   assert.match(community, /run, walk, or roll/);
@@ -203,10 +213,21 @@ test("static build and SEO check", () => {
     assert.match(netlify, new RegExp(`from = "${from}"\\n  to = "/classes/"\\n  status = 301\\n  force = true`));
   }
   for (const from of ["/classes/hotflo", "/classes/hotflo/", "/classes/hot-flo", "/classes/hot-flo/", "/classes/hotflow", "/classes/hotflow/", "/classes/hot-flow", "/classes/hot-flow/", "/hotflo", "/hotflo/", "/hot-flo", "/hot-flo/", "/hotflow", "/hotflow/", "/hot-flow", "/hot-flow/"]) {
-    assert.match(netlify, new RegExp(`from = "${from}"\\n  to = "/classes/flow/"\\n  status = 301\\n  force = true`));
+    assert.match(netlify, new RegExp(`from = "${from}"\\n  to = "/classes/flo/"\\n  status = 301\\n  force = true`));
+  }
+  for (const from of ["/classes/flow", "/classes/flow/"]) {
+    assert.match(netlify, new RegExp(`from = "${from}"\\n  to = "/classes/flo/"\\n  status = 301\\n  force = true`));
+  }
+  for (const from of ["/classes/powerhiit45", "/classes/powerhiit45/", "/classes/power-hiit-45", "/classes/power-hiit-45/", "/classes/powerhiit-45", "/classes/powerhiit-45/", "/classes/power-hiit45", "/classes/power-hiit45/", "/powerhiit45", "/powerhiit45/", "/power-hiit-45", "/power-hiit-45/", "/powerhiit-45", "/powerhiit-45/", "/power-hiit45", "/power-hiit45/"]) {
+    assert.match(netlify, new RegExp(`from = "${from}"\\n  to = "/classes/"\\n  status = 301\\n  force = true`));
   }
   assert.doesNotMatch(community, /power yoga/i);
-  assert.match(readFileSync("dist/classes/index.html", "utf8"), /PowerFlo/);
+  const classesIndex = readFileSync("dist/classes/index.html", "utf8");
+  assert.match(classesIndex, /POWERFLO/);
+  assert.match(classesIndex, /Get in the flo/);
+  assert.match(classesIndex, /find your flow/);
+  assert.doesNotMatch(classesIndex, /PowerHIIT45/i);
+  assert.doesNotMatch(classesIndex, /\/classes\/flow\//);
 
   const power45 = /power[\s-]*45/i;
   function walkHtml(dir, found = []) {
@@ -227,15 +248,24 @@ test("static build and SEO check", () => {
     assert.doesNotMatch(html, /hot[\s-]*flow/i, file);
     assert.doesNotMatch(html, /\/classes\/stretch/i, file);
     assert.doesNotMatch(html, />\s*Stretch\s*</, file);
+    assert.doesNotMatch(html, /powerhiit45/i, file);
+    assert.doesNotMatch(html, /\/classes\/flow\b/i, file);
     assert.doesNotMatch(html, /image-asset-90d1db64/, file);
     assert.doesNotMatch(html, /Diane Shaw/, file);
   }
-  assert.match(readFileSync("dist/classes/flow/index.html", "utf8"), /<h1>Flow<\/h1>/);
-  assert.match(readFileSync("dist/classes/deep-surrender/index.html", "utf8"), /<h1>Deep Surrender<\/h1>/);
-  assert.match(readFileSync("dist/classes/deep-surrender45/index.html", "utf8"), /<h1>Deep Surrender45<\/h1>/);
-  assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/classes\/flow\/<\/loc>/);
-  assert.doesNotMatch(readFileSync("dist/sitemap.xml", "utf8"), /hotflo|stretch|ignyte-sculpt-45|bliss/i);
-  assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/classes\/deep-surrender45\/<\/loc>/);
-  assert.match(readFileSync("dist/classes/powerhiit45/index.html", "utf8"), /PowerHIIT45/);
-  assert.match(readFileSync("dist/classes/powerflo/index.html", "utf8"), /PowerFlo/);
+  const flo = readFileSync("dist/classes/flo/index.html", "utf8");
+  assert.match(flo, /<h1>FLO<\/h1>/);
+  assert.match(flo, /"url":"https:\/\/ignyteyoga\.com\/classes\/flo\/"/);
+  assert.match(flo, /property="og:title" content="FLO \| Hot Yoga Frisco \| Ignyte Yoga"/);
+  assert.match(flo, /yoga flow/);
+  assert.match(readFileSync("dist/classes/deep-surrender/index.html", "utf8"), /<h1>DEEP SURRENDER<\/h1>/);
+  assert.match(readFileSync("dist/classes/deep-surrender45/index.html", "utf8"), /<h1>DEEP SURRENDER45<\/h1>/);
+  assert.match(readFileSync("dist/classes/ignyte-sculpt/index.html", "utf8"), /<h1>IGNYTESCULPT<\/h1>/);
+  assert.match(readFileSync("dist/classes/hothiit/index.html", "utf8"), /<h1>HOTHIIT<\/h1>/);
+  const sitemap = readFileSync("dist/sitemap.xml", "utf8");
+  assert.match(sitemap, /<loc>https:\/\/ignyteyoga\.com\/classes\/flo\/<\/loc>/);
+  assert.doesNotMatch(sitemap, /hotflo|stretch|ignyte-sculpt-45|bliss|powerhiit45|classes\/flow/i);
+  assert.match(sitemap, /<loc>https:\/\/ignyteyoga\.com\/classes\/deep-surrender45\/<\/loc>/);
+  assert.match(readFileSync("dist/classes/powerflo/index.html", "utf8"), /<h1>POWERFLO<\/h1>/);
+  assert.match(readFileSync("dist/classes/powerflo/index.html", "utf8"), /our FLO class powered up/);
 });

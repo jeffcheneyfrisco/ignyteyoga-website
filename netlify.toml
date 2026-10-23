@@ -334,7 +334,7 @@
   status = 301
   force = true
 
-# IgnyteSculpt45 and Stretch are retired. HotFlo / Hot Flow is now Flow.
+# IgnyteSculpt45 and Stretch are retired. HotFlo / Hot Flow is now Flo.
 
 [[redirects]]
   from = "/classes/ignyte-sculpt-45"
@@ -506,96 +506,206 @@
 
 [[redirects]]
   from = "/classes/hotflo"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/classes/hotflo/"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/hotflo"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/hotflo/"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/classes/hot-flo"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/classes/hot-flo/"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/hot-flo"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/hot-flo/"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/classes/hotflow"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/classes/hotflow/"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/hotflow"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/hotflow/"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/classes/hot-flow"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/classes/hot-flow/"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/hot-flow"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/hot-flow/"
-  to = "/classes/flow/"
+  to = "/classes/flo/"
+  status = 301
+  force = true
+
+# Flow is now Flo.
+[[redirects]]
+  from = "/classes/flow"
+  to = "/classes/flo/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/flow/"
+  to = "/classes/flo/"
+  status = 301
+  force = true
+
+# PowerHIIT45 is retired.
+[[redirects]]
+  from = "/classes/powerhiit45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/powerhiit45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/power-hiit-45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/power-hiit-45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/powerhiit-45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/powerhiit-45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/power-hiit45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/power-hiit45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/powerhiit45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/powerhiit45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/power-hiit-45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/power-hiit-45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/powerhiit-45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/powerhiit-45/"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/power-hiit45"
+  to = "/classes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/power-hiit45/"
+  to = "/classes/"
   status = 301
   force = true
