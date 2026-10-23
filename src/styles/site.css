@@ -242,6 +242,15 @@ button.btn,
   z-index: -1;
 }
 
+.hero.hero-bright::before {
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.hero.hero-bright h1,
+.hero.hero-bright p {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.72), 0 1px 2px rgba(0, 0, 0, 0.55);
+}
+
 .newsletter::before {
   background: rgba(0, 0, 0, 0.62);
 }
