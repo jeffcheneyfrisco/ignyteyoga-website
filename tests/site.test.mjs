@@ -80,9 +80,15 @@ test("static build and SEO check", () => {
   assert.match(home, /<p class="card-title">POWERFLO<\/p>/);
   assert.match(home, /<p class="card-title">FLO<\/p>/);
   assert.match(home, /<p class="card-title">IGNYTESCULPT<\/p>/);
+  assert.match(home, /alt="FLO class in the Ignyte studio\."/);
+  assert.match(home, /alt="POWERFLO class in the Ignyte studio\."/);
   assert.match(home, /alt="IGNYTESCULPT class with weights in the Ignyte studio\."/);
+  assert.match(home, /\/media\/flo-class-/);
+  assert.match(home, /\/media\/powerflo-class-/);
   assert.match(home, /\/media\/ignyte-sculpt-class-/);
   assert.doesNotMatch(home, /Ignyte\+Sculpt\+Class/);
+  assert.doesNotMatch(home, /unsplash-image-Vz0RbclzG_w/);
+  assert.doesNotMatch(home, /unsplash-image-Mgx1oe2vlVY/);
   assert.match(home, /<p class="card-title"><span>DEEP<\/span><span>SURRENDER<\/span><\/p>/);
   assert.doesNotMatch(home, />POWER<\/span>/);
   assert.match(readFileSync("src/styles/site.css", "utf8"), /\.card-title \{[^}]*white-space:\s*nowrap/s);
@@ -264,6 +270,11 @@ test("static build and SEO check", () => {
   }
   const flo = readFileSync("dist/classes/flo/index.html", "utf8");
   assert.match(flo, /<h1>FLO<\/h1>/);
+  assert.match(flo, /\/media\/flo-class-/);
+  assert.match(flo, /alt="FLO class in the Ignyte studio\."/);
+  const powerfloPage = readFileSync("dist/classes/powerflo/index.html", "utf8");
+  assert.match(powerfloPage, /\/media\/powerflo-class-/);
+  assert.match(powerfloPage, /alt="POWERFLO class in the Ignyte studio\."/);
   assert.match(flo, /"url":"https:\/\/ignyteyoga\.com\/classes\/flo\/"/);
   assert.match(flo, /property="og:title" content="FLO \| Hot Yoga Frisco \| Ignyte Yoga"/);
   assert.match(flo, /yoga flow/);
