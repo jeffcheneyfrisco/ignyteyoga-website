@@ -431,6 +431,11 @@ button.btn,
   object-fit: cover;
 }
 
+.gallery.event-photos img {
+  height: 420px;
+  object-position: center 30%;
+}
+
 .team-grid figure,
 .gallery figure {
   margin: 0;
@@ -1079,6 +1084,10 @@ blockquote footer {
 
   .photo-slot {
     min-height: 240px;
+  }
+
+  .gallery.event-photos img {
+    height: 280px;
   }
 
   .hero {
