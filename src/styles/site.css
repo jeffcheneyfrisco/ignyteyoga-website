@@ -155,6 +155,33 @@ p {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (min-width: 901px) {
+  .logo {
+    flex: 0 0 auto;
+  }
+
+  .logo img {
+    max-width: none;
+  }
+
+  .site-header {
+    flex-wrap: wrap;
+    row-gap: 0.35rem;
+  }
+
+  .header-end {
+    flex: 1 1 720px;
+    justify-content: flex-end;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 0.35rem;
+  }
 }
 
 .site-nav a:hover {
@@ -596,6 +623,37 @@ button.btn,
   gap: 0.8rem;
 }
 
+.page-lead {
+  margin: 0;
+  padding: clamp(4.2rem, 10vw, 7rem) 1.2rem 3.4rem;
+  text-align: center;
+  background: var(--accent);
+  color: white;
+}
+
+.page-lead h1 {
+  margin: 0;
+}
+
+.photo-slot {
+  margin: 0;
+  min-height: 280px;
+  display: grid;
+  place-items: end start;
+  background: #f4f4f4;
+  border: 2px dashed #c4c4c4;
+}
+
+.photo-slot figcaption {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5c5c5c;
+}
+
 .class-groups {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1017,6 +1075,10 @@ blockquote footer {
   .photo-row img {
     width: 100%;
     height: 240px;
+  }
+
+  .photo-slot {
+    min-height: 240px;
   }
 
   .hero {

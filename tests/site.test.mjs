@@ -34,6 +34,7 @@ test("static build and SEO check", () => {
   assert.equal(existsSync("dist/classes/powerhiit45/index.html"), false);
   assert.equal(existsSync("src/pages/classes/powerhiit45.html"), false);
   assert.equal(existsSync("dist/private-events/index.html"), true);
+  assert.equal(existsSync("dist/did-you-know/index.html"), true);
   assert.equal(existsSync("assets/source/inventory.md"), true);
   assert.equal(existsSync("content/home.md"), true);
   assert.equal(existsSync("notes/later-improvements.md"), true);
@@ -90,6 +91,7 @@ test("static build and SEO check", () => {
   assert.match(home, /href="\/classes\/fyreflo\/"/);
   assert.match(home, /href="\/classes\/hothiit\/"/);
   assert.match(home, /href="\/private-events\/">Private events/);
+  assert.equal((home.match(/href="\/did-you-know\/">Did you know\?/g) || []).length, 2);
   assert.doesNotMatch(home, /PowerHIIT45/);
   assert.doesNotMatch(home, /Journal of the American College of Cardiology/);
   assert.match(home, /class="mobile-bar"/);
@@ -290,6 +292,7 @@ test("static build and SEO check", () => {
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/classes\/flo\/<\/loc>/);
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/classes\/fyreflo\/<\/loc>/);
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/private-events\/<\/loc>/);
+  assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/did-you-know\/<\/loc>/);
   assert.doesNotMatch(readFileSync("dist/sitemap.xml", "utf8"), /hotflo|stretch|ignyte-sculpt-45|bliss|powerhiit45|\/classes\/flow\//i);
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/classes\/deep-surrender45\/<\/loc>/);
   assert.match(readFileSync("dist/classes/powerflo/index.html", "utf8"), /POWERFLO/);
@@ -302,4 +305,19 @@ test("static build and SEO check", () => {
   assert.match(procedures, /mailto:hello@ignyteyoga.com/);
   assert.match(readFileSync("dist/private-events/index.html", "utf8"), /Omni PGA/);
   assert.match(readFileSync("dist/private-events/index.html", "utf8"), /hello@ignyteyoga.com/);
+  const didYouKnow = readFileSync("dist/did-you-know/index.html", "utf8");
+  assert.match(didYouKnow, /<h1>DID YOU KNOW\?<\/h1>/);
+  assert.match(didYouKnow, /wellness workshops/);
+  assert.match(didYouKnow, /yoga mats and bolsters/);
+  assert.match(didYouKnow, /Omni PGA/);
+  assert.match(didYouKnow, /Please reach out for more information/);
+  assert.match(didYouKnow, /mailto:hello@ignyteyoga.com/);
+  assert.match(didYouKnow, /tel:\+14695362540/);
+  assert.match(didYouKnow, /href="\/private-events\/"/);
+  assert.match(didYouKnow, /class="photo-slot"/);
+  assert.equal((didYouKnow.match(/<img\b/g) || []).length, 1);
+  assert.doesNotMatch(didYouKnow, /unsplash/);
+  const privateEvents = readFileSync("src/pages/private-events.html", "utf8");
+  assert.match(privateEvents, /We offer special classes for organizations, corporations, team building, and birthday parties\./);
+  assert.doesNotMatch(privateEvents, /wellness workshops/);
 });
