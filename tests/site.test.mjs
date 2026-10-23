@@ -77,6 +77,12 @@ test("static build and SEO check", () => {
   assert.doesNotMatch(home, /PowerHIIT45/i);
   assert.match(home, /<h1>Fire up your mind, body, and soul<\/h1>/);
   assert.match(home, /FLO powered up/);
+  assert.match(home, /<p class="card-title">POWERFLO<\/p>/);
+  assert.match(home, /<p class="card-title">FLO<\/p>/);
+  assert.match(home, /<p class="card-title">IGNYTESCULPT<\/p>/);
+  assert.match(home, /<p class="card-title"><span>DEEP<\/span><span>SURRENDER<\/span><\/p>/);
+  assert.doesNotMatch(home, />POWER<\/span>/);
+  assert.match(readFileSync("src/styles/site.css", "utf8"), /\.card-title \{[^}]*white-space:\s*nowrap/s);
   assert.match(home, /Goddess Flow/);
   assert.match(home, /All-levels flow/);
   assert.match(home, /Stronger flow/);

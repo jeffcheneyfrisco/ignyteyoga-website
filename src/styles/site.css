@@ -337,6 +337,7 @@ button.btn,
   min-height: 280px;
   overflow: hidden;
   background: #222;
+  container-type: inline-size;
 }
 
 .card img {
@@ -351,15 +352,20 @@ button.btn,
   right: 0;
   bottom: 0;
   margin: 0;
-  padding: 2.2rem 0.8rem 0.9rem;
+  padding: 2.2rem 0.45rem 0.9rem;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
   color: white;
-  font-size: clamp(1.6rem, 2vw, 2.1rem);
+  font-size: clamp(1.15rem, 11cqi, 2.1rem);
   text-align: center;
+  white-space: nowrap;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: keep-all;
 }
 
 .card-title span {
   display: block;
+  white-space: nowrap;
 }
 
 .gallery,
