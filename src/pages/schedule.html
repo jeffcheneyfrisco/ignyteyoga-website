@@ -16,12 +16,12 @@
   <section class="section">
     <div class="narrow center">
       <h2>Get fired up and come sweat with us</h2>
-      <p>To find a specific class, use the filter in the Mindbody schedule. Please see our <a href="/policy-procedures/">policy and procedures</a> to learn more about what to bring, when to show up, and the polite way to cancel or change a class.</p>
+      <p>To find a specific class, use the filter in the Mindbody schedule. Please see our <a href="/policy-procedures/">studio procedures</a> for reservations, the door lock, and how to cancel.</p>
     </div>
     <div class="wrap schedule-embed">
       <p class="note">Mindbody schedule for Ignyte Yoga (widget id ce1600307310).</p>
-      <!-- Healcode's loader injects an inline resizer script, which Content-Security-Policy blocks. This is the same Mindbody schedule widget, framed directly. -->
-      <iframe class="mindbody-frame" title="Mindbody class schedule" src="https://widgets.mindbodyonline.com/iframe/schedules/ce1600307310"></iframe>
+      <!-- The schedule UI lives in Mindbody's app (inner widget ce771257310). Teacher names are not in this page, and a cross-origin frame cannot be styled from here. This same-origin path is that schedule document with one shared teacher-name rule added by the schedule-staff edge function. -->
+      <iframe class="mindbody-frame" title="Mindbody class schedule" src="/book/widgets/schedules/view/ce771257310/schedule"></iframe>
     </div>
   </section>
   <section class="section tight">
