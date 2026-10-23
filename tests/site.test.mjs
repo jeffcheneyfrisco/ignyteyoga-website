@@ -75,8 +75,11 @@ test("static build and SEO check", () => {
 
   const teachers = readFileSync("dist/ourteam/index.html", "utf8");
   assert.match(teachers, /Christie must confirm this roster/);
+  assert.match(teachers, /Christie Cheney, Owner/);
+  assert.match(teachers, /71-dsc-5583|71-DSC_5583/);
+  assert.match(teachers, /Known as CLee by her friends and family/);
+  assert.match(teachers, /Younity Wellness Center in Frisco/);
   assert.doesNotMatch(teachers, /Christie Cheney Bone/);
-  assert.doesNotMatch(teachers, /CLee|Younity Wellness|Christie Cheney Bone/);
   assert.match(teachers, /Dianne Powter/);
   assert.match(teachers, /Sierra Snyder/);
   assert.doesNotMatch(teachers, /lorem ipsum/i);
