@@ -130,6 +130,8 @@ test("static build and SEO check", () => {
   assert.equal(existsSync("dist/home-original/index.html"), false);
   assert.equal(existsSync("dist/schedule-1/index.html"), false);
   assert.equal(existsSync("dist/instructors-1/index.html"), false);
+  assert.equal(existsSync("dist/instructorschristiecheney/index.html"), false);
+  assert.equal(existsSync("src/pages/instructorschristiecheney.html"), false);
   const netlify = readFileSync("netlify.toml", "utf8");
   assert.match(netlify, /function = "schedule-staff"/);
   assert.match(netlify, /pattern = "\^\/book\/\.\*"/);
@@ -138,6 +140,8 @@ test("static build and SEO check", () => {
   assert.match(netlify, /from = "\/home-original\/"\n  to = "\/"\n  status = 301\n  force = true/);
   assert.match(netlify, /from = "\/schedule-1\/"\n  to = "\/schedule\/"\n  status = 301\n  force = true/);
   assert.match(netlify, /from = "\/instructors-1\/"\n  to = "\/ourteam\/"\n  status = 301\n  force = true/);
+  assert.match(netlify, /from = "\/instructorschristiecheney"\n  to = "\/ourteam\/"\n  status = 301\n  force = true/);
+  assert.match(netlify, /from = "\/instructorschristiecheney\/"\n  to = "\/ourteam\/"\n  status = 301\n  force = true/);
   assert.equal(existsSync("dist/apple-touch-icon.png"), true);
   assert.equal(existsSync("dist/site.webmanifest"), true);
   const icon = readFileSync("dist/apple-touch-icon.png");
@@ -318,7 +322,7 @@ test("static build and SEO check", () => {
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/classes\/flo\/<\/loc>/);
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/classes\/fyreflo\/<\/loc>/);
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/private-events\/<\/loc>/);
-  assert.doesNotMatch(readFileSync("dist/sitemap.xml", "utf8"), /did-you-know/);
+  assert.doesNotMatch(readFileSync("dist/sitemap.xml", "utf8"), /did-you-know|instructorschristiecheney/);
   assert.doesNotMatch(readFileSync("dist/sitemap.xml", "utf8"), /hotflo|stretch|ignyte-sculpt-45|bliss|powerhiit45|\/classes\/flow\//i);
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/classes\/deep-surrender45\/<\/loc>/);
   assert.match(readFileSync("dist/classes/powerflo/index.html", "utf8"), /POWERFLO/);

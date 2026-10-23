@@ -662,3 +662,16 @@
   to = "/private-events/"
   status = 301
   force = true
+
+# Christie's bio page is unpublished until every teacher bio is ready.
+[[redirects]]
+  from = "/instructorschristiecheney"
+  to = "/ourteam/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/instructorschristiecheney/"
+  to = "/ourteam/"
+  status = 301
+  force = true
