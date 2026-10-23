@@ -9,7 +9,7 @@ A follow-up branch adds /new-here/, a page for each class under /classes/, a hea
 The live navigation is only Schedule, Classes, Rates, Our Team, About, and Attend a Class. These pages are not on the current site and should be a later information architecture, not this preview:
 
 - New here / first class
-- Dedicated class pages for HotFlo, PowerFlo, IgnyteSculpt, BlissFlo, and Stretch (HotHIIT, PowerHIIT45, and IgnyteSculpt45 can stay linked from Classes)
+- Dedicated class pages for Flow, PowerFlo, IgnyteSculpt, and Deep Surrender (HotHIIT and PowerHIIT45 can stay linked from Classes)
 - Contact and location, with a map and hours
 - Privacy policy and terms of use
 - Events (the homepage gallery still carries old pop-up captions: Goddess Flow, Booty Burn, spring equinox)
