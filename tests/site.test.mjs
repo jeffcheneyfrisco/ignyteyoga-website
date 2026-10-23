@@ -80,6 +80,9 @@ test("static build and SEO check", () => {
   assert.match(home, /<p class="card-title">POWERFLO<\/p>/);
   assert.match(home, /<p class="card-title">FLO<\/p>/);
   assert.match(home, /<p class="card-title">IGNYTESCULPT<\/p>/);
+  assert.match(home, /alt="IGNYTESCULPT class with weights in the Ignyte studio\."/);
+  assert.match(home, /\/media\/ignyte-sculpt-class-/);
+  assert.doesNotMatch(home, /Ignyte\+Sculpt\+Class/);
   assert.match(home, /<p class="card-title"><span>DEEP<\/span><span>SURRENDER<\/span><\/p>/);
   assert.doesNotMatch(home, />POWER<\/span>/);
   assert.match(readFileSync("src/styles/site.css", "utf8"), /\.card-title \{[^}]*white-space:\s*nowrap/s);
@@ -266,7 +269,11 @@ test("static build and SEO check", () => {
   assert.match(flo, /yoga flow/);
   assert.match(readFileSync("dist/classes/deep-surrender/index.html", "utf8"), /<h1>DEEP SURRENDER<\/h1>/);
   assert.match(readFileSync("dist/classes/deep-surrender45/index.html", "utf8"), /<h1>DEEP SURRENDER45<\/h1>/);
-  assert.match(readFileSync("dist/classes/ignyte-sculpt/index.html", "utf8"), /<h1>IGNYTESCULPT<\/h1>/);
+  const sculpt = readFileSync("dist/classes/ignyte-sculpt/index.html", "utf8");
+  assert.match(sculpt, /<h1>IGNYTESCULPT<\/h1>/);
+  assert.match(sculpt, /\/media\/ignyte-sculpt-class-/);
+  assert.match(sculpt, /alt="IGNYTESCULPT class with weights in the Ignyte studio\."/);
+  assert.equal(existsSync("dist/media/ignyte-sculpt-class-960.webp"), true);
   assert.match(readFileSync("dist/classes/hothiit/index.html", "utf8"), /<h1>HOTHIIT<\/h1>/);
   const sitemap = readFileSync("dist/sitemap.xml", "utf8");
   assert.match(sitemap, /<loc>https:\/\/ignyteyoga\.com\/classes\/flo\/<\/loc>/);
