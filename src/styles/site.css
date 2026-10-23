@@ -246,6 +246,14 @@ button.btn,
   background: rgba(0, 0, 0, 0.18);
 }
 
+.hero.hero-bright .hero-media {
+  object-fit: cover;
+  object-position: left center;
+  width: 250%;
+  max-width: none;
+  right: auto;
+}
+
 .hero.hero-bright h1,
 .hero.hero-bright p {
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.72), 0 1px 2px rgba(0, 0, 0, 0.55);
