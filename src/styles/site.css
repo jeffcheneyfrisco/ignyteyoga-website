@@ -373,6 +373,15 @@ button.btn,
   grid-template-columns: repeat(3, 1fr);
 }
 
+.gallery a {
+  display: block;
+}
+
+.gallery a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 2px;
+}
+
 .photo-row {
   grid-template-columns: repeat(4, 1fr);
 }
