@@ -74,6 +74,9 @@ function stemOf(filePath) {
 }
 
 function variantWidths(originalWidth, stem) {
+  // The Private Events hero crop is 400px wide. Emit the usual hero sizes anyway
+  // so wide and retina screens are not stuck on that single small file.
+  if (stem === "private-events-hero") return [480, 960, 1200];
   const wanted = stem === "ignyte-0323-090" ? [480, 800, 960, 1600] : [480, 960, 1600];
   const widths = wanted.filter((width) => width < originalWidth - 8);
   const cap = Math.min(originalWidth, 1600);
@@ -81,10 +84,10 @@ function variantWidths(originalWidth, stem) {
   return [...new Set(widths)].sort((a, b) => a - b);
 }
 
-async function writeWebp(absolute, width, quality, output) {
+async function writeWebp(absolute, width, quality, output, enlarge = false) {
   await sharp(absolute)
     .rotate()
-    .resize({ width, withoutEnlargement: true })
+    .resize({ width, withoutEnlargement: !enlarge })
     .webp({ quality })
     .toFile(output);
 }
@@ -116,7 +119,8 @@ async function emitImage(sourceUrl) {
       const size = (await stat(output)).size;
       console.log(`ignyte-0323-090-1600.webp ${size} bytes at quality ${quality}`);
     } else {
-      await writeWebp(absolute, width, quality, output);
+      const enlarge = stem === "private-events-hero" && width > originalWidth;
+      await writeWebp(absolute, width, quality, output, enlarge);
     }
     variants.push({ width, url: `/media/${filename}` });
   }

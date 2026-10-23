@@ -352,10 +352,13 @@ test("static build and SEO check", () => {
   assert.match(eventsPage, /\.hero\.hero-bright::before\s*\{[^}]*background:\s*rgba\(0,\s*0,\s*0,\s*0\.18\)/);
   assert.match(eventsPage, /background:\s*rgba\(0,\s*0,\s*0,\s*0\.48\)/);
   assert.match(eventsPage, /width="400" height="880"/);
-  assert.equal(existsSync("dist/media/private-events-hero-400.webp"), true);
-  assert.equal(existsSync("dist/media/private-events-hero-560.webp"), false);
-  assert.equal(existsSync("dist/media/private-events-hero-960.webp"), false);
-  assert.equal(existsSync("dist/media/private-events-hero-1206.webp"), false);
+  assert.match(eventsPage, /\/media\/private-events-hero-480\.webp 480w/);
+  assert.match(eventsPage, /\/media\/private-events-hero-960\.webp 960w/);
+  assert.match(eventsPage, /\/media\/private-events-hero-1200\.webp 1200w/);
+  assert.equal(existsSync("dist/media/private-events-hero-480.webp"), true);
+  assert.equal(existsSync("dist/media/private-events-hero-960.webp"), true);
+  assert.equal(existsSync("dist/media/private-events-hero-1200.webp"), true);
+  assert.equal(existsSync("dist/media/private-events-hero-400.webp"), false);
   const homePage = readFileSync("dist/index.html", "utf8");
   assert.match(homePage, /<section class="hero">/);
   assert.doesNotMatch(homePage, /<section class="[^"]*hero-bright/);
