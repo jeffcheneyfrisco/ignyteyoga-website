@@ -337,6 +337,7 @@ button.btn,
   min-height: 280px;
   overflow: hidden;
   background: #222;
+  container-type: inline-size;
 }
 
 .card img {
@@ -351,11 +352,15 @@ button.btn,
   right: 0;
   bottom: 0;
   margin: 0;
-  padding: 2.2rem 0.8rem 0.9rem;
+  padding: 2.2rem 0.45rem 0.9rem;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
   color: white;
-  font-size: clamp(1.6rem, 2vw, 2.1rem);
+  font-size: clamp(1.15rem, 15.5cqi, 2.6rem);
+  line-height: 1;
   text-align: center;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .card-title span {
@@ -397,6 +402,11 @@ button.btn,
   width: 100%;
   height: 280px;
   object-fit: cover;
+}
+
+.gallery.event-photos img {
+  height: 420px;
+  object-position: center 30%;
 }
 
 .team-grid figure,
@@ -834,6 +844,67 @@ textarea {
   padding-left: 1.1rem;
 }
 
+.sign-quote {
+  margin: 0;
+  padding: clamp(3.4rem, 8vw, 6.2rem) 1.2rem;
+  text-align: center;
+}
+
+.sign-quote p {
+  margin: 0 auto;
+  max-width: 11em;
+  font-family: "Mirza", "Palatino Linotype", Palatino, serif;
+  font-weight: 400;
+  font-size: clamp(2.7rem, 7.2vw, 5.2rem);
+  line-height: 0.92;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.sign-quote.sign-long p {
+  max-width: 14em;
+  font-size: clamp(2rem, 5vw, 3.7rem);
+  line-height: 0.98;
+}
+
+.sign-quote.sign-sentence p,
+.sign-quote.sign-script p {
+  text-transform: none;
+}
+
+.sign-quote.sign-script p {
+  max-width: 12em;
+  font-size: clamp(3rem, 8vw, 5.8rem);
+  line-height: 1;
+}
+
+.sign-quote.sign-mixed p {
+  text-transform: uppercase;
+}
+
+.sign-you {
+  display: inline-block;
+  font-size: 0.78em;
+  text-transform: none;
+}
+
+.sign-red {
+  background: var(--accent);
+  color: white;
+}
+
+.sign-dark {
+  background: var(--ink);
+  color: white;
+}
+
+.sign-paper {
+  background: var(--paper);
+  color: var(--ink);
+  border-top: 8px solid var(--accent);
+  border-bottom: 8px solid var(--accent);
+}
+
 blockquote {
   margin: 0;
   font-family: "Mirza", Palatino, serif;
@@ -951,6 +1022,10 @@ blockquote footer {
   .photo-row img {
     width: 100%;
     height: 240px;
+  }
+
+  .gallery.event-photos img {
+    height: 280px;
   }
 
   .hero {

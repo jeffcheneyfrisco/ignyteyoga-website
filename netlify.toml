@@ -649,3 +649,29 @@
   to = "/classes/"
   status = 301
   force = true
+
+# Did You Know duplicated Private Events.
+[[redirects]]
+  from = "/did-you-know"
+  to = "/private-events/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/did-you-know/"
+  to = "/private-events/"
+  status = 301
+  force = true
+
+# Christie's bio page is unpublished until every teacher bio is ready.
+[[redirects]]
+  from = "/instructorschristiecheney"
+  to = "/ourteam/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/instructorschristiecheney/"
+  to = "/ourteam/"
+  status = 301
+  force = true

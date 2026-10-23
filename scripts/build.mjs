@@ -197,7 +197,7 @@ async function convertBackgrounds(node) {
       src: emitted.src,
       srcset: srcset(emitted.variants),
       sizes: "100vw",
-      alt: "",
+      alt: attr(background, "data-alt") || "",
       width: emitted.width,
       height: emitted.height,
       decoding: "async",
@@ -205,7 +205,7 @@ async function convertBackgrounds(node) {
       loading: priority ? undefined : "lazy",
     });
     background.childNodes = [image, ...(background.childNodes ?? [])];
-    background.attrs = (background.attrs ?? []).filter((item) => item.name !== "data-bg");
+    background.attrs = (background.attrs ?? []).filter((item) => item.name !== "data-bg" && item.name !== "data-alt");
     if (priority) lcp = emitted;
   }
   return lcp;
