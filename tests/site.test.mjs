@@ -271,6 +271,12 @@ test("static build and SEO check", () => {
   assert.match(readFileSync("dist/about/index.html", "utf8"), /make the world<br>a brighter place/);
   assert.match(readFileSync("dist/about/index.html", "utf8"), /Grateful for this space\./);
   assert.match(readFileSync("dist/classes/fyreflo/index.html", "utf8"), /Embrace the future/);
+  assert.match(home, /alt="FYREFLO class in the Ignyte studio\."/);
+  assert.match(home, /\/media\/fyreflo-class-/);
+  const fyreflo = readFileSync("dist/classes/fyreflo/index.html", "utf8");
+  assert.match(fyreflo, /\/media\/fyreflo-class-/);
+  assert.match(fyreflo, /alt="FYREFLO class in the Ignyte studio\."/);
+  assert.equal(existsSync("dist/media/fyreflo-class-960.webp"), true);
   assert.match(readFileSync("dist/classes/deep-surrender/index.html", "utf8"), /Celebrate the present/);
   assert.match(readFileSync("dist/schedule/index.html", "utf8"), /Keep going\./);
   assert.match(readFileSync("dist/private-events/index.html", "utf8"), /Found my people\./);
