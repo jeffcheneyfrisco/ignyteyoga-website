@@ -363,6 +363,23 @@ test("static build and SEO check", () => {
   assert.match(eventsPage, /\.hero\.hero-bright \.hero-media\s*\{[^}]*object-position:\s*left center/);
   assert.match(eventsPage, /\.hero\.hero-bright \.hero-media\s*\{[^}]*width:\s*100%/);
   assert.doesNotMatch(eventsPage, /\.hero\.hero-bright \.hero-media\s*\{[^}]*width:\s*250%/);
+  assert.match(eventsPage, /@media \(max-width: 700px\)\s*\{[^}]*\.hero\.hero-bright\s*\{[^}]*min-height:\s*22rem/);
+  assert.match(eventsPage, /@media \(max-width: 700px\)[\s\S]*?object-position:\s*55% 60%/);
+  for (const alt of [
+    "Ignyte teacher leading an outdoor group class from a stage in warrior III.",
+    "Ignyte students in a low lunge with arms raised at an outdoor event.",
+    "Group photo of Ignyte students after an outdoor private event.",
+  ]) {
+    const tags = [...eventsPage.matchAll(new RegExp(`<img\\b[^>]*alt="${alt.replaceAll(".", "\\.")}"[^>]*>`, "g"))];
+    assert.ok(tags.length > 0, alt);
+    assert.ok(tags.some((tag) => /loading="eager"/.test(tag[0])), alt);
+    assert.ok(tags.every((tag) => !/loading="lazy"/.test(tag[0])), alt);
+  }
+  for (const name of ["private-events-hero", "event-lunge-arms-raised", "event-group-lawn"]) {
+    for (const width of [480, 960, 1206]) {
+      assert.equal(existsSync(`dist/media/${name}-${width}.webp`), true);
+    }
+  }
   assert.equal(existsSync("dist/media/private-events-hero-480.webp"), true);
   assert.equal(existsSync("dist/media/private-events-hero-960.webp"), true);
   assert.equal(existsSync("dist/media/private-events-hero-1206.webp"), true);

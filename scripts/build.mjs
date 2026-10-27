@@ -173,7 +173,10 @@ async function rewriteImages(node, { eager = false } = {}) {
     if (!attr(image, "width")) setAttr(image, "width", String(emitted.width));
     if (!attr(image, "height")) setAttr(image, "height", String(emitted.height));
     if (!attr(image, "decoding")) setAttr(image, "decoding", "async");
-    if (!eager && !attr(image, "loading")) {
+    const eventGallery = ancestorClasses(image).includes("event-photos");
+    if (eventGallery) {
+      setAttr(image, "loading", "eager");
+    } else if (!eager && !attr(image, "loading")) {
       setAttr(image, "loading", "lazy");
       if (!attr(image, "fetchpriority")) setAttr(image, "fetchpriority", "low");
     }
