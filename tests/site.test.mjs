@@ -345,19 +345,41 @@ test("static build and SEO check", () => {
   assert.match(eventsPage, /\/media\/event-yard-signs-/);
   assert.match(eventsPage, /class="hero hero-bright"/);
   assert.match(eventsPage, /\/media\/private-events-hero-/);
-  assert.match(eventsPage, /alt="Outdoor group yoga at PGA District, arms raised\."/);
+  assert.match(eventsPage, /alt="Ignyte teacher leading an outdoor group class from a stage in warrior III\."/);
+  assert.match(eventsPage, /alt="Ignyte students in a low lunge with arms raised at an outdoor event\."/);
+  assert.match(eventsPage, /alt="Group photo of Ignyte students after an outdoor private event\."/);
   assert.match(eventsPage, /<h1>Private Events<\/h1>/);
-  assert.match(eventsPage, /Organizations, teams, and celebrations\./);
+  assert.match(eventsPage, /Organizations, Teams And Celebrations/);
   assert.doesNotMatch(eventsPage, /img-4441/);
   assert.match(eventsPage, /\.hero\.hero-bright::before\s*\{[^}]*background:\s*rgba\(0,\s*0,\s*0,\s*0\.18\)/);
   assert.match(eventsPage, /background:\s*rgba\(0,\s*0,\s*0,\s*0\.48\)/);
-  assert.match(eventsPage, /width="1206" height="880"/);
+  assert.match(eventsPage, /width="1206" height="873"/);
   assert.match(eventsPage, /\/media\/private-events-hero-480\.webp 480w/);
   assert.match(eventsPage, /\/media\/private-events-hero-960\.webp 960w/);
   assert.match(eventsPage, /\/media\/private-events-hero-1206\.webp 1206w/);
+  assert.match(eventsPage, /\/media\/event-lunge-arms-raised-1206\.webp/);
+  assert.match(eventsPage, /\/media\/event-group-lawn-1206\.webp/);
   assert.match(eventsPage, /\.hero\.hero-bright \.hero-media\s*\{[^}]*object-fit:\s*cover/);
   assert.match(eventsPage, /\.hero\.hero-bright \.hero-media\s*\{[^}]*object-position:\s*left center/);
-  assert.match(eventsPage, /\.hero\.hero-bright \.hero-media\s*\{[^}]*width:\s*250%/);
+  assert.match(eventsPage, /\.hero\.hero-bright \.hero-media\s*\{[^}]*width:\s*100%/);
+  assert.doesNotMatch(eventsPage, /\.hero\.hero-bright \.hero-media\s*\{[^}]*width:\s*250%/);
+  assert.match(eventsPage, /@media \(max-width: 700px\)\s*\{[^}]*\.hero\.hero-bright\s*\{[^}]*min-height:\s*22rem/);
+  assert.match(eventsPage, /@media \(max-width: 700px\)[\s\S]*?object-position:\s*55% 60%/);
+  for (const alt of [
+    "Ignyte teacher leading an outdoor group class from a stage in warrior III.",
+    "Ignyte students in a low lunge with arms raised at an outdoor event.",
+    "Group photo of Ignyte students after an outdoor private event.",
+  ]) {
+    const tags = [...eventsPage.matchAll(new RegExp(`<img\\b[^>]*alt="${alt.replaceAll(".", "\\.")}"[^>]*>`, "g"))];
+    assert.ok(tags.length > 0, alt);
+    assert.ok(tags.some((tag) => /loading="eager"/.test(tag[0])), alt);
+    assert.ok(tags.every((tag) => !/loading="lazy"/.test(tag[0])), alt);
+  }
+  for (const name of ["private-events-hero", "event-lunge-arms-raised", "event-group-lawn"]) {
+    for (const width of [480, 960, 1206]) {
+      assert.equal(existsSync(`dist/media/${name}-${width}.webp`), true);
+    }
+  }
   assert.equal(existsSync("dist/media/private-events-hero-480.webp"), true);
   assert.equal(existsSync("dist/media/private-events-hero-960.webp"), true);
   assert.equal(existsSync("dist/media/private-events-hero-1206.webp"), true);
