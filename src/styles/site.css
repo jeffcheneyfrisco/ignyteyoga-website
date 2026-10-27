@@ -471,6 +471,10 @@ button.btn,
   object-position: center 38%;
 }
 
+.hero-practice .hero-media {
+  object-position: center 30%;
+}
+
 .adventure.tri-day {
   display: grid;
   grid-template-columns: minmax(220px, 340px) minmax(0, 1fr);
