@@ -249,9 +249,9 @@ button.btn,
 .hero.hero-bright .hero-media {
   object-fit: cover;
   object-position: left center;
-  width: 250%;
+  width: 100%;
+  height: 100%;
   max-width: none;
-  right: auto;
 }
 
 .hero.hero-bright h1,
