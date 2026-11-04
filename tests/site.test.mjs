@@ -69,7 +69,7 @@ test("static build and SEO check", () => {
   assert.match(newer, /4\. After class/);
   assert.match(newer, /TODO: The published policies/);
   assert.match(newer, /Doors lock 10 minutes after class starts/);
-  assert.match(newer, /No shoes in the study space/);
+  assert.match(newer, /No shoes in the studio space/);
   assert.match(newer, /Leave your weights/);
   assert.match(newer, /30 days before the next billing cycle/);
   assert.doesNotMatch(newer, /PowerHIIT45/);
@@ -334,7 +334,7 @@ test("static build and SEO check", () => {
   const procedures = readFileSync("dist/policy-procedures/index.html", "utf8");
   assert.match(procedures, /<h1>Studio procedures<\/h1>/);
   assert.match(procedures, /Doors lock 10 minutes after class starts/);
-  assert.match(procedures, /No shoes in the study space/);
+  assert.match(procedures, /No shoes in the studio space/);
   assert.match(procedures, /leave your weights/);
   assert.match(procedures, /30 days before your next billing cycle/);
   assert.match(procedures, /mailto:hello@ignyteyoga.com/);
