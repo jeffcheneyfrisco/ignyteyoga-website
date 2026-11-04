@@ -63,15 +63,35 @@ test("static build and SEO check", () => {
   assert.doesNotMatch(newer, /TODO: Hours/);
   assert.doesNotMatch(newer, /75033/);
   assert.match(newer, /href="\/new-here\/">New here\?/);
-  assert.match(newer, /1\. Before you come/);
-  assert.match(newer, /2\. Arriving/);
+  assert.match(newer, /1\. Before you arrive/);
+  assert.match(newer, /2\. Arrival/);
   assert.match(newer, /3\. In the room/);
   assert.match(newer, /4\. After class/);
-  assert.match(newer, /TODO: The published policies/);
+  assert.match(newer, /href="\/schedule\/">Mindbody schedule/);
+  assert.match(newer, /href="\/classes\/">See every class/);
+  assert.match(newer, /href="\/policy-procedures\/">studio procedures/);
+  assert.match(newer, /mailto:hello@ignyteyoga.com/);
+  assert.match(newer, /<strong>Dress light\.<\/strong>/);
+  assert.match(newer, /<strong>Hydrate like it’s your job\.<\/strong>/);
+  assert.match(newer, /<strong>Fuel smart\.<\/strong>/);
+  assert.match(newer, /Cancel at least 60 minutes ahead/);
+  assert.doesNotMatch(newer, /1\. Before you come/);
+  assert.doesNotMatch(newer, /2\. Arriving/);
+  assert.doesNotMatch(newer, /TODO: The published policies/);
+  assert.match(newer, /<strong>Save your spot\.<\/strong>/);
+  assert.match(newer, /<strong>Come early, stay calm\.<\/strong>/);
+  assert.match(newer, /<strong>Plans change, we get it\.<\/strong>/);
+  assert.match(newer, /<strong>Shoes off, good vibes on\.<\/strong>/);
+  assert.match(newer, /<strong>Heading out early\?<\/strong>/);
+  assert.match(newer, /<strong>Need to pause your membership\?<\/strong>/);
+  assert.match(newer, /href="\/policy-procedures\/">studio procedures page/);
+  assert.match(newer, /href="\/schedule\/">schedule/);
   assert.match(newer, /Doors lock 10 minutes after class starts/);
   assert.match(newer, /No shoes in the studio space/);
   assert.match(newer, /Leave your weights/);
+  assert.match(newer, /30 days before your next billing date/);
   assert.match(newer, /30 days before the next billing cycle/);
+  assert.doesNotMatch(newer, /12 hours/);
   assert.doesNotMatch(newer, /PowerHIIT45/);
 
   const teachers = readFileSync("dist/ourteam/index.html", "utf8");
@@ -276,6 +296,7 @@ test("static build and SEO check", () => {
     assert.doesNotMatch(html, /\/classes\/stretch/i, file);
     assert.doesNotMatch(html, />\s*Stretch\s*</, file);
     assert.doesNotMatch(html, /PowerHIIT45/i, file);
+    assert.doesNotMatch(html, /12 hours/, file);
     assert.doesNotMatch(html, /image-asset-90d1db64/, file);
     assert.doesNotMatch(html, /Diane Shaw/, file);
   }
@@ -348,7 +369,9 @@ test("static build and SEO check", () => {
   assert.match(procedures, /Doors lock 10 minutes after class starts/);
   assert.match(procedures, /No shoes in the studio space/);
   assert.match(procedures, /leave your weights/);
+  assert.match(procedures, /cancel at least 60 minutes ahead/);
   assert.match(procedures, /30 days before your next billing cycle/);
+  assert.doesNotMatch(procedures, /12 hours/);
   assert.match(procedures, /mailto:hello@ignyteyoga.com/);
   assert.match(readFileSync("dist/private-events/index.html", "utf8"), /Omni PGA/);
   assert.match(readFileSync("dist/private-events/index.html", "utf8"), /hello@ignyteyoga.com/);
