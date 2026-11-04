@@ -380,6 +380,17 @@ function robotsTxt() {
   return `${agents.map((agent) => `User-agent: ${agent}\nAllow: /\n`).join("\n")}\nSitemap: ${siteOrigin}/sitemap.xml\n`;
 }
 
+async function copyAuthoredMedia() {
+  const from = path.join(root, "media");
+  try {
+    await stat(from);
+  } catch (error) {
+    if (error.code === "ENOENT") return;
+    throw error;
+  }
+  await copyTree(from, path.join(distDir, "media"));
+}
+
 async function copyTree(from, to) {
   await mkdir(to, { recursive: true });
   for (const entry of await readdir(from, { withFileTypes: true })) {
@@ -435,6 +446,7 @@ async function main() {
   }
   await copyFile(path.join(root, "assets/source/images/favicon.ico"), path.join(distDir, "favicon.ico"));
   await copyTree(path.join(root, "images"), path.join(distDir, "images"));
+  await copyAuthoredMedia();
 
   const scriptTag = `<script src="/scripts/nav.js" defer></script>`;
   for (const page of pages) {
