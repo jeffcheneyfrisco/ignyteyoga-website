@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import test from "node:test";
+import { isPastEventDate, markPastEvents, studioToday } from "../src/scripts/past-events.js";
 
 test("static build and SEO check", () => {
   const build = spawnSync(process.execPath, ["scripts/build.mjs"], { encoding: "utf8" });
@@ -158,7 +159,9 @@ test("static build and SEO check", () => {
   assert.match(about, /loading="lazy"/);
 
   assert.match(home, /href="\/community\/">Community/);
+  assert.match(home, /href="\/community\/">Community<\/a>\s*<a href="\/events\/">Events<\/a>\s*<a href="\/private-events\/">Private events/);
   assert.equal(existsSync("dist/community/index.html"), true);
+  assert.equal(existsSync("dist/events/index.html"), true);
   assert.equal(existsSync("dist/classes/power45/index.html"), false);
   assert.equal(existsSync("dist/classes/power-45/index.html"), false);
   assert.equal(existsSync("src/pages/classes/power45.html"), false);
@@ -391,4 +394,138 @@ test("static build and SEO check", () => {
   assert.match(privateEvents, /data-bg="\/assets\/source\/images\/private-events-hero\.jpg"/);
   assert.match(privateEvents, /We offer special classes for organizations, corporations, team building, and birthday parties\./);
   assert.doesNotMatch(privateEvents, /wellness workshops/);
+
+  const upcoming = readFileSync("dist/events/index.html", "utf8");
+  const eventsSource = readFileSync("src/pages/events.html", "utf8");
+  assert.match(upcoming, /<title>Upcoming Events \| Hot Yoga Frisco \| Ignyte Yoga<\/title>/);
+  assert.match(upcoming, /<h1>Upcoming Events<\/h1>/);
+  assert.match(upcoming, /December events coming soon\. Stay tuned!/);
+  assert.match(upcoming, /https:\/\/ignyteyoga\.com\/events\//);
+  assert.match(upcoming, /src="\/scripts\/mark-past-events\.js"/);
+  assert.match(upcoming, /Mindbody site 44816/);
+  assert.match(upcoming, /ce1600307310/);
+  assert.doesNotMatch(upcoming, /healcode\.js/);
+  assert.doesNotMatch(eventsSource, /\b\d{1,2}:\d{2}\b/);
+  assert.doesNotMatch(eventsSource, /\b(?:AM|PM|a\.m\.|p\.m\.)\b/);
+  const eventList = upcoming.slice(upcoming.indexOf('class="event-list"'), upcoming.indexOf("Grateful you"));
+  assert.doesNotMatch(eventList, /\b\d{1,2}:\d{2}\b/);
+  assert.doesNotMatch(eventList, /\b(?:AM|PM|a\.m\.|p\.m\.)\b/);
+  const eventCards = [
+    {
+      title: "Pop Up Dance Class",
+      date: "Saturday, November 8, 2026",
+      iso: "2026-11-08",
+      teacher: "with Michelle",
+      copy: /social dance party, and we learn the Thriller dance together/,
+    },
+    {
+      title: "Gratitude Week: Surrender + Sound Healing",
+      date: "Sunday, November 15, 2026",
+      iso: "2026-11-15",
+      teacher: "with Kristin",
+      copy: /surrender and sound healing/,
+    },
+    {
+      title: "Gratitude Week: Friendsgiving 75-minute VinYin",
+      date: "Thursday, November 19, 2026",
+      iso: "2026-11-19",
+      teacher: "with Kristin",
+      copy: /75-minute VinYin class with Kristin/,
+    },
+  ];
+  assert.equal((upcoming.match(/class="event-card"/g) || []).length, eventCards.length);
+  assert.equal((upcoming.match(/href="\/schedule\/">Sign up<\/a>/g) || []).length, eventCards.length);
+  for (const card of eventCards) {
+    const marker = `data-event-date="${card.iso}"`;
+    const markerAt = upcoming.indexOf(marker);
+    assert.ok(markerAt > -1, card.iso);
+    const slice = upcoming.slice(Math.max(0, markerAt - 80), markerAt + 1100);
+    assert.ok(slice.includes(`<h2>${card.title}</h2>`), card.title);
+    assert.ok(slice.includes(`datetime="${card.iso}"`), card.iso);
+    assert.ok(slice.includes(card.date), card.date);
+    assert.ok(slice.includes(`data-remove-after="${card.iso}"`), card.iso);
+    assert.ok(slice.includes(`remove-after: ${card.iso}`), card.iso);
+    assert.ok(slice.includes(card.teacher), card.teacher);
+    assert.match(slice, card.copy);
+    assert.match(slice, /href="\/schedule\/">Sign up<\/a>/);
+  }
+  assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/events\/<\/loc>/);
+  assert.equal(existsSync("dist/scripts/past-events.js"), true);
+  assert.equal(existsSync("dist/scripts/mark-past-events.js"), true);
+});
+
+function fakeEventCard(date) {
+  const attributes = { "data-event-date": date };
+  const children = [];
+  return {
+    getAttribute(name) {
+      return attributes[name] ?? null;
+    },
+    setAttribute(name, value) {
+      attributes[name] = value;
+    },
+    removeAttribute(name) {
+      delete attributes[name];
+    },
+    classList: {
+      names: new Set(),
+      toggle(name, force) {
+        const on = force === undefined ? !this.names.has(name) : Boolean(force);
+        if (on) this.names.add(name);
+        else this.names.delete(name);
+        return on;
+      },
+      contains(name) {
+        return this.names.has(name);
+      },
+    },
+    querySelector(selector) {
+      if (selector !== ".event-status") return null;
+      return children.find((child) => child.className === "event-status") ?? null;
+    },
+    ownerDocument: {
+      createElement() {
+        return { className: "", textContent: "" };
+      },
+    },
+    prepend(node) {
+      node.remove = () => {
+        const index = children.indexOf(node);
+        if (index >= 0) children.splice(index, 1);
+      };
+      children.unshift(node);
+    },
+    children,
+    attributes,
+  };
+}
+
+test("past events are marked after the studio date", () => {
+  assert.equal(isPastEventDate("2026-11-08", "2026-11-08"), false);
+  assert.equal(isPastEventDate("2026-11-08", "2026-11-09"), true);
+  assert.equal(isPastEventDate("2026-11-19", "2026-11-04"), false);
+  assert.equal(isPastEventDate("not-a-date", "2026-11-09"), false);
+  assert.equal(studioToday(new Date("2026-11-09T05:30:00Z")), "2026-11-08");
+  assert.equal(studioToday(new Date("2026-11-09T06:30:00Z")), "2026-11-09");
+
+  const card = fakeEventCard("2026-11-08");
+  const root = { querySelectorAll: () => [card] };
+  markPastEvents(root, "2026-11-08");
+  assert.equal(card.classList.contains("event-past"), false);
+  assert.equal(card.attributes["data-past"], undefined);
+  assert.equal(card.children.length, 0);
+
+  markPastEvents(root, "2026-11-09");
+  assert.equal(card.classList.contains("event-past"), true);
+  assert.equal(card.attributes["data-past"], "true");
+  assert.equal(card.children.length, 1);
+  assert.equal(card.children[0].className, "event-status");
+  assert.equal(card.children[0].textContent, "Past");
+  markPastEvents(root, "2026-11-09");
+  assert.equal(card.children.length, 1);
+
+  markPastEvents(root, "2026-11-08");
+  assert.equal(card.classList.contains("event-past"), false);
+  assert.equal(card.attributes["data-past"], undefined);
+  assert.equal(card.children.length, 0);
 });
