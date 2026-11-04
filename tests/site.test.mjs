@@ -481,6 +481,35 @@ test("static build and SEO check", () => {
 
   assert.match(home, /class="gift-banner"[\s\S]*<section class="hero">/);
   assert.match(home, /Give the gift of wellness this holiday season\./);
+  const tickerAt = home.indexOf('class="announce-ticker"');
+  const headerAt = home.indexOf('class="site-header"');
+  const giftAt = home.indexOf('class="gift-banner"');
+  const heroAt = home.indexOf('<section class="hero">');
+  assert.ok(tickerAt > -1 && tickerAt < headerAt && headerAt < giftAt && giftAt < heroAt);
+  assert.match(home, /<a class="announce-ticker" href="\/new-here\/">/);
+  assert.match(home, /<span class="announce-ticker-item"><span class="announce-ticker-text">Join the movement!<\/span>/);
+  assert.match(home, /<span class="announce-ticker-item" aria-hidden="true">/);
+  assert.match(home, /<span class="announce-ticker-group" aria-hidden="true">/);
+  assert.match(home, /class="flame-outer"/);
+  assert.match(home, /class="flame-mid"/);
+  assert.match(home, /class="flame-core"/);
+  assert.doesNotMatch(home, /<marquee[\s>]/i);
+  assert.match(home, /@keyframes announce-ticker-scroll[\s\S]*translate3d\(-50%, 0, 0\)/);
+  assert.match(home, /\.announce-ticker:hover \.announce-ticker-track,\s*\.announce-ticker:focus-visible \.announce-ticker-track\s*\{[^}]*animation-play-state:\s*paused/);
+  assert.match(home, /@media \(prefers-reduced-motion: reduce\)[\s\S]*?\.announce-ticker-track[\s\S]*?animation:\s*none/);
+  assert.match(home, /\.announce-ticker\s*\{[^}]*height:\s*36px/);
+  for (const page of [
+    "dist/new-here/index.html",
+    "dist/about/index.html",
+    "dist/gift-cards/index.html",
+    "dist/schedule/index.html",
+    "dist/404.html",
+  ]) {
+    const html = readFileSync(page, "utf8");
+    assert.match(html, /<a class="announce-ticker" href="\/new-here\/">/, page);
+    assert.match(html, /<span class="announce-ticker-group" aria-hidden="true">/, page);
+    assert.doesNotMatch(html, /<marquee[\s>]/i, page);
+  }
   assert.match(home, /href="\/gift-cards\/">Shop gift cards<\/a>/);
   assert.match(home, /<section class="hero">/);
   assert.match(home, /\.hero\s*\{[^}]*min-height:\s*82vh/);
