@@ -424,7 +424,11 @@ async function main() {
   }
 
   await copyFile(path.join(srcDir, "styles/site.css"), path.join(distDir, "styles/site.css"));
-  await copyFile(path.join(srcDir, "scripts/nav.js"), path.join(distDir, "scripts/nav.js"));
+  for (const file of await readdir(path.join(srcDir, "scripts"))) {
+    if (file.endsWith(".js")) {
+      await copyFile(path.join(srcDir, "scripts", file), path.join(distDir, "scripts", file));
+    }
+  }
   await copyFile(path.join(srcDir, "site.webmanifest"), path.join(distDir, "site.webmanifest"));
   for (const font of await readdir(path.join(srcDir, "fonts"))) {
     await copyFile(path.join(srcDir, "fonts", font), path.join(distDir, "fonts", font));

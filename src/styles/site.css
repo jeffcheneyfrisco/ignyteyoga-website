@@ -138,14 +138,14 @@ p {
   margin-left: auto;
 }
 
-.book-btn-bar {
+.btn.book-btn-bar {
   display: none;
 }
 
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .site-nav a {
@@ -155,6 +155,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .site-nav a:hover {
@@ -702,6 +703,68 @@ button.btn,
   padding: 1.3rem 1.3rem 0.4rem;
 }
 
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  padding: 1.35rem 1.25rem 1.4rem;
+  background: var(--paper);
+}
+
+.event-card h2 {
+  min-height: 3.15em;
+  font-size: clamp(1.65rem, 2.5vw, 2.15rem);
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.event-date {
+  margin: 0 0 0.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.event-teacher {
+  margin: 0 0 0.9rem;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.event-card .event-copy {
+  flex: 1;
+}
+
+.event-card .btn {
+  margin-top: 1.1rem;
+}
+
+.event-card.event-past {
+  border-top-color: var(--muted);
+  background: #f6f6f6;
+}
+
+.event-status {
+  margin: 0 0 0.7rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .price-card h2 {
   font-size: 2rem;
 }
@@ -952,6 +1015,40 @@ blockquote footer {
   text-transform: uppercase;
 }
 
+@media (max-width: 1240px) {
+  .btn.book-btn-bar {
+    display: inline-block;
+    padding: 0.55rem 0.65rem;
+    font-size: 0.68rem;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: white;
+    border-bottom: 1px solid var(--line);
+    padding: 0.4rem 0 0.8rem;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 0.85rem 1.2rem;
+  }
+}
+
 @media (max-width: 900px) {
   .logo img {
     height: 48px;
@@ -961,7 +1058,7 @@ blockquote footer {
     gap: 0.5rem;
   }
 
-  .book-btn-bar {
+  .btn.book-btn-bar {
     display: inline-block;
     padding: 0.55rem 0.65rem;
     font-size: 0.68rem;
@@ -1000,7 +1097,8 @@ blockquote footer {
   .post-card,
   .class-groups,
   .adventures,
-  .lake-media {
+  .lake-media,
+  .event-list {
     grid-template-columns: 1fr;
   }
 
