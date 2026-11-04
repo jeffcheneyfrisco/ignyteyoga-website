@@ -315,6 +315,55 @@ button.btn,
   text-align: center;
 }
 
+.gift-banner {
+  background: var(--ink);
+  color: var(--paper);
+  border-bottom: 3px solid var(--accent);
+  padding: 0.7rem 6vw;
+}
+
+.gift-banner-inner {
+  max-width: var(--content);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem 1.25rem;
+  text-align: center;
+}
+
+.gift-banner p {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+.gift-banner .btn {
+  padding: 0.62rem 0.95rem;
+}
+
+.gift-options {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+}
+
+.gift-options li {
+  margin: 0.15rem 0;
+}
+
+@media (max-width: 700px) {
+  .gift-banner {
+    padding: 0.75rem 1.2rem;
+  }
+
+  .gift-banner-inner {
+    flex-direction: column;
+  }
+}
+
 .theme-bright {
   background: var(--accent);
   color: white;

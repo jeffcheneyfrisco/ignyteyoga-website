@@ -468,6 +468,36 @@ test("static build and SEO check", () => {
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/events\/<\/loc>/);
   assert.equal(existsSync("dist/scripts/past-events.js"), true);
   assert.equal(existsSync("dist/scripts/mark-past-events.js"), true);
+
+  assert.match(home, /class="gift-banner"[\s\S]*<section class="hero">/);
+  assert.match(home, /Give the gift of wellness this holiday season\./);
+  assert.match(home, /href="\/gift-cards\/">Shop gift cards<\/a>/);
+  assert.match(home, /<section class="hero">/);
+  assert.match(home, /\.hero\s*\{[^}]*min-height:\s*82vh/);
+  assert.match(home, /@media \(max-width: 900px\)[\s\S]*?\.hero\s*\{[^}]*min-height:\s*72vh/);
+  const homeNav = home.match(/<nav id="site-nav"[\s\S]*?<\/nav>/)[0];
+  assert.doesNotMatch(homeNav, /gift-cards|Gift Cards/);
+  assert.match(home, /class="footer-links"[\s\S]*href="\/gift-cards\/">Gift Cards<\/a>/);
+
+  assert.equal(existsSync("dist/gift-cards/index.html"), true);
+  const gifts = readFileSync("dist/gift-cards/index.html", "utf8");
+  assert.match(gifts, /<title>Give the gift of wellness \| Hot Yoga Frisco \| Ignyte Yoga<\/title>/);
+  assert.match(gifts, /<h1>Give the gift of wellness<\/h1>/);
+  assert.match(gifts, /Looking for the perfect gift for someone you love\? Give them time on the mat\./);
+  assert.match(gifts, /Ignyte gift cards are delivered by email, so they.re easy to send and easy to love\./);
+  assert.match(gifts, /<li>\$25<\/li>\s*<li>\$50<\/li>\s*<li>\$100<\/li>\s*<li>Choose your own amount<\/li>/);
+  assert.match(gifts, /Plus class packs and a month of classes make a great gift too\./);
+  assert.match(gifts, /href="https:\/\/clients\.mindbodyonline\.com\/classic\/ws\?studioid=44816&amp;stype=42"[^>]*target="_blank"[^>]*rel="noopener"/);
+  assert.match(gifts, />Buy a gift card<\/a>/);
+  assert.match(gifts, /\/media\/powerflo-class-/);
+  assert.match(gifts, /alt="POWERFLO class in the Ignyte studio\."/);
+  assert.match(gifts, /href="\/gift-cards\/">Gift Cards<\/a>/);
+  const giftNav = gifts.match(/<nav id="site-nav"[\s\S]*?<\/nav>/)[0];
+  assert.doesNotMatch(giftNav, /gift-cards|Gift Cards/);
+  const rates = readFileSync("dist/rates/index.html", "utf8");
+  assert.match(rates, /href="\/gift-cards\/">Gift Cards<\/a>/);
+  assert.doesNotMatch(rates.match(/<nav id="site-nav"[\s\S]*?<\/nav>/)[0], /gift-cards|Gift Cards/);
+  assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/gift-cards\/<\/loc>/);
 });
 
 function fakeEventCard(date) {
