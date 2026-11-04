@@ -765,6 +765,49 @@ button.btn,
   text-transform: uppercase;
 }
 
+.text-message,
+.owners-photo {
+  margin: 1.75rem auto 0;
+}
+
+.text-message {
+  max-width: 24rem;
+}
+
+.text-message img,
+.owners-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.text-message img {
+  max-width: 320px;
+  margin-inline: auto;
+  border: 1px solid var(--line);
+  border-radius: 1.35rem;
+}
+
+.text-message figcaption {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.owners-photo {
+  max-width: 420px;
+  margin-top: 2.4rem;
+  margin-bottom: 0;
+}
+
+.sign-quote.sign-motto p {
+  max-width: 16em;
+  font-size: clamp(1.65rem, 4vw, 2.7rem);
+  line-height: 1.08;
+}
+
 .price-card h2 {
   font-size: 2rem;
 }

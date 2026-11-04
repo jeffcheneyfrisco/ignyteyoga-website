@@ -1,34 +1,30 @@
-# About — Ignyte Yoga. What's Your Why?
-
-Source: https://www.ignyteyoga.com/about
+# About — Ignyte Yoga
 
 ## Copy
 
-FIRED Up FROM THE START
+Fired up from the start
 We’re on a mission to ignyte a movement that warms the heart and lights a fire in the soul.
 
-Home Grown Yoga
-Ignyte Yoga is a family-owned, family-run yoga practice that embraces and celebrates all skill levels - from beginner to advanced. And like you, each one of us is at a different place in our yoga journey. There is no judgment, only joy in the wonderful things that yoga can bring into your life.
-Ignyte Yoga is one of the original infrared hot yoga studios in Frisco. We offer flow classes, power yoga, and weight-cardio fusion classes for all levels!
-We’re conveniently located in the heart of Frisco, Texas at the corner of Dallas Parkway and El Dorado. Come join us on the mat. We look forward to having you.
+It started with a text
+Jeff has been rolling out his mat at this studio since March 2016. For him, this room has always been the place to calm and strengthen his heart, mind and soul.
+So when he heard the studio was looking for new owners, he texted me: "Want to own a yoga studio?"
+I remember exactly where I was. I was out on a run, and that text stopped me in my tracks. Wait… what?
+That "wait, what?" turned into a yes. And here we are.
+Friday, January 22. The text that started it all.
 
-A MESsAGE FROM OUR OWNER
-Hello. My name is Christie and I’m one of the owners at Ignyte Yoga. Along with my brother, Jeff, and his wife, Dana, we’ve set out to create a one-of-a-kind studio that embraces yogis of all levels. Beginner, intermediate, or advanced, Ignyte Yoga is a safe place where everyone is welcome to enjoy your time on the mat.
-Yoga has been an integral part of my life for over a decade. The word "Yoga" literally means "union" – but at the studio, we like to think of it in terms of “community.” One that’s built upon love, support, empathy, acceptance, and friendship.
-Anyone can start practicing yoga at any time in life. Regardless of age, weight, fitness level, or experience – wherever you are, yoga will meet you there. And we’ll be there to support you along your journey. Yoga is really “your yoga.” Done your way.
-For me, I practice yoga to fire up my mind, body, and soul.
-What’s your why?
+Meet Christie
+Hi, I'm Christie! I'm a Licensed Professional Counselor with a private practice, and that work is still very much part of my life. I believe so deeply in the power of breath and movement to heal the mind and body that in 2012 I went through yoga teacher training, so I could bring a more holistic approach to my therapy sessions. Now I get to bring that same heart onto the mat here at Ignyte.
+What I believe in the counseling room is true in the hot room too. Healing begins with presence. Pause. Breathe. Notice. Move your body with love, not punishment, and with curiosity, not rigidity.
 
-hello@ignyteyoga.com
-12021 Dallas Parkway Suite #300, Frisco, Texas 75034
-469.536.2540
+Home grown, family run
+Ignyte is family-owned and family-run, and every level is welcome, from your first class to advanced. There's no judgment here, only joy in what this practice can bring into your life. We're one of the original infrared hot yoga studios in Frisco.
+
+Our culture motto
+Be the reason someone feels welcomed, seen, heard, valued, loved, and supported.
+That's how we try to show up for everyone who walks through our door, and how we hope you'll show up for each other. Come say hi. We'll greet you at the door.
 
 ## Images on the page
 
-- 74-DSC_5606.jpg
-- ignyte+0323-062.jpg
-- 75-DSC_5635.jpg
-- ignyte+0323-065.jpg — ignyte 0323-065.jpg
-- ignyte+0323-090.jpg — ignyte 0323-090.jpg
-- ignyte+0323-016.jpg — ignyte 0323-016.jpg
-- ignyte+0323-008+%281%29.jpg — ignyte 0323-008 (1).jpg
+- 74-DSC_5606.jpg — hero
+- media/about-text.webp — text message, 320px and 640px
+- media/about-jeff-christie.webp — Christie and Jeff, 420px and 840px

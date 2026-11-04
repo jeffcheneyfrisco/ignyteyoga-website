@@ -150,16 +150,22 @@ test("static build and SEO check", () => {
   const icon = readFileSync("dist/apple-touch-icon.png");
   assert.equal(icon.readUInt32BE(16), 180);
   assert.equal(icon.readUInt32BE(20), 180);
-  const photo = statSync("dist/media/ignyte-0323-090-1600.webp");
-  assert.ok(photo.size <= 220 * 1024, `ignyte-0323-090-1600.webp is ${photo.size} bytes`);
-  assert.equal(existsSync("dist/media/ignyte-0323-090-800.webp"), true);
   const about = readFileSync("dist/about/index.html", "utf8");
-  assert.match(about, /ignyte-0323-090-1600\.webp 1600w/);
-  assert.match(about, /ignyte-0323-090-800\.webp 800w/);
+  assert.match(about, /src="\/media\/about-text\.webp"/);
+  assert.match(about, /\/media\/about-text\.webp 1x, \/media\/about-text-2x\.webp 2x/);
+  assert.match(about, /src="\/media\/about-jeff-christie\.webp"/);
+  assert.match(about, /\/media\/about-jeff-christie\.webp 1x, \/media\/about-jeff-christie-2x\.webp 2x/);
+  assert.match(about, /class="text-message"/);
+  assert.match(about, /max-width:\s*320px/);
+  assert.equal(existsSync("dist/media/about-text.webp"), true);
+  assert.equal(existsSync("dist/media/about-text-2x.webp"), true);
+  assert.equal(existsSync("dist/media/about-jeff-christie.webp"), true);
+  assert.equal(existsSync("dist/media/about-jeff-christie-2x.webp"), true);
   assert.match(about, /loading="lazy"/);
 
   assert.match(home, /href="\/community\/">Community/);
-  assert.match(home, /href="\/community\/">Community<\/a>\s*<a href="\/events\/">Events<\/a>\s*<a href="\/private-events\/">Private events/);
+  assert.match(home, /href="\/schedule\/">Schedule<\/a>\s*<a href="\/events\/">Events<\/a>/);
+  assert.doesNotMatch(home, /href="\/community\/">Community<\/a>\s*<a href="\/events\/">Events<\/a>/);
   assert.equal(existsSync("dist/community/index.html"), true);
   assert.equal(existsSync("dist/events/index.html"), true);
   assert.equal(existsSync("dist/classes/power45/index.html"), false);
@@ -281,9 +287,15 @@ test("static build and SEO check", () => {
   assert.match(readFileSync("dist/new-here/index.html", "utf8"), /One step<br>at a time\./);
   assert.match(readFileSync("dist/community/index.html", "utf8"), /We love this community\./);
   assert.match(readFileSync("dist/community/index.html", "utf8"), /we rise together/);
-  assert.match(readFileSync("dist/about/index.html", "utf8"), /make the world<br>a brighter place/);
-  assert.match(readFileSync("dist/about/index.html", "utf8"), /Grateful for this space\./);
-  assert.doesNotMatch(readFileSync("dist/about/index.html", "utf8"), /A message from our owner|Christie at Ignyte Yoga/);
+  assert.match(readFileSync("dist/about/index.html", "utf8"), /It started with a text/);
+  assert.match(readFileSync("dist/about/index.html", "utf8"), /Want to own a yoga studio\?/);
+  assert.match(readFileSync("dist/about/index.html", "utf8"), /Friday, January 22\. The text that started it all\./);
+  assert.match(readFileSync("dist/about/index.html", "utf8"), /Christie and her brother Jeff the day they met the previous owners/);
+  assert.match(readFileSync("dist/about/index.html", "utf8"), /Meet Christie/);
+  assert.match(readFileSync("dist/about/index.html", "utf8"), /Home grown, family run/);
+  assert.match(readFileSync("dist/about/index.html", "utf8"), /Be the reason someone feels welcomed, seen, heard, valued, loved, and supported\./);
+  assert.match(readFileSync("dist/about/index.html", "utf8"), /href="\/schedule\/">Book a class/);
+  assert.doesNotMatch(readFileSync("dist/about/index.html", "utf8"), /make the world<br>a brighter place|Grateful for this space\.|Home grown yoga|A message from our owner|Christie at Ignyte Yoga/);
   assert.doesNotMatch(home, /Christie Cheney Bone/);
   assert.match(home, /"name": "Christie Cheney"/);
   assert.match(readFileSync("dist/classes/fyreflo/index.html", "utf8"), /Embrace the future/);
@@ -417,6 +429,7 @@ test("static build and SEO check", () => {
       iso: "2026-11-08",
       teacher: "with Michelle",
       copy: /social dance party, and we learn the Thriller dance together/,
+      signup: "https://clients.mindbodyonline.com/ws.asp?sDate=11%2F08%2F2026&amp;sLoc=1&amp;sTG=2&amp;sType=-7&amp;sclassid=2506&amp;studioid=44816",
     },
     {
       title: "Gratitude Week: Surrender + Sound Healing",
@@ -424,6 +437,7 @@ test("static build and SEO check", () => {
       iso: "2026-11-15",
       teacher: "with Kristin",
       copy: /surrender and sound healing/,
+      signup: "https://clients.mindbodyonline.com/ws.asp?sDate=11%2F15%2F2026&amp;sLoc=1&amp;sTG=2&amp;sType=-7&amp;sclassid=2504&amp;studioid=44816",
     },
     {
       title: "Gratitude Week: Friendsgiving 75-minute VinYin",
@@ -431,15 +445,16 @@ test("static build and SEO check", () => {
       iso: "2026-11-19",
       teacher: "with Kristin",
       copy: /75-minute VinYin class with Kristin/,
+      signup: "https://clients.mindbodyonline.com/ws.asp?sDate=11%2F19%2F2026&amp;sLoc=1&amp;sTG=2&amp;sType=-7&amp;sclassid=2507&amp;studioid=44816",
     },
   ];
   assert.equal((upcoming.match(/class="event-card"/g) || []).length, eventCards.length);
-  assert.equal((upcoming.match(/href="\/schedule\/">Sign up<\/a>/g) || []).length, eventCards.length);
+  assert.equal((upcoming.match(/href="\/schedule\/">Sign up<\/a>/g) || []).length, 0);
   for (const card of eventCards) {
     const marker = `data-event-date="${card.iso}"`;
     const markerAt = upcoming.indexOf(marker);
     assert.ok(markerAt > -1, card.iso);
-    const slice = upcoming.slice(Math.max(0, markerAt - 80), markerAt + 1100);
+    const slice = upcoming.slice(Math.max(0, markerAt - 80), markerAt + 1600);
     assert.ok(slice.includes(`<h2>${card.title}</h2>`), card.title);
     assert.ok(slice.includes(`datetime="${card.iso}"`), card.iso);
     assert.ok(slice.includes(card.date), card.date);
@@ -447,7 +462,8 @@ test("static build and SEO check", () => {
     assert.ok(slice.includes(`remove-after: ${card.iso}`), card.iso);
     assert.ok(slice.includes(card.teacher), card.teacher);
     assert.match(slice, card.copy);
-    assert.match(slice, /href="\/schedule\/">Sign up<\/a>/);
+    assert.ok(slice.includes(`href="${card.signup}"`), card.signup);
+    assert.match(slice, />Sign up<\/a>/);
   }
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/events\/<\/loc>/);
   assert.equal(existsSync("dist/scripts/past-events.js"), true);
