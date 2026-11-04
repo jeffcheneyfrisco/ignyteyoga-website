@@ -413,7 +413,7 @@ test("static build and SEO check", () => {
   const eventCards = [
     {
       title: "Pop Up Dance Class",
-      date: "Saturday, November 8, 2026",
+      date: "Sunday, November 8, 2026",
       iso: "2026-11-08",
       teacher: "with Michelle",
       copy: /social dance party, and we learn the Thriller dance together/,
