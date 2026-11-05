@@ -635,6 +635,25 @@ button.btn,
   object-position: center 20%;
 }
 
+/* Portrait source. A wide hero sits on the upper-middle so her back, head, and lifted foot stay in frame, with the mandala behind her. */
+.hero-events {
+  background-position: center 44%;
+}
+
+.hero-events .hero-media {
+  object-position: center 44%;
+}
+
+@media (max-width: 700px) {
+  .hero-events {
+    background-position: center 50%;
+  }
+
+  .hero-events .hero-media {
+    object-position: center 50%;
+  }
+}
+
 .adventure.tri-day {
   display: grid;
   grid-template-columns: minmax(220px, 340px) minmax(0, 1fr);
