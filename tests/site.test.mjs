@@ -488,6 +488,38 @@ test("static build and SEO check", () => {
     assert.ok(slice.includes(`href="${card.signup}"`), card.signup);
     assert.match(slice, />Sign up<\/a>/);
   }
+  assert.match(eventsSource, /class="hero short hero-events"/);
+  assert.match(eventsSource, /data-bg="\/assets\/source\/images\/events-mandala\.jpg"/);
+  assert.match(eventsSource, /data-alt="Yogi in a kneeling pose in front of the Ignyte mandala wall"/);
+  assert.doesNotMatch(eventsSource, /hero-bright|73-DSC_5601/);
+  assert.match(upcoming, /class="hero short hero-events"/);
+  assert.match(upcoming, /alt="Yogi in a kneeling pose in front of the Ignyte mandala wall"/);
+  assert.match(upcoming, /width="1206" height="1793"/);
+  assert.match(upcoming, /\/media\/events-mandala-480\.webp 480w/);
+  assert.match(upcoming, /\/media\/events-mandala-960\.webp 960w/);
+  assert.match(upcoming, /\/media\/events-mandala-1206\.webp 1206w/);
+  assert.match(upcoming, /\.hero-events \.hero-media\s*\{\s*object-position:\s*center 50%/);
+  assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?\.hero\.short\.hero-events\s*\{[^}]*min-height:\s*calc\(100vh - 8rem\)/);
+  assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?align-items:\s*flex-start/);
+  assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?\.hero-events \.hero-media\s*\{[^}]*height:\s*158%/);
+  assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?transform:\s*translate\(-50%, -27%\)/);
+  assert.match(upcoming, /\.hero::before[\s\S]*?background:\s*rgba\(0,\s*0,\s*0,\s*0\.48\)/);
+  assert.match(upcoming, /<section class="hero short hero-events">/);
+  assert.doesNotMatch(upcoming, /<section class="[^"]*hero-bright/);
+  assert.doesNotMatch(upcoming, /73-dsc-5601|73-DSC_5601/i);
+  for (const width of [480, 960, 1206]) {
+    assert.equal(existsSync(`dist/media/events-mandala-${width}.webp`), true, String(width));
+  }
+  assert.equal(existsSync("dist/media/events-mandala-1600.webp"), false);
+  const firstHero = (html) => {
+    const start = html.indexOf('<section class="hero');
+    return html.slice(start, html.indexOf("</section>", start));
+  };
+  assert.match(firstHero(upcoming), /events-mandala/);
+  assert.doesNotMatch(firstHero(home), /events-mandala/);
+  assert.doesNotMatch(home, /<section class="[^"]*hero-events/);
+  assert.doesNotMatch(firstHero(readFileSync("dist/private-events/index.html", "utf8")), /events-mandala/);
+  assert.doesNotMatch(firstHero(readFileSync("dist/community/index.html", "utf8")), /events-mandala/);
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/events\/<\/loc>/);
   assert.equal(existsSync("dist/scripts/past-events.js"), true);
   assert.equal(existsSync("dist/scripts/mark-past-events.js"), true);

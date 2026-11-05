@@ -635,6 +635,60 @@ button.btn,
   object-position: center 20%;
 }
 
+/* Portrait source. Narrow screens use a cover crop of the pose. */
+.hero-events {
+  background-position: center 50%;
+}
+
+.hero-events .hero-media {
+  object-position: center 50%;
+}
+
+@media (max-width: 700px) {
+  .hero-events {
+    background-position: center 50%;
+  }
+
+  .hero-events .hero-media {
+    object-position: center 50%;
+  }
+}
+
+/* Wide screens show the full pose and the mandala, with the title above her face. */
+@media (min-width: 901px) {
+  .hero.short.hero-events {
+    min-height: calc(100vh - 8rem);
+    align-items: flex-start;
+    padding-top: 2.15rem;
+    background-image: url("/media/events-mandala-960.webp");
+    background-size: cover;
+    background-position: center 46%;
+  }
+
+  .hero.short.hero-events::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    background: rgba(17, 17, 17, 0.28);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
+  .hero-events .hero-media {
+    width: auto;
+    height: 158%;
+    max-width: none;
+    inset: auto;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -27%);
+    object-fit: cover;
+    object-position: center center;
+    z-index: -2;
+  }
+}
+
 .adventure.tri-day {
   display: grid;
   grid-template-columns: minmax(220px, 340px) minmax(0, 1fr);
