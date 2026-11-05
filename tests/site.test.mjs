@@ -531,9 +531,9 @@ test("static build and SEO check", () => {
   assert.match(upcoming, /\.hero-events \.hero-media\s*\{\s*object-position:\s*center 36%/);
   assert.match(upcoming, /@media \(max-width: 900px\)[\s\S]*?\.hero\.short\.hero-events\s*\{[^}]*min-height:\s*80vh/);
   assert.match(upcoming, /@media \(max-width: 900px\)[\s\S]*?align-items:\s*flex-end/);
-  assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?\.hero\.short\.hero-events\s*\{[^}]*min-height:\s*calc\(100vh - 8rem\)/);
+  assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?\.hero\.short\.hero-events\s*\{[^}]*min-height:\s*calc\(100vh - 4rem\)/);
   assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?align-items:\s*flex-start/);
-  assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?\.hero-events \.hero-media\s*\{[^}]*height:\s*140%/);
+  assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?\.hero-events \.hero-media\s*\{[^}]*height:\s*112%/);
   assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?transform:\s*translateX\(-50%\)/);
   assert.match(upcoming, /\.hero::before[\s\S]*?background:\s*rgba\(0,\s*0,\s*0,\s*0\.48\)/);
   assert.match(upcoming, /<section class="hero short hero-events">/);

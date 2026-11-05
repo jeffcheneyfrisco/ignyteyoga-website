@@ -661,16 +661,16 @@ button.btn,
   }
 }
 
-/* Wide screens keep the raised foot, hands, head, and mandala in frame.
+/* Wide screens lift the portrait so the seated pose, mat, and mandala stay in view.
    The title sits on the wall above her face. */
 @media (min-width: 901px) {
   .hero.short.hero-events {
-    min-height: calc(100vh - 8rem);
+    min-height: calc(100vh - 4rem);
     align-items: flex-start;
     padding-top: 1.55rem;
     background-image: url("/media/events-mandala-alt-960.webp");
     background-size: cover;
-    background-position: center 28%;
+    background-position: center 55%;
   }
 
   .hero.short.hero-events .tagline {
@@ -689,7 +689,7 @@ button.btn,
 
   .hero-events .hero-media {
     width: auto;
-    height: 140%;
+    height: 112%;
     max-width: none;
     inset: auto;
     top: 0;
