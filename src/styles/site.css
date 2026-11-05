@@ -635,34 +635,46 @@ button.btn,
   object-position: center 20%;
 }
 
-/* Portrait source. Narrow screens use a cover crop of the pose. */
+/* Portrait of the leg-to-sky pose. Phones show her raised foot through the mat,
+   and the title sits on the floor so it does not cover her face. */
 .hero-events {
-  background-position: center 50%;
+  background-position: center 36%;
 }
 
 .hero-events .hero-media {
-  object-position: center 50%;
+  object-position: center 36%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+  .hero.short.hero-events {
+    min-height: 80vh;
+    align-items: flex-end;
+    padding: 1.4rem 1.2rem 1.7rem;
+  }
+
   .hero-events {
-    background-position: center 50%;
+    background-position: center 36%;
   }
 
   .hero-events .hero-media {
-    object-position: center 50%;
+    object-position: center 36%;
   }
 }
 
-/* Wide screens show the full pose and the mandala, with the title above her face. */
+/* Wide screens keep the raised foot, hands, head, and mandala in frame.
+   The title sits on the wall above her face. */
 @media (min-width: 901px) {
   .hero.short.hero-events {
     min-height: calc(100vh - 8rem);
     align-items: flex-start;
-    padding-top: 2.15rem;
-    background-image: url("/media/events-mandala-960.webp");
+    padding-top: 1.55rem;
+    background-image: url("/media/events-mandala-alt-960.webp");
     background-size: cover;
-    background-position: center 46%;
+    background-position: center 28%;
+  }
+
+  .hero.short.hero-events .tagline {
+    max-width: none;
   }
 
   .hero.short.hero-events::after {
@@ -677,14 +689,14 @@ button.btn,
 
   .hero-events .hero-media {
     width: auto;
-    height: 158%;
+    height: 140%;
     max-width: none;
     inset: auto;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -27%);
+    transform: translateX(-50%);
     object-fit: cover;
-    object-position: center center;
+    object-position: center top;
     z-index: -2;
   }
 }

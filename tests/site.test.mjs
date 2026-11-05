@@ -4,6 +4,36 @@ import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import test from "node:test";
 import { isPastEventDate, markPastEvents, studioToday } from "../src/scripts/past-events.js";
 
+function jpegHasExif(buf) {
+  if (buf[0] !== 0xff || buf[1] !== 0xd8) return false;
+  let offset = 2;
+  while (offset + 4 < buf.length) {
+    if (buf[offset] !== 0xff) return false;
+    const marker = buf[offset + 1];
+    if (marker === 0xd8) {
+      offset += 2;
+      continue;
+    }
+    if (marker === 0xd9 || marker === 0xda) return false;
+    const size = buf.readUInt16BE(offset + 2);
+    if (marker === 0xe1 && buf.toString("ascii", offset + 4, offset + 8) === "Exif") return true;
+    offset += 2 + size;
+  }
+  return false;
+}
+
+function webpHasExif(buf) {
+  if (buf.toString("ascii", 0, 4) !== "RIFF" || buf.toString("ascii", 8, 12) !== "WEBP") return false;
+  let offset = 12;
+  while (offset + 8 <= buf.length) {
+    const fourcc = buf.toString("ascii", offset, offset + 4);
+    const size = buf.readUInt32LE(offset + 4);
+    if (fourcc === "EXIF") return true;
+    offset += 8 + size + (size % 2);
+  }
+  return false;
+}
+
 test("static build and SEO check", () => {
   const build = spawnSync(process.execPath, ["scripts/build.mjs"], { encoding: "utf8" });
   assert.equal(build.status, 0, `${build.stdout}\n${build.stderr}`);
@@ -489,33 +519,38 @@ test("static build and SEO check", () => {
     assert.match(slice, />Sign up<\/a>/);
   }
   assert.match(eventsSource, /class="hero short hero-events"/);
-  assert.match(eventsSource, /data-bg="\/assets\/source\/images\/events-mandala\.jpg"/);
-  assert.match(eventsSource, /data-alt="Yogi in a kneeling pose in front of the Ignyte mandala wall"/);
-  assert.doesNotMatch(eventsSource, /hero-bright|73-DSC_5601/);
+  assert.match(eventsSource, /data-bg="\/assets\/source\/images\/events-mandala-alt\.jpg"/);
+  assert.match(eventsSource, /data-alt="Woman seated on a mat in a leg-to-sky pose in front of the Ignyte mandala wall, a red candle beside her"/);
+  assert.doesNotMatch(eventsSource, /hero-bright|73-DSC_5601|events-mandala\.jpg"/);
   assert.match(upcoming, /class="hero short hero-events"/);
-  assert.match(upcoming, /alt="Yogi in a kneeling pose in front of the Ignyte mandala wall"/);
-  assert.match(upcoming, /width="1206" height="1793"/);
-  assert.match(upcoming, /\/media\/events-mandala-480\.webp 480w/);
-  assert.match(upcoming, /\/media\/events-mandala-960\.webp 960w/);
-  assert.match(upcoming, /\/media\/events-mandala-1206\.webp 1206w/);
-  assert.match(upcoming, /\.hero-events \.hero-media\s*\{\s*object-position:\s*center 50%/);
+  assert.match(upcoming, /alt="Woman seated on a mat in a leg-to-sky pose in front of the Ignyte mandala wall, a red candle beside her"/);
+  assert.match(upcoming, /width="1206" height="1742"/);
+  assert.match(upcoming, /\/media\/events-mandala-alt-480\.webp 480w/);
+  assert.match(upcoming, /\/media\/events-mandala-alt-960\.webp 960w/);
+  assert.match(upcoming, /\/media\/events-mandala-alt-1206\.webp 1206w/);
+  assert.match(upcoming, /\.hero-events \.hero-media\s*\{\s*object-position:\s*center 36%/);
+  assert.match(upcoming, /@media \(max-width: 900px\)[\s\S]*?\.hero\.short\.hero-events\s*\{[^}]*min-height:\s*80vh/);
+  assert.match(upcoming, /@media \(max-width: 900px\)[\s\S]*?align-items:\s*flex-end/);
   assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?\.hero\.short\.hero-events\s*\{[^}]*min-height:\s*calc\(100vh - 8rem\)/);
   assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?align-items:\s*flex-start/);
-  assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?\.hero-events \.hero-media\s*\{[^}]*height:\s*158%/);
-  assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?transform:\s*translate\(-50%, -27%\)/);
+  assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?\.hero-events \.hero-media\s*\{[^}]*height:\s*140%/);
+  assert.match(upcoming, /@media \(min-width: 901px\)[\s\S]*?transform:\s*translateX\(-50%\)/);
   assert.match(upcoming, /\.hero::before[\s\S]*?background:\s*rgba\(0,\s*0,\s*0,\s*0\.48\)/);
   assert.match(upcoming, /<section class="hero short hero-events">/);
   assert.doesNotMatch(upcoming, /<section class="[^"]*hero-bright/);
   assert.doesNotMatch(upcoming, /73-dsc-5601|73-DSC_5601/i);
   for (const width of [480, 960, 1206]) {
-    assert.equal(existsSync(`dist/media/events-mandala-${width}.webp`), true, String(width));
+    assert.equal(existsSync(`dist/media/events-mandala-alt-${width}.webp`), true, String(width));
+    assert.equal(webpHasExif(readFileSync(`dist/media/events-mandala-alt-${width}.webp`)), false, String(width));
   }
-  assert.equal(existsSync("dist/media/events-mandala-1600.webp"), false);
+  assert.equal(existsSync("dist/media/events-mandala-alt-1600.webp"), false);
+  assert.equal(existsSync("dist/media/events-mandala-1206.webp"), false);
+  assert.equal(jpegHasExif(readFileSync("assets/source/images/events-mandala-alt.jpg")), false);
   const firstHero = (html) => {
     const start = html.indexOf('<section class="hero');
     return html.slice(start, html.indexOf("</section>", start));
   };
-  assert.match(firstHero(upcoming), /events-mandala/);
+  assert.match(firstHero(upcoming), /events-mandala-alt/);
   assert.doesNotMatch(firstHero(home), /events-mandala/);
   assert.doesNotMatch(home, /<section class="[^"]*hero-events/);
   assert.doesNotMatch(firstHero(readFileSync("dist/private-events/index.html", "utf8")), /events-mandala/);
