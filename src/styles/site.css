@@ -16,24 +16,8 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("/fonts/montserrat-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
   src: url("/fonts/montserrat-600.woff2") format("woff2");
   font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Great Vibes";
-  src: url("/fonts/great-vibes-400.woff2") format("woff2");
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -445,18 +429,18 @@ button.btn,
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.65rem;
-  margin: -0.45rem 0 0.9rem;
+  gap: 0.15rem;
+  margin: -0.2rem 0 0.85rem;
 }
 
 .signature-option {
-  margin: 0;
+  margin: 0.55rem 0 0;
   text-align: center;
 }
 
 .signature-label {
   display: block;
-  margin: 0 0 0.05rem;
+  margin: 0 0 0.1rem;
   font-family: "Montserrat", "Gill Sans", "Trebuchet MS", sans-serif;
   font-size: 0.72rem;
   font-weight: 400;
@@ -466,29 +450,61 @@ button.btn,
   text-transform: none;
 }
 
-.signature-script,
-.signature-plain {
+.hand-signature {
   display: block;
-  text-transform: none;
-  color: var(--ink);
+  width: min(100%, 34rem);
+  height: auto;
+  margin: 0 auto;
+  overflow: visible;
 }
 
-.signature-script {
-  font-family: "Great Vibes", cursive;
-  font-size: clamp(2.05rem, 7.2vw, 2.7rem);
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.35;
-  letter-spacing: 0.01em;
+.hand-signature-option2 {
+  width: min(100%, 32rem);
 }
 
-.signature-plain {
-  font-family: "Montserrat", "Gill Sans", "Trebuchet MS", sans-serif;
-  font-size: 1.15rem;
-  font-weight: 500;
-  font-style: normal;
-  letter-spacing: 0.08em;
-  line-height: 1.35;
+@keyframes sig-draw {
+  from {
+    stroke-dashoffset: 100;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .hand-signature-primary .sig-ink {
+      -webkit-mask: url(#sign-mask-primary);
+      mask: url(#sign-mask-primary);
+    }
+
+    .hand-signature-option2 .sig-ink {
+      -webkit-mask: url(#sign-mask-option2);
+      mask: url(#sign-mask-option2);
+    }
+
+    .sig-reveal {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      animation-name: sig-draw;
+      animation-timing-function: ease-out;
+      animation-fill-mode: both;
+      animation-timeline: view();
+    }
+
+    .sig-reveal.sig-first {
+      animation-range: entry 0% entry 62%;
+    }
+
+    .sig-reveal.sig-mark {
+      animation-range: entry 22% entry 48%;
+    }
+
+    .sig-reveal.sig-last {
+      animation-range: entry 36% entry 92%;
+    }
+  }
 }
 
 .gift-banner {
