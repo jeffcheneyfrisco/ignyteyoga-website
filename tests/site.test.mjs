@@ -319,13 +319,10 @@ test("static build and SEO check", () => {
   assert.doesNotMatch(readFileSync("dist/about/index.html", "utf8"), /make the world<br>a brighter place|Grateful for this space\.|Home grown yoga|A message from our owner|Christie at Ignyte Yoga/);
   assert.doesNotMatch(home, /Christie Cheney Bone/);
   assert.match(home, /"name": "Christie Cheney"/);
-  assert.match(home, /What’s your why\?<\/p>\s*<div class="welcome-signatures">/);
-  assert.match(home, /<svg class="hand-signature hand-signature-primary"[^>]*aria-label="Christie Cheney"/);
-  assert.match(home, /<span class="signature-label">Option 2<\/span>\s*<svg class="hand-signature hand-signature-option2"[^>]*aria-label="Christie Cheney"/);
-  assert.match(home, /@keyframes sig-draw/);
-  assert.match(home, /@media \(prefers-reduced-motion: no-preference\)/);
-  assert.match(home, /animation-timeline:\s*view\(\)/);
-  assert.doesNotMatch(home, /Great Vibes|Option A · script|Option B · plain/);
+  assert.match(home, /What’s your why\?<\/p>\s*<svg class="owner-signature"[^>]*aria-label="Christie Cheney signature"/);
+  assert.match(home, /<title>Christie Cheney signature<\/title>/);
+  assert.match(home, /fill="#2a2724"/);
+  assert.doesNotMatch(home, /Great Vibes|Option 2|signature-label|sig-draw|hand-signature|welcome-signatures/);
   assert.equal(existsSync("dist/fonts/great-vibes-400.woff2"), false);
   assert.equal(existsSync("dist/fonts/montserrat-500.woff2"), false);
   assert.match(readFileSync("dist/classes/fyreflo/index.html", "utf8"), /Embrace the future/);
