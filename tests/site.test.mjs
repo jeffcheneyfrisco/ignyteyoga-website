@@ -319,6 +319,12 @@ test("static build and SEO check", () => {
   assert.doesNotMatch(readFileSync("dist/about/index.html", "utf8"), /make the world<br>a brighter place|Grateful for this space\.|Home grown yoga|A message from our owner|Christie at Ignyte Yoga/);
   assert.doesNotMatch(home, /Christie Cheney Bone/);
   assert.match(home, /"name": "Christie Cheney"/);
+  assert.match(home, /What’s your why\?<\/p>\s*<svg class="owner-signature"[^>]*aria-label="Christie Cheney signature"/);
+  assert.match(home, /<title>Christie Cheney signature<\/title>/);
+  assert.match(home, /fill="#2a2724"/);
+  assert.doesNotMatch(home, /Great Vibes|Option 2|signature-label|sig-draw|hand-signature|welcome-signatures/);
+  assert.equal(existsSync("dist/fonts/great-vibes-400.woff2"), false);
+  assert.equal(existsSync("dist/fonts/montserrat-500.woff2"), false);
   assert.match(readFileSync("dist/classes/fyreflo/index.html", "utf8"), /Embrace the future/);
   assert.match(home, /alt="FYREFLO class in the Ignyte studio\."/);
   assert.match(home, /alt="FLO class in the Ignyte studio\."/);
