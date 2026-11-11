@@ -434,17 +434,19 @@ test("static build and SEO check", () => {
   const eventsSource = readFileSync("src/pages/events.html", "utf8");
   assert.match(upcoming, /<title>Upcoming Events \| Hot Yoga Frisco \| Ignyte Yoga<\/title>/);
   assert.match(upcoming, /<h1>Upcoming Events<\/h1>/);
-  assert.match(upcoming, /December events coming soon\. Stay tuned!/);
+  assert.doesNotMatch(upcoming, /December events coming soon/);
+  assert.match(upcoming, /<h2>This December<\/h2>/);
   assert.match(upcoming, /https:\/\/ignyteyoga\.com\/events\//);
   assert.match(upcoming, /src="\/scripts\/mark-past-events\.js"/);
   assert.match(upcoming, /Mindbody site 44816/);
   assert.match(upcoming, /ce1600307310/);
   assert.doesNotMatch(upcoming, /healcode\.js/);
-  assert.doesNotMatch(eventsSource, /\b\d{1,2}:\d{2}\b/);
-  assert.doesNotMatch(eventsSource, /\b(?:AM|PM|a\.m\.|p\.m\.)\b/);
-  const eventList = upcoming.slice(upcoming.indexOf('class="event-list"'), upcoming.indexOf("Grateful you"));
-  assert.doesNotMatch(eventList, /\b\d{1,2}:\d{2}\b/);
-  assert.doesNotMatch(eventList, /\b(?:AM|PM|a\.m\.|p\.m\.)\b/);
+  const novemberSource = eventsSource.slice(eventsSource.indexOf("This November"), eventsSource.indexOf("This December"));
+  assert.doesNotMatch(novemberSource, /\b\d{1,2}:\d{2}\b/);
+  assert.doesNotMatch(novemberSource, /\b(?:AM|PM|a\.m\.|p\.m\.)\b/);
+  const novemberList = upcoming.slice(upcoming.indexOf("This November"), upcoming.indexOf("This December"));
+  assert.doesNotMatch(novemberList, /\b\d{1,2}:\d{2}\b/);
+  assert.doesNotMatch(novemberList, /\b(?:AM|PM|a\.m\.|p\.m\.)\b/);
   const eventCards = [
     {
       title: "Pop Up Dance Class",
@@ -470,6 +472,17 @@ test("static build and SEO check", () => {
       copy: /75-minute VinYin class with Kristin/,
       signup: "https://clients.mindbodyonline.com/ws.asp?sDate=11%2F19%2F2026&amp;sLoc=1&amp;sTG=2&amp;sType=-7&amp;sclassid=2507&amp;studioid=44816",
     },
+    {
+      title: "Movement Is Magic",
+      date: "Sunday, December 6, 2026<br>2:00–3:30 PM (1.5 hours)",
+      iso: "2026-12-06",
+      datetime: "2026-12-06T14:00-06:00",
+      teacher: "with Luke and Mandi",
+      copy: /A special class with Luke and Mandi of Love 'n' Move\./,
+      price: "$30",
+      signup: "https://clients.mindbodyonline.com/classic/ws?studioid=44816&amp;sDate=12/06/2026&amp;sLoc=1&amp;sTG=78&amp;sType=-7&amp;sclassid=2509",
+      button: "Reserve your spot",
+    },
   ];
   assert.equal((upcoming.match(/class="event-card"/g) || []).length, eventCards.length);
   assert.equal((upcoming.match(/href="\/schedule\/">Sign up<\/a>/g) || []).length, 0);
@@ -479,15 +492,23 @@ test("static build and SEO check", () => {
     assert.ok(markerAt > -1, card.iso);
     const slice = upcoming.slice(Math.max(0, markerAt - 80), markerAt + 1600);
     assert.ok(slice.includes(`<h2>${card.title}</h2>`), card.title);
-    assert.ok(slice.includes(`datetime="${card.iso}"`), card.iso);
+    assert.ok(slice.includes(`datetime="${card.datetime ?? card.iso}"`), card.iso);
     assert.ok(slice.includes(card.date), card.date);
     assert.ok(slice.includes(`data-remove-after="${card.iso}"`), card.iso);
     assert.ok(slice.includes(`remove-after: ${card.iso}`), card.iso);
     assert.ok(slice.includes(card.teacher), card.teacher);
     assert.match(slice, card.copy);
+    if (card.price) assert.ok(slice.includes(card.price), card.price);
     assert.ok(slice.includes(`href="${card.signup}"`), card.signup);
-    assert.match(slice, />Sign up<\/a>/);
+    assert.match(slice, new RegExp(`>${card.button ?? "Sign up"}</a>`));
   }
+  const movement = upcoming.slice(upcoming.indexOf('data-event-date="2026-12-06"'), upcoming.indexOf("Grateful you"));
+  const movementButton = movement.slice(movement.indexOf("<a "), movement.indexOf("</a>"));
+  assert.match(movementButton, /sclassid=2509/);
+  assert.match(movementButton, /sTG=78/);
+  assert.doesNotMatch(movementButton, /sView=day/);
+  assert.doesNotMatch(eventsSource, /TODO/);
+  assert.doesNotMatch(upcoming, /sclassid=NNNN/);
   assert.match(eventsSource, /class="hero short hero-events"/);
   assert.match(eventsSource, /data-bg="\/assets\/source\/images\/events-mandala\.jpg"/);
   assert.match(eventsSource, /data-alt="Yogi in a kneeling pose in front of the Ignyte mandala wall"/);

@@ -916,6 +916,10 @@ button.btn,
   padding: 1.3rem 1.3rem 0.4rem;
 }
 
+.event-month {
+  margin-top: 3.5rem;
+}
+
 .event-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -958,6 +962,12 @@ button.btn,
 
 .event-card .event-copy {
   flex: 1;
+}
+
+.event-price {
+  margin: 0.85rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .event-card .btn {
