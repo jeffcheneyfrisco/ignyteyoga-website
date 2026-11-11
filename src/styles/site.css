@@ -425,6 +425,13 @@ button.btn,
   text-align: center;
 }
 
+.owner-signature {
+  display: block;
+  width: min(100%, 24rem);
+  height: auto;
+  margin: -0.15rem auto 0.85rem;
+}
+
 .gift-banner {
   background: var(--ink);
   color: var(--paper);
