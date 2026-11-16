@@ -675,3 +675,28 @@
   to = "/ourteam/"
   status = 301
   force = true
+
+# STRENGTH AND FLO is retired. The 60-minute class is STRENGTH.
+[[redirects]]
+  from = "/classes/strength-and-flo"
+  to = "/classes/strength/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/classes/strength-and-flo/"
+  to = "/classes/strength/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/strength-and-flo"
+  to = "/classes/strength/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/strength-and-flo/"
+  to = "/classes/strength/"
+  status = 301
+  force = true
