@@ -19,6 +19,10 @@ test("static build and SEO check", () => {
   assert.equal(existsSync("dist/classes/flow/index.html"), false);
   assert.equal(existsSync("dist/classes/fyreflo/index.html"), true);
   assert.equal(existsSync("dist/classes/powerflo/index.html"), true);
+  assert.equal(existsSync("dist/classes/powergro90/index.html"), true);
+  assert.equal(existsSync("dist/classes/strength/index.html"), true);
+  assert.equal(existsSync("dist/classes/strength-and-flo/index.html"), false);
+  assert.equal(existsSync("src/pages/classes/strength-and-flo.html"), false);
   assert.equal(existsSync("dist/classes/ignyte-sculpt/index.html"), true);
   assert.equal(existsSync("dist/classes/ignyte-sculpt-45/index.html"), false);
   assert.equal(existsSync("src/pages/classes/ignyte-sculpt-45.html"), false);
@@ -365,6 +369,26 @@ test("static build and SEO check", () => {
   assert.match(readFileSync("dist/classes/powerflo/index.html", "utf8"), /90°F/);
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/classes\/flo\/<\/loc>/);
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/classes\/fyreflo\/<\/loc>/);
+  assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/classes\/powergro90\/<\/loc>/);
+  assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/classes\/strength\/<\/loc>/);
+  assert.doesNotMatch(readFileSync("dist/sitemap.xml", "utf8"), /strength-and-flo/);
+  assert.match(home, /href="\/classes\/powergro90\/">POWERGRO90<\/a>\. 90 minutes with Julia, Thursdays 11:00 AM–12:30 PM, heated to 88–90°F\./);
+  assert.match(home, /href="\/classes\/fyreflo\/">FYREFLO<\/a>\. 60 minutes of all-levels LYT-inspired/);
+  assert.match(home, /href="\/classes\/strength\/">STRENGTH<\/a>\. 60 minutes, Sundays 10:45–11:45 AM\./);
+  assert.doesNotMatch(home, /href="\/classes\/strength-and-flo\/"/);
+  assert.match(readFileSync("dist/classes/index.html", "utf8"), /href="\/classes\/powergro90\/">POWERGRO90<\/a>/);
+  assert.match(readFileSync("dist/classes/index.html", "utf8"), /href="\/classes\/strength\/">STRENGTH<\/a>/);
+  assert.doesNotMatch(readFileSync("dist/classes/index.html", "utf8"), /strength-and-flo|STRENGTH AND FLO|STRENGTH &amp; FLO/);
+  assert.match(readFileSync("dist/classes/powergro90/index.html", "utf8"), /<h1>POWERGRO90<\/h1>/);
+  assert.match(readFileSync("dist/classes/powergro90/index.html", "utf8"), /Heated to 88–90°F with infrared heat panels\./);
+  assert.match(readFileSync("dist/classes/strength/index.html", "utf8"), /<h1>STRENGTH<\/h1>/);
+  assert.match(readFileSync("dist/classes/strength/index.html", "utf8"), /infrared-heated space/);
+  assert.match(readFileSync("dist/new-here/index.html", "utf8"), /POWERGRO90 is 90 minutes, heated to 88–90°F with infrared heat panels\./);
+  assert.match(readFileSync("dist/new-here/index.html", "utf8"), /including STRENGTH/);
+  assert.doesNotMatch(readFileSync("dist/new-here/index.html", "utf8"), /STRENGTH AND FLO|strength-and-flo/);
+  for (const from of ["/classes/strength-and-flo", "/classes/strength-and-flo/", "/strength-and-flo", "/strength-and-flo/"]) {
+    assert.match(netlify, new RegExp(`from = "${from}"\\n  to = "/classes/strength/"\\n  status = 301\\n  force = true`));
+  }
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/private-events\/<\/loc>/);
   assert.doesNotMatch(readFileSync("dist/sitemap.xml", "utf8"), /did-you-know|instructorschristiecheney/);
   assert.doesNotMatch(readFileSync("dist/sitemap.xml", "utf8"), /hotflo|stretch|ignyte-sculpt-45|bliss|powerhiit45|\/classes\/flow\//i);
@@ -455,22 +479,6 @@ test("static build and SEO check", () => {
   assert.doesNotMatch(novemberList, /\b(?:AM|PM|a\.m\.|p\.m\.)\b/);
   const eventCards = [
     {
-      title: "Pop Up Dance Class",
-      date: "Sunday, November 8, 2026",
-      iso: "2026-11-08",
-      teacher: "with Michelle",
-      copy: /social dance party, and we learn the Thriller dance together/,
-      signup: "https://clients.mindbodyonline.com/ws.asp?sDate=11%2F08%2F2026&amp;sLoc=1&amp;sTG=2&amp;sType=-7&amp;sclassid=2506&amp;studioid=44816",
-    },
-    {
-      title: "Gratitude Week: Surrender + Sound Healing",
-      date: "Sunday, November 15, 2026",
-      iso: "2026-11-15",
-      teacher: "with Kristin",
-      copy: /surrender and sound healing/,
-      signup: "https://clients.mindbodyonline.com/ws.asp?sDate=11%2F15%2F2026&amp;sLoc=1&amp;sTG=2&amp;sType=-7&amp;sclassid=2504&amp;studioid=44816",
-    },
-    {
       title: "Gratitude Week: Friendsgiving 75-minute VinYin",
       date: "Thursday, November 19, 2026",
       iso: "2026-11-19",
@@ -489,8 +497,22 @@ test("static build and SEO check", () => {
       signup: "https://clients.mindbodyonline.com/classic/ws?studioid=44816&amp;sDate=12/06/2026&amp;sLoc=1&amp;sTG=78&amp;sType=-7&amp;sclassid=2509",
       button: "Reserve your spot",
     },
+    {
+      title: "Surrender + Sound Healing",
+      date: "Sunday, December 13, 2026<br>12:00–1:00 PM",
+      iso: "2026-12-13",
+      datetime: "2026-12-13T12:00-06:00",
+      teacher: "with Kristin",
+      copy: /surrender and sound healing/,
+      signup: "https://clients.mindbodyonline.com/classic/ws?studioid=44816&amp;sDate=12/13/2026",
+    },
   ];
   assert.equal((upcoming.match(/class="event-card"/g) || []).length, eventCards.length);
+  assert.deepEqual(
+    [...upcoming.matchAll(/data-event-date="(\d{4}-\d{2}-\d{2})"/g)].map((match) => match[1]),
+    ["2026-11-19", "2026-12-06", "2026-12-13"],
+  );
+  assert.doesNotMatch(upcoming, /Pop Up Dance|Thriller|November 15, 2026|sclassid=2504|sclassid=2506/);
   assert.equal((upcoming.match(/href="\/schedule\/">Sign up<\/a>/g) || []).length, 0);
   for (const card of eventCards) {
     const marker = `data-event-date="${card.iso}"`;
