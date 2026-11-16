@@ -1108,6 +1108,62 @@ textarea {
   min-height: 240px;
 }
 
+.schedule-backup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
+  margin: 0 0 1rem;
+  padding: 0.9rem 1rem;
+  background: white;
+  border: 1px solid var(--line);
+}
+
+.schedule-backup p {
+  margin: 0;
+  flex: 1 1 16rem;
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.schedule-backup .btn {
+  min-height: 44px;
+  min-width: 44px;
+  padding-inline: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.schedule-backup .btn:focus-visible,
+.schedule-backup-note a:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.schedule-backup-note {
+  margin: 0.85rem 0 0;
+}
+
+@media (max-width: 700px) {
+  .schedule-backup {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .schedule-backup p {
+    flex: none;
+  }
+
+  .schedule-backup .btn {
+    width: 100%;
+  }
+}
+
 .mindbody-frame {
   display: block;
   width: 100%;
