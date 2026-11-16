@@ -129,6 +129,14 @@ test("static build and SEO check", () => {
   assert.match(schedule, /ce1600307310/);
   assert.match(schedule, /mindbody/i);
   assert.match(schedule, /src="\/book\/widgets\/schedules\/view\/ce771257310\/schedule"/);
+  assert.match(schedule, /class="schedule-backup"/);
+  assert.match(schedule, /Trouble booking\? Book directly on Mindbody\./);
+  assert.match(schedule, /class="btn" href="https:\/\/clients\.mindbodyonline\.com\/classic\/ws\?studioid=44816&amp;stype=-7" target="_blank" rel="noopener">Book on Mindbody<\/a>/);
+  assert.match(schedule, /class="note schedule-backup-note"/);
+  assert.match(schedule, /book directly on Mindbody<\/a>/);
+  assert.match(schedule, /href="\/schedule\/">Book a class/);
+  assert.doesNotMatch(home, /Book on Mindbody/);
+  assert.doesNotMatch(readFileSync("dist/classes/index.html", "utf8"), /Book on Mindbody/);
   assert.doesNotMatch(schedule, /widgets\.mindbodyonline\.com\/iframe/);
   assert.doesNotMatch(schedule, /healcode\.js/);
   const staffStyle = readFileSync("netlify/edge-functions/schedule-staff.js", "utf8");
