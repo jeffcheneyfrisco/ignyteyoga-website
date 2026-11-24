@@ -1,0 +1,27 @@
+<!--
+  Black Friday 2026 home banner.
+  Included from src/pages/index.html while BLACK_FRIDAY_HOME_BANNER is true in src/promos.mjs.
+  Sale wording hides after Mon Nov 30, 2026, 11:59 PM America/Chicago.
+  The gift-card message hides after Thu Dec 24, 2026, 11:59 PM America/Chicago.
+  Preview those states with ?bfdate=2026-12-01 and ?bfdate=2026-12-25.
+-->
+<section class="gift-banner bf-banner" data-promo="black-friday" aria-label="Black Friday at Ignyte">
+  <div class="gift-banner-inner" data-show-until="2026-12-01T00:00:00-06:00">
+    <p>
+      <strong class="bf-banner-title">Black Friday at Ignyte</strong>
+      <span class="bf-banner-dates">Sale Fri Nov 27 - Mon Nov 30 · Gift card bonus through Dec 24</span>
+    </p>
+    <a class="btn" href="/black-friday/">Shop Black Friday Specials</a>
+  </div>
+  <div class="gift-banner-inner" data-show-from="2026-12-01T00:00:00-06:00" data-show-until="2026-12-25T00:00:00-06:00" hidden>
+    <p>
+      <strong class="bf-banner-title">Gift card bonus</strong>
+      <span class="bf-banner-dates">Buy a $100 gift card, get a $20 bonus credit. Buy $200, get a $50 bonus credit. Through Dec 24.</span>
+    </p>
+    <a class="btn" href="/black-friday/#gift-card-bonus">Shop the gift card bonus</a>
+  </div>
+  <noscript>
+    <p class="bf-noscript">Sale offers run through Monday, November 30, 2026, 11:59 PM Central. The gift card bonus runs through Thursday, December 24, 2026, 11:59 PM Central.</p>
+  </noscript>
+</section>
+<script type="module" src="/scripts/black-friday.js"></script>
