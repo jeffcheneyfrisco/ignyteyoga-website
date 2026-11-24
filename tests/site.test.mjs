@@ -672,7 +672,9 @@ test("static build and SEO check", () => {
     assert.ok(at > offerCursor, name);
     offerCursor = at;
   }
+  assert.match(specials, /<p class="bf-price">\$90<\/p>/);
   assert.match(specials, /30 days unlimited\. Regular \$190, save \$100\./);
+  assert.match(specials, /po_11Lfu6UU5eS1EZJkS/);
   assert.match(specials, /Regular \$875, save \$76\. \$133\.17\/mo\./);
   assert.match(specials, /Regular \$1,700, save \$200\. \$125\/mo\./);
   assert.match(specials, /\$220 for 13 classes\. Save \$66\. \$16\.92\/class\. Use within 180 days of purchase\./);
@@ -686,8 +688,7 @@ test("static build and SEO check", () => {
   assert.match(specials, /\/media\/black-friday-header-480\.webp 480w/);
   assert.match(specials, /\/media\/black-friday-header-960\.webp 960w/);
   assert.match(specials, /\/media\/black-friday-header-1200\.webp 1200w/);
-  assert.match(specials, /\/media\/black-friday-offers-480\.webp 480w/);
-  assert.match(specials, /\/media\/black-friday-offers-1080\.webp 1080w/);
+  assert.doesNotMatch(specials, /<img[^>]+black-friday-offers/);
   assert.match(specials, /\/media\/black-friday-gift-card-480\.webp 480w/);
   assert.match(specials, /\/media\/black-friday-gift-card-1080\.webp 1080w/);
   assert.match(specials, /alt="Ignyte Yoga Black Friday specials banner\./);
