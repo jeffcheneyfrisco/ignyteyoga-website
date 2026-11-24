@@ -512,19 +512,12 @@ button.btn,
   line-height: 1.45;
 }
 
-.bf-text-hero {
-  border-bottom: 3px solid var(--accent);
-  padding-block: 4.2rem 3.2rem;
+.bf-hero {
+  background: #000;
 }
 
-.bf-text-hero h1 {
-  margin-bottom: 0.8rem;
-}
-
-.bf-text-hero .bf-dates {
-  margin: 0;
-  color: white;
-  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+.bf-hero img {
+  width: 100%;
 }
 
 .bf-dates {
@@ -584,8 +577,7 @@ button.btn,
 
 .bf-figures {
   display: grid;
-  grid-template-columns: minmax(0, 32rem);
-  justify-content: center;
+  grid-template-columns: 1fr 1fr;
   gap: 1.2rem;
   align-items: start;
   margin-top: 2.5rem;

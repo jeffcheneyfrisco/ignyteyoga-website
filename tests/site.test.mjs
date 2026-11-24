@@ -673,7 +673,7 @@ test("static build and SEO check", () => {
     offerCursor = at;
   }
   assert.match(specials, /<p class="bf-price">\$110<\/p>/);
-  assert.match(specials, /\$110 for 30 days unlimited\. New clients only\. Regular \$190, save \$80\./);
+  assert.match(specials, /\$110 for 30 days unlimited \(save \$80 vs \$190 month-to-month\)\./);
   assert.doesNotMatch(specials, /<p class="bf-price">\$90<\/p>/);
   assert.doesNotMatch(specials, /save \$100\./);
   assert.match(rates, /Monthly: \$90 \(3-month commitment\)/);
@@ -688,9 +688,15 @@ test("static build and SEO check", () => {
     assert.match(specials, new RegExp(`href="${pricing}/${id}" target="_blank" rel="noopener"`));
   }
   assert.match(specials, /href="https:\/\/clients\.mindbodyonline\.com\/classic\/ws\?studioid=44816&amp;stype=42" target="_blank" rel="noopener">Buy a gift card<\/a>/);
-  assert.doesNotMatch(specials, /<img[^>]+black-friday-header/);
-  assert.doesNotMatch(specials, /<img[^>]+black-friday-offers/);
-  assert.match(specials, /class="section theme-dark bf-text-hero"/);
+  assert.match(specials, /\/media\/black-friday-header-480\.webp 480w/);
+  assert.match(specials, /\/media\/black-friday-header-1200\.webp 1200w/);
+  assert.match(specials, /alt="Ignyte Yoga Black Friday specials banner\./);
+  assert.match(specials, /\$110 intro month for new clients/);
+  assert.match(specials, /sizes="100vw"/);
+  assert.match(specials, /fetchpriority="high"/);
+  assert.match(specials, /data-show-until="2026-12-01T00:00:00-06:00"[\s\S]*black-friday-offers-/);
+  assert.match(specials, /\/media\/black-friday-offers-480\.webp 480w/);
+  assert.match(specials, /\/media\/black-friday-offers-1080\.webp 1080w/);
   assert.match(specials, /\/media\/black-friday-gift-card-480\.webp 480w/);
   assert.match(specials, /\/media\/black-friday-gift-card-1080\.webp 1080w/);
   assert.equal(existsSync("dist/scripts/black-friday.js"), true);
