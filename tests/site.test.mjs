@@ -645,11 +645,10 @@ test("static build and SEO check", () => {
   assert.match(readFileSync("src/promos.mjs", "utf8"), /export const BLACK_FRIDAY_HOME_BANNER = true/);
   assert.match(home, /class="gift-banner bf-banner"/);
   assert.match(home, /<strong class="bf-banner-title">Black Friday at Ignyte<\/strong>/);
-  assert.match(home, /Sale Fri Nov 27 - Mon Nov 30 · Gift card bonus through Dec 24/);
+  assert.match(home, /Sale Fri Nov 27 - Mon Nov 30 · Includes gift card bonus/);
   assert.match(home, /href="\/black-friday\/">Shop Black Friday Specials<\/a>/);
   assert.match(home, /data-show-until="2026-12-01T00:00:00-06:00"/);
-  assert.match(home, /data-show-from="2026-12-01T00:00:00-06:00" data-show-until="2026-12-25T00:00:00-06:00" hidden/);
-  assert.match(home, /href="\/black-friday\/#gift-card-bonus">Shop the gift card bonus<\/a>/);
+  assert.doesNotMatch(home, /Shop the gift card bonus/);
   assert.match(home, /src="\/scripts\/black-friday\.js"/);
   const bannerAt = home.indexOf('class="gift-banner bf-banner"');
   const holidayAt = home.indexOf('aria-label="Holiday gift cards"');
@@ -703,10 +702,14 @@ test("static build and SEO check", () => {
   assert.equal(existsSync("dist/scripts/promo-windows.js"), true);
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/black-friday\/<\/loc>/);
   assert.match(rates, /href="\/black-friday\/">Shop Black Friday Specials<\/a>/);
-  assert.match(rates, /Sale Fri Nov 27 - Mon Nov 30 · Gift card bonus through Dec 24\./);
-  assert.match(gifts, /Black Friday bonus through Dec 24/);
+  assert.match(rates, /Sale Fri Nov 27 - Mon Nov 30 · Includes gift card bonus\./);
+  assert.match(gifts, /Black Friday bonus through Mon Nov 30/);
   assert.match(gifts, /good Jan 1 – Mar 31, 2027/);
   assert.match(gifts, /href="\/black-friday\/#gift-card-bonus">See the gift card bonus<\/a>/);
+  for (const file of ["dist/index.html", "dist/black-friday/index.html", "dist/rates/index.html", "dist/gift-cards/index.html"]) {
+    const html = readFileSync(file, "utf8");
+    assert.doesNotMatch(html, /Dec 24|December 24/, file);
+  }
 });
 
 function fakeEventCard(date) {
@@ -831,31 +834,23 @@ function promoMatches(node, selector) {
 
 function blackFridaySample() {
   const saleUntil = "2026-12-01T00:00:00-06:00";
-  const giftUntil = "2026-12-25T00:00:00-06:00";
   const salePanel = promoNode({ "data-show-until": saleUntil });
-  const giftPanel = promoNode({ "data-show-from": saleUntil, "data-show-until": giftUntil, hidden: "" });
-  const banner = promoNode({ "data-promo": "black-friday" }, [salePanel, giftPanel]);
+  const banner = promoNode({ "data-promo": "black-friday" }, [salePanel]);
   const intro = promoNode({ "data-show-until": saleUntil });
-  const giftCopy = promoNode({ "data-show-from": saleUntil, "data-show-until": giftUntil, hidden: "" });
-  const giftOffer = promoNode({ "data-show-until": giftUntil });
-  const live = promoNode({ "data-bf-live": "" }, [intro, giftCopy, giftOffer]);
+  const giftOffer = promoNode({ "data-show-until": saleUntil });
+  const live = promoNode({ "data-bf-live": "" }, [intro, giftOffer]);
   const ended = promoNode({ "data-bf-ended": "", hidden: "" });
   const page = promoNode({ "data-bf-page": "" }, [live, ended]);
-  return { root: promoNode({}, [banner, page]), salePanel, giftPanel, banner, intro, giftCopy, giftOffer, live, ended };
+  return { root: promoNode({}, [banner, page]), salePanel, banner, intro, giftOffer, live, ended };
 }
 
 test("black friday windows follow America/Chicago", () => {
   const saleUntil = new Date("2026-12-01T00:00:00-06:00");
-  const giftFrom = saleUntil;
-  const giftUntil = new Date("2026-12-25T00:00:00-06:00");
   assert.equal(isPromoOpen(new Date("2026-11-30T23:59:59-06:00"), null, saleUntil), true);
   assert.equal(isPromoOpen(new Date("2026-12-01T00:00:00-06:00"), null, saleUntil), false);
-  assert.equal(isPromoOpen(new Date("2026-12-01T00:00:00-06:00"), giftFrom, giftUntil), true);
-  assert.equal(isPromoOpen(new Date("2026-12-24T23:59:59-06:00"), giftFrom, giftUntil), true);
-  assert.equal(isPromoOpen(new Date("2026-12-25T00:00:00-06:00"), giftFrom, giftUntil), false);
 
+  assert.equal(previewInstant("2026-11-28").toISOString(), "2026-11-28T18:00:00.000Z");
   assert.equal(previewInstant("2026-12-01").toISOString(), "2026-12-01T18:00:00.000Z");
-  assert.equal(previewInstant("2026-12-25").toISOString(), "2026-12-25T18:00:00.000Z");
   assert.equal(previewInstant("2026-12-01T00:00:00-06:00").toISOString(), "2026-12-01T06:00:00.000Z");
   assert.equal(previewInstant("nope"), null);
   const realNow = new Date("2026-11-24T18:00:00Z");
@@ -865,29 +860,17 @@ test("black friday windows follow America/Chicago", () => {
   const during = blackFridaySample();
   applyPromoWindows(during.root, promoNow("?bfdate=2026-11-28", realNow));
   assert.equal(during.salePanel.hidden, false);
-  assert.equal(during.giftPanel.hidden, true);
   assert.equal(during.banner.hidden, false);
   assert.equal(during.intro.hidden, false);
   assert.equal(during.giftOffer.hidden, false);
   assert.equal(during.live.hidden, false);
   assert.equal(during.ended.hidden, true);
 
-  const giftsOnly = blackFridaySample();
-  applyPromoWindows(giftsOnly.root, promoNow("?bfdate=2026-12-01", realNow));
-  assert.equal(giftsOnly.salePanel.hidden, true);
-  assert.equal(giftsOnly.giftPanel.hidden, false);
-  assert.equal(giftsOnly.banner.hidden, false);
-  assert.equal(giftsOnly.intro.hidden, true);
-  assert.equal(giftsOnly.giftCopy.hidden, false);
-  assert.equal(giftsOnly.giftOffer.hidden, false);
-  assert.equal(giftsOnly.live.hidden, false);
-  assert.equal(giftsOnly.ended.hidden, true);
-
   const ended = blackFridaySample();
-  applyPromoWindows(ended.root, promoNow("?bfdate=2026-12-25", realNow));
+  applyPromoWindows(ended.root, promoNow("?bfdate=2026-12-01", realNow));
   assert.equal(ended.salePanel.hidden, true);
-  assert.equal(ended.giftPanel.hidden, true);
   assert.equal(ended.banner.hidden, true);
+  assert.equal(ended.intro.hidden, true);
   assert.equal(ended.giftOffer.hidden, true);
   assert.equal(ended.live.hidden, true);
   assert.equal(ended.ended.hidden, false);
