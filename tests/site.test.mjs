@@ -3,6 +3,7 @@ import { spawnSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import test from "node:test";
 import { isPastEventDate, markPastEvents, studioToday } from "../src/scripts/past-events.js";
+import { applyPromoWindows, isPromoOpen, previewInstant, promoNow } from "../src/scripts/promo-windows.js";
 
 test("static build and SEO check", () => {
   const build = spawnSync(process.execPath, ["scripts/build.mjs"], { encoding: "utf8" });
@@ -639,6 +640,83 @@ test("static build and SEO check", () => {
   assert.match(rates, /href="\/gift-cards\/">Gift Cards<\/a>/);
   assert.doesNotMatch(rates.match(/<nav id="site-nav"[\s\S]*?<\/nav>/)[0], /gift-cards|Gift Cards/);
   assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/gift-cards\/<\/loc>/);
+
+  assert.match(readFileSync("src/pages/index.html", "utf8"), /<!-- include:black-friday-banner -->/);
+  assert.match(readFileSync("src/promos.mjs", "utf8"), /export const BLACK_FRIDAY_HOME_BANNER = true/);
+  assert.match(home, /class="gift-banner bf-banner"/);
+  assert.match(home, /<strong class="bf-banner-title">Black Friday at Ignyte<\/strong>/);
+  assert.match(home, /Sale Fri Nov 27 - Mon Nov 30 · Includes gift card bonus/);
+  assert.match(home, /href="\/black-friday\/">Shop Black Friday Specials<\/a>/);
+  assert.match(home, /data-show-until="2026-12-01T00:00:00-06:00"/);
+  assert.match(home, /data-show-from="2026-12-01T00:00:00-06:00" data-show-until="2027-01-01T00:00:00-06:00" hidden/);
+  assert.match(home, /Special Intro Month \$110/);
+  assert.match(home, /New clients · Through Dec 31/);
+  assert.match(home, /href="\/black-friday\/#special-intro-month">Shop the Special Intro Month<\/a>/);
+  assert.match(home, /src="\/scripts\/black-friday\.js"/);
+  const bannerAt = home.indexOf('class="gift-banner bf-banner"');
+  const holidayAt = home.indexOf('aria-label="Holiday gift cards"');
+  assert.ok(headerAt < bannerAt && bannerAt < holidayAt && holidayAt < heroAt);
+
+  assert.equal(existsSync("dist/black-friday/index.html"), true);
+  const specials = readFileSync("dist/black-friday/index.html", "utf8");
+  assert.match(specials, /<title>Black Friday \| Hot Yoga Frisco \| Ignyte Yoga<\/title>/);
+  assert.match(specials, /<h1>Black Friday at Ignyte<\/h1>/);
+  assert.match(specials, /The \$110 Special Intro Month for new clients runs through Thu Dec 31\./);
+  assert.match(specials, /Grab yours in the Mindbody app or at the front desk\./);
+  assert.match(specials, /The studio is closed Thanksgiving, Thursday, Nov 26\./);
+  assert.match(specials, /This offer has ended\./);
+  assert.match(specials, /href="\/rates\/">See current rates<\/a>/);
+  assert.match(specials, /href="\/">Back to the home page<\/a>/);
+  const offerOrder = ["Special Intro Month", "6-Month Unlimited", "Annual Unlimited", "10-Class Pack + 3 Free", "20-Class Pack + 5 Free", "Gift Card Bonus"];
+  let offerCursor = 0;
+  for (const name of offerOrder) {
+    const at = specials.indexOf(`<h2>${name}</h2>`, offerCursor);
+    assert.ok(at > offerCursor, name);
+    offerCursor = at;
+  }
+  assert.match(specials, /id="special-intro-month" data-show-until="2027-01-01T00:00:00-06:00"/);
+  assert.match(specials, /<p class="bf-price">\$110<\/p>/);
+  assert.match(specials, /\$110 for 30 days unlimited \(save \$80 vs \$190 month-to-month\)\. Runs Fri Nov 27 through Thu Dec 31\./);
+  assert.doesNotMatch(specials, /<p class="bf-price">\$90<\/p>/);
+  assert.doesNotMatch(specials, /save \$100\./);
+  assert.match(rates, /Monthly: \$90 \(3-month commitment\)/);
+  assert.match(specials, /po_11Lfu6UU5eS1EZJkS/);
+  assert.match(specials, /Regular \$875, save \$76\. \$133\.17\/mo\./);
+  assert.match(specials, /Regular \$1,700, save \$200\. \$125\/mo\./);
+  assert.match(specials, /\$220 for 13 classes\. Save \$66\. \$16\.92\/class\. Use within 180 days of purchase\./);
+  assert.match(specials, /\$400 for 25 classes\. Save \$100\. \$16\/class\. Use within 180 days of purchase\./);
+  assert.match(specials, /Buy a \$100 gift card, get a \$20 bonus credit\. Buy \$200, get a \$50 bonus credit\. Bonus credit added to your account, good Jan 1 – Mar 31, 2027\./);
+  const pricing = "https://go.mindbodyonline.com/book/app/pricing/bus_11Lfu6UU5eS1EiQoY";
+  for (const id of ["po_11Lfu6UU5eS1EZJkS", "po_11Lfu6UU5eS1EZJmT", "po_11Lfu6UU5eS1EZJnU", "po_11Lfu6UU5eS1EZJoV", "po_11Lfu6UU5eS1EZJpW"]) {
+    assert.match(specials, new RegExp(`href="${pricing}/${id}" target="_blank" rel="noopener"`));
+  }
+  assert.match(specials, /href="https:\/\/clients\.mindbodyonline\.com\/classic\/ws\?studioid=44816&amp;stype=42" target="_blank" rel="noopener">Buy a gift card<\/a>/);
+  assert.match(specials, /\/media\/black-friday-header-480\.webp 480w/);
+  assert.match(specials, /\/media\/black-friday-header-1200\.webp 1200w/);
+  assert.match(specials, /alt="Ignyte Yoga Black Friday specials banner\./);
+  assert.match(specials, /\$110 Special Intro Month for new clients runs Friday November 27 through Thursday December 31/);
+  assert.match(specials, /\/media\/black-friday-intro-480\.webp 480w/);
+  assert.match(specials, /\/media\/black-friday-intro-1080\.webp 1080w/);
+  assert.match(specials, /sizes="100vw"/);
+  assert.match(specials, /fetchpriority="high"/);
+  assert.match(specials, /data-show-until="2026-12-01T00:00:00-06:00"[\s\S]*black-friday-offers-/);
+  assert.match(specials, /\/media\/black-friday-offers-480\.webp 480w/);
+  assert.match(specials, /\/media\/black-friday-offers-1080\.webp 1080w/);
+  assert.match(specials, /\/media\/black-friday-gift-card-480\.webp 480w/);
+  assert.match(specials, /\/media\/black-friday-gift-card-1080\.webp 1080w/);
+  assert.equal(existsSync("dist/scripts/black-friday.js"), true);
+  assert.equal(existsSync("dist/scripts/promo-windows.js"), true);
+  assert.match(readFileSync("dist/sitemap.xml", "utf8"), /<loc>https:\/\/ignyteyoga\.com\/black-friday\/<\/loc>/);
+  assert.match(rates, /href="\/black-friday\/">Shop Black Friday Specials<\/a>/);
+  assert.match(rates, /Sale Fri Nov 27 - Mon Nov 30 · Includes gift card bonus\. Special Intro Month through Dec 31\./);
+  assert.match(rates, /Special Intro Month \$110 · New clients · Through Dec 31\./);
+  assert.match(gifts, /Black Friday bonus through Mon Nov 30/);
+  assert.match(gifts, /good Jan 1 – Mar 31, 2027/);
+  assert.match(gifts, /href="\/black-friday\/#gift-card-bonus">See the gift card bonus<\/a>/);
+  for (const file of ["dist/index.html", "dist/black-friday/index.html", "dist/rates/index.html", "dist/gift-cards/index.html"]) {
+    const html = readFileSync(file, "utf8");
+    assert.doesNotMatch(html, /Dec 24|December 24/, file);
+  }
 });
 
 function fakeEventCard(date) {
@@ -715,4 +793,110 @@ test("past events are marked after the studio date", () => {
   assert.equal(card.classList.contains("event-past"), false);
   assert.equal(card.attributes["data-past"], undefined);
   assert.equal(card.children.length, 0);
+});
+
+function promoNode(attrs = {}, children = []) {
+  const node = {
+    attrs: { ...attrs },
+    children,
+    hidden: Object.prototype.hasOwnProperty.call(attrs, "hidden"),
+    getAttribute(name) {
+      return Object.prototype.hasOwnProperty.call(this.attrs, name) ? this.attrs[name] : null;
+    },
+    setAttribute(name, value) {
+      this.attrs[name] = value;
+      if (name === "hidden") this.hidden = true;
+    },
+    removeAttribute(name) {
+      delete this.attrs[name];
+      if (name === "hidden") this.hidden = false;
+    },
+    querySelector(selector) {
+      return this.querySelectorAll(selector)[0] ?? null;
+    },
+    querySelectorAll(selector) {
+      const found = [];
+      const visit = (current) => {
+        for (const child of current.children) {
+          if (promoMatches(child, selector)) found.push(child);
+          visit(child);
+        }
+      };
+      visit(this);
+      return found;
+    },
+  };
+  return node;
+}
+
+function promoMatches(node, selector) {
+  return selector.split(",").some((part) => {
+    const match = /^\[([a-z0-9-]+)(?:='([^']*)')?\]$/i.exec(part.trim());
+    if (!match) throw new Error(`Unsupported selector ${part}`);
+    const value = node.getAttribute(match[1]);
+    if (value == null) return false;
+    return match[2] === undefined || value === match[2];
+  });
+}
+
+function blackFridaySample() {
+  const saleUntil = "2026-12-01T00:00:00-06:00";
+  const introUntil = "2027-01-01T00:00:00-06:00";
+  const salePanel = promoNode({ "data-show-until": saleUntil });
+  const introPanel = promoNode({ "data-show-from": saleUntil, "data-show-until": introUntil, hidden: "" });
+  const banner = promoNode({ "data-promo": "black-friday" }, [salePanel, introPanel]);
+  const saleOffer = promoNode({ "data-show-until": saleUntil });
+  const intro = promoNode({ "data-show-until": introUntil });
+  const live = promoNode({ "data-bf-live": "" }, [saleOffer, intro]);
+  const ended = promoNode({ "data-bf-ended": "", hidden: "" });
+  const page = promoNode({ "data-bf-page": "" }, [live, ended]);
+  return { root: promoNode({}, [banner, page]), salePanel, introPanel, banner, saleOffer, intro, live, ended };
+}
+
+test("black friday windows follow America/Chicago", () => {
+  const saleUntil = new Date("2026-12-01T00:00:00-06:00");
+  const introUntil = new Date("2027-01-01T00:00:00-06:00");
+  assert.equal(isPromoOpen(new Date("2026-11-30T23:59:59-06:00"), null, saleUntil), true);
+  assert.equal(isPromoOpen(new Date("2026-12-01T00:00:00-06:00"), null, saleUntil), false);
+  assert.equal(isPromoOpen(new Date("2026-12-31T23:59:59-06:00"), null, introUntil), true);
+  assert.equal(isPromoOpen(new Date("2027-01-01T00:00:00-06:00"), null, introUntil), false);
+
+  assert.equal(previewInstant("2026-11-28").toISOString(), "2026-11-28T18:00:00.000Z");
+  assert.equal(previewInstant("2026-12-01").toISOString(), "2026-12-01T18:00:00.000Z");
+  assert.equal(previewInstant("2026-12-31").toISOString(), "2026-12-31T18:00:00.000Z");
+  assert.equal(previewInstant("2027-01-01").toISOString(), "2027-01-01T18:00:00.000Z");
+  assert.equal(previewInstant("nope"), null);
+  const realNow = new Date("2026-11-24T18:00:00Z");
+  assert.equal(promoNow("?bfdate=nope", realNow), realNow);
+
+  const during = blackFridaySample();
+  applyPromoWindows(during.root, promoNow("?bfdate=2026-11-28", realNow));
+  assert.equal(during.salePanel.hidden, false);
+  assert.equal(during.introPanel.hidden, true);
+  assert.equal(during.banner.hidden, false);
+  assert.equal(during.saleOffer.hidden, false);
+  assert.equal(during.intro.hidden, false);
+  assert.equal(during.live.hidden, false);
+  assert.equal(during.ended.hidden, true);
+
+  for (const day of ["2026-12-01", "2026-12-31"]) {
+    const introOnly = blackFridaySample();
+    applyPromoWindows(introOnly.root, promoNow(`?bfdate=${day}`, realNow));
+    assert.equal(introOnly.salePanel.hidden, true, day);
+    assert.equal(introOnly.introPanel.hidden, false, day);
+    assert.equal(introOnly.banner.hidden, false, day);
+    assert.equal(introOnly.saleOffer.hidden, true, day);
+    assert.equal(introOnly.intro.hidden, false, day);
+    assert.equal(introOnly.live.hidden, false, day);
+    assert.equal(introOnly.ended.hidden, true, day);
+  }
+
+  const ended = blackFridaySample();
+  applyPromoWindows(ended.root, promoNow("?bfdate=2027-01-01", realNow));
+  assert.equal(ended.salePanel.hidden, true);
+  assert.equal(ended.introPanel.hidden, true);
+  assert.equal(ended.banner.hidden, true);
+  assert.equal(ended.intro.hidden, true);
+  assert.equal(ended.live.hidden, true);
+  assert.equal(ended.ended.hidden, false);
 });

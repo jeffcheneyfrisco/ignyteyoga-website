@@ -155,6 +155,7 @@ function sizesFor(image) {
   if (preset) return preset;
   const classes = ancestorClasses(image);
   if (classes.includes("photo-row")) return "(min-width: 901px) 25vw, 50vw";
+  if (classes.includes("bf-figures")) return "(min-width: 901px) 50vw, 100vw";
   if (classes.includes("gallery") || classes.includes("team-grid")) return "(min-width: 901px) 33vw, 50vw";
   if (classes.includes("cards")) return "(min-width: 901px) 25vw, 100vw";
   if (classes.includes("split") || classes.includes("frame")) return "(min-width: 901px) 50vw, 100vw";
@@ -270,8 +271,32 @@ function preloadImage(emitted) {
   });
 }
 
+async function expandIncludes(html) {
+  const names = [...html.matchAll(/<!--\s*include:([a-z0-9-]+)\s*-->/g)].map((match) => match[1]);
+  if (!names.length) return html;
+  const { BLACK_FRIDAY_HOME_BANNER } = await import("../src/promos.mjs");
+  const partials = new Map();
+  for (const name of new Set(names)) {
+    if (name === "black-friday-banner" && !BLACK_FRIDAY_HOME_BANNER) {
+      partials.set(name, "");
+      continue;
+    }
+    const partialPath = path.join(srcDir, "partials", `${name}.html`);
+    try {
+      partials.set(name, (await readFile(partialPath, "utf8")).trim());
+    } catch (error) {
+      if (error.code === "ENOENT") throw new Error(`Missing include partial ${name}`);
+      throw error;
+    }
+  }
+  return html.replace(/<!--\s*include:([a-z0-9-]+)\s*-->/g, (_full, name) => {
+    if (!partials.has(name)) throw new Error(`Missing include partial ${name}`);
+    return partials.get(name);
+  });
+}
+
 async function buildPage(file, headerHtml, footerHtml, css) {
-  const html = await readFile(file, "utf8");
+  const html = await expandIncludes(await readFile(file, "utf8"));
   const document = parse5.parse(html);
   const head = findOne(document, "head");
   const body = findOne(document, "body");

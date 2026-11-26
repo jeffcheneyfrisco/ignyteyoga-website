@@ -1,0 +1,27 @@
+<!--
+  Black Friday 2026 home banner.
+  Included from src/pages/index.html while BLACK_FRIDAY_HOME_BANNER is true in src/promos.mjs.
+  The full sale hides after Mon Nov 30, 2026, 11:59 PM America/Chicago.
+  The Special Intro Month banner hides after Thu Dec 31, 2026, 11:59 PM America/Chicago.
+  Preview with ?bfdate=2026-11-28, ?bfdate=2026-12-01, and ?bfdate=2027-01-01.
+-->
+<section class="gift-banner bf-banner" data-promo="black-friday" aria-label="Black Friday at Ignyte">
+  <div class="gift-banner-inner" data-show-until="2026-12-01T00:00:00-06:00">
+    <p>
+      <strong class="bf-banner-title">Black Friday at Ignyte</strong>
+      <span class="bf-banner-dates">Sale Fri Nov 27 - Mon Nov 30 · Includes gift card bonus</span>
+    </p>
+    <a class="btn" href="/black-friday/">Shop Black Friday Specials</a>
+  </div>
+  <div class="gift-banner-inner" data-show-from="2026-12-01T00:00:00-06:00" data-show-until="2027-01-01T00:00:00-06:00" hidden>
+    <p>
+      <strong class="bf-banner-title">Special Intro Month $110</strong>
+      <span class="bf-banner-dates">New clients · Through Dec 31</span>
+    </p>
+    <a class="btn" href="/black-friday/#special-intro-month">Shop the Special Intro Month</a>
+  </div>
+  <noscript>
+    <p class="bf-noscript">Most Black Friday specials, including the gift card bonus, end Monday, November 30, 2026. The $110 Special Intro Month for new clients runs through Thursday, December 31, 2026.</p>
+  </noscript>
+</section>
+<script type="module" src="/scripts/black-friday.js"></script>
